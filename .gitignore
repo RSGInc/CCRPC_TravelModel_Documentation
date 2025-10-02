@@ -1,0 +1,21 @@
+
+# Add files and directories to ignore
+
+# Virtual environment
+_pycache_/
+.venv/
+venv/
+.pyc
+
+# User data
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+
+# Word, Excel and other Data
+source_docs/
+
+#*.xlsx
+#.csv
