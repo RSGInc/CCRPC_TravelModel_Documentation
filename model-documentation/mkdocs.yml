@@ -1,6 +1,6 @@
 site_name: CCRPC Travel Demand Model Documentation
 nav:
-  - Documentation: index.md
+  - Home: index.md
   - User Guide: userguide.md
 theme: 
   name: readthedocs
