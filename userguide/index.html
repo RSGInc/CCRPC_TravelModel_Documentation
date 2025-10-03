@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>User Guide - CCRPC Travel Demand Model Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "User Guide";
+        var mkdocs_page_input_path = "userguide.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> CCRPC Travel Demand Model Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../input/">Documentation</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">User Guide</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">CCRPC Travel Demand Model Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">User Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;img src="./docs2/assets/media/image1.jpeg"</td>
+<td></td>
+</tr>
+<tr>
+<td>style="width:3.12658in;height:2.08066in"</td>
+<td></td>
+</tr>
+<tr>
+<td>alt="A car driving down a country road Description generated with very high confidence" /&gt;</td>
+<td>&lt;img src="./docs2/assets/media/image2.jpeg"</td>
+</tr>
+<tr>
+<td>style="width:5.48101in;height:2.09827in"</td>
+<td></td>
+</tr>
+<tr>
+<td>alt="A large body of water with a city in the background Description generated with very high confidence" /&gt;</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><span id="_Ref506300276" class="anchor"></span>Table 1: Physical and
+Structural Edits Outline</p>
+<table>
+<caption><p><span id="_Ref506292274" class="anchor"></span>Table 2:
+Project Action Commands</p></caption>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th rowspan="8">180 Battery Street, Suite 350<br />
+Burlington, VT 05401<br />
+802.383.0118<br />
+<strong>www.rsginc.com</strong></th>
+<th></th>
+</tr>
+<tr class="odd">
+<th><strong>prepared for:</strong></th>
+</tr>
+<tr class="header">
+<th>Chittenden County Regional Planning Commission</th>
+</tr>
+<tr class="odd">
+<th><strong>Submitted By:</strong></th>
+</tr>
+<tr class="header">
+<th>rsg</th>
+</tr>
+<tr class="odd">
+<th></th>
+</tr>
+<tr class="header">
+<th></th>
+</tr>
+<tr class="odd">
+<th></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+<p><span id="_Ref506292274" class="anchor"></span>Table 2: Project Action
+Commands</p>
+<p><a href="#introduction">1.0 Introduction [1](#introduction)</a></p>
+<p><a href="#installing-the-model">2.0 Installing the Model
+[2](#installing-the-model)</a></p>
+<p><a href="#modeling-requirements">2.1 | Modeling Requirements
+[2](#modeling-requirements)</a></p>
+<p><a href="#model-directory-structure">2.2 | Model Directory Structure
+[2](#model-directory-structure)</a></p>
+<p><a href="#installing-the-model-1">2.3 | Installing the Model
+[3](#installing-the-model-1)</a></p>
+<p><a href="#installing-the-transcad-add-in">2.4 | Installing the TransCAD Add-In
+[3](#installing-the-transcad-add-in)</a></p>
+<p><a href="#reinstalling-other-versions-of-the-model">2.5 | (Re)Installing other Versions of the Model
+[5](#reinstalling-other-versions-of-the-model)</a></p>
+<p><a href="#launching-the-model">2.6 | Launching The Model
+[6](#launching-the-model)</a></p>
+<p><a href="#running-the-ccrpc-model">2.7 | Running the CCRPC Model
+[8](#running-the-ccrpc-model)</a></p>
+<p><a href="#creating-a-new-scenario">3.0 Creating A New Scenario
+[9](#creating-a-new-scenario)</a></p>
+<p><a href="#network-manager">3.1 | Network Manager [9](#network-manager)</a></p>
+<p><a href="#create-a-new-scenario">3.2 | Create A New Scenario
+[12](#create-a-new-scenario)</a></p>
+<p><a href="#required-model-files">4.0 Required Model FIles
+[13](#required-model-files)</a></p>
+<p><a href="#road-network">4.1 | Road Network [13](#road-network)</a></p>
+<p><a href="#trip-generation">4.2 | Trip Generation [16](#trip-generation)</a></p>
+<p><a href="#roadway-travel-time-skims">4.3 | Roadway Travel Time Skims
+[17](#roadway-travel-time-skims)</a></p>
+<p><a href="#trip-distribution">4.4 | Trip Distribution [17](#trip-distribution)</a></p>
+<p><a href="#mode-choice">4.5 | Mode Choice [17](#mode-choice)</a></p>
+<p><a href="#auto-trips-by-time-of-day">4.6 | Auto Trips by Time-of-Day
+[18](#auto-trips-by-time-of-day)</a></p>
+<p><a href="#auto-traffic-assignment">4.7 | Auto Traffic Assignment
+[18](#auto-traffic-assignment)</a></p>
+<p><strong>List of Figures</strong></p>
+<p><a href="#_Ref327889600">Figure 1: GIS Developer’s Kit [3](#_Ref327889600)</a></p>
+<p><a href="#_Ref506376983">Figure 2: Compiling to UI [4](#_Ref506376983)</a></p>
+<p><a href="#_Ref506377011">Figure 3: Setup Add-ins [5](#_Ref506377011)</a></p>
+<p><a href="#_Ref506207416">Figure 4: Model Interface [6](#_Ref506207416)</a></p>
+<p><a href="#_Toc508626696">Figure 5: Project Scenarios Menu [7](#_Toc508626696)</a></p>
+<p><a href="#_Ref506205385">Figure 6: Defining Inputs [8](#_Ref506205385)</a></p>
+<p><a href="#_Ref506292484">Figure 7: Example Project .BIN File
+[10](#_Ref506292484)</a></p>
+<p><a href="#_Ref506292502">Figure 8: Scenario Example [11](#_Ref506292502)</a></p>
+<p><a href="#_Ref506296572">Figure 9: Network Manager [11](#_Ref506296572)</a></p>
+<p><a href="#_Toc508626701">Figure 10: Link Type Lookup Table [14](#_Toc508626701)</a></p>
+<p><a href="#_Toc508626702">Figure 11: Node Type Lookup Table [14](#_Toc508626702)</a></p>
+<p><a href="#_Toc508626703">Figure 12: Highway/street Line Layer Attributes
+[14](#_Toc508626703)</a></p>
+<p><a href="#_Toc508626704">Figure 13: Node Layer Attributes [16](#_Toc508626704)</a></p>
+<p><strong>List of Tables</strong></p>
+<p><a href="#_Ref506300276">Table 1: Physical and Structural Edits Outline
+[9](#_Ref506300276)</a></p>
+<p><a href="#_Ref506292274">Table 3: Project Action Commands [10](#_Ref506292274)</a></p>
+<h1 id="introduction">Introduction</h1>
+<p>The Chittenden County Regional Planning Commission Travel Demand Model,
+Version 4.0.0 (“the model”) is an integrated transportation demand model
+developed by Resource Systems Group (RSG) for the Chittenden County
+Regional Planning Commission.</p>
+<p>The model estimates the movement of people and vehicles within the
+region during an average fall weekday in 2015. The 2015 Model is a daily
+model with hourly traffic assignments and is implemented in TransCAD
+7.0. The model includes 528 internal Transportation Analysis Zones
+(TAZs) covering the 19 municipalities in Chittenden County. Traffic
+entering and exiting the region does so through 17 external zones.</p>
+<p>Transportation planners can use the model to perform comprehensive
+regional transportation analyses, and to evaluate traffic impacts
+resulting from:</p>
+<ul>
+<li>
+<p>multi-modal transportation improvements,</p>
+</li>
+<li>
+<p>changes in traveler behavior,</p>
+</li>
+<li>
+<p>changes to the roadway system,</p>
+</li>
+<li>
+<p>changes in land use activity, and</p>
+</li>
+<li>
+<p>implementation of demand management strategies.</p>
+</li>
+</ul>
+<p>Details regarding the model structure, data sources, and calibration are
+presented in the CCRPC Regional Travel Model Documentation report from
+September 5, 2017.</p>
+<p>The purpose of this User Guide is to describe the steps necessary to:</p>
+<ul>
+<li>
+<p>Install the model,</p>
+</li>
+<li>
+<p>Create new scenarios for model analyses, and</p>
+</li>
+<li>
+<p>Run the model to generate results for analysis</p>
+</li>
+</ul>
+<h1 id="installing-the-model">Installing the Model</h1>
+<p>This section outlines the procedure to follow to successfully install,
+set-up, and begin using the CCRPC Regional Travel Model. The following
+sections outline the software and hardware requirements, installing the
+model, installing the TransCAD add-in and finally using the model.</p>
+<h2 id="modeling-requirements">Modeling Requirements</h2>
+<p>The minimum software requirements to run the model include:</p>
+<p>TransCAD Version 7.0</p>
+<p>Build 12365</p>
+<p>The minimum hardware system requirements to properly execute a model run
+include:</p>
+<p>1 GB RAM - Minimum</p>
+<p>30 GB – Minimum of free hard disk space</p>
+<h2 id="model-directory-structure">Model Directory Structure</h2>
+<p>The model directory structure is outlined below:</p>
+<p><strong>Drive:\CCRPC\</strong> -Model root directory</p>
+<blockquote>
+<p><strong>Scenario Name(s)\</strong> -User defined scenario name(s) (e.g.
+“2015_Base”, “2020”, “2030”, “2035”, “2050wTIP”; Create as many of
+these directories as there are scenarios.</p>
+</blockquote>
+<p><strong>Inputs\</strong> -Model Input Files</p>
+<p><strong>1_Highway Network</strong> -Highway Network Inputs</p>
+<p><strong>2_Transit Network</strong> -Transit Network Inputs</p>
+<p><strong>3_TAZ and TripGen</strong> -TAZ and land-use data</p>
+<p><strong>4_Trip Distribution</strong> -Distribution Inputs</p>
+<p><strong>5_Mode Choice</strong> -Travel Mode Inputs</p>
+<p><strong>6_Diurnal Distribution</strong> -Diurnal Distribution Inputs</p>
+<p><strong>7_Assignemnt</strong> -Assignment Inputs</p>
+<p><strong>8_Reports</strong> -Model Reports</p>
+<p><strong>Outputs\</strong> - Model output files</p>
+<p><strong>1_ Network</strong> - Network outputs</p>
+<p><strong>2_Transit</strong> -Transit outputs</p>
+<p><strong>3_ TripGen</strong> -Trip generation outputs</p>
+<p><strong>4_TripDist</strong> -Trip distribution outputs</p>
+<p><strong>5_ModeChoice</strong> -Mode choice outputs</p>
+<p><strong>6_Diurnal</strong> -Diurnal Distribution outputs</p>
+<p><strong>7_Assign</strong> -Assignment outputs</p>
+<p><strong>8_Reports</strong> -Model reports</p>
+<blockquote>
+<p><strong>Resource Files\</strong> -Resource files for model installation including
+the model user interface</p>
+</blockquote>
+<h2 id="installing-the-model_1">Installing the Model</h2>
+<p>Copy the model scripts and configure the interface control files:</p>
+<ol>
+<li>
+<p>Paste the GISDK macros folder (“<strong>Resource Files</strong>”) and built-in
+    &gt; <strong>scenarios</strong> folders (“2015_Base”,…,), along with the
+    &gt; <strong>CCRPC_mod.bin</strong> and .DCB files to the root directory location
+    &gt; chosen by the user.</p>
+</li>
+<li>
+<p>Edit the MacrosLIST_CCRPC.lst file (located in the ResourceFiles
+    &gt; folder) using a text editor. Update all file paths to indicate the
+    &gt; Model root directory as chosen by the user.</p>
+</li>
+</ol>
+<h2 id="installing-the-transcad-add-in">Installing the TransCAD Add-In</h2>
+<p>Install the GISDK program:</p>
+<ol>
+<li>In the main TransCAD menu, select Tools and make sure the “GIS
+    Developer’s Kit” is enabled.</li>
+</ol>
+<p><span id="_Ref327889600" class="anchor"></span>Figure 1: GIS Developer’s
+Kit</p>
+<p><img src="./docs2/assets/media/image5.png"
+style="width:1.36441in;height:0.29163in" alt="GISDK_Tools.bmp" /></p>
+<ol>
+<li>
+<p>Click the “Compile to UI” button (icon with an arrow pointing to
+    text, see Figure 1) and navigate to the GISDK list file located:
+    Drive:\CCRPC\ResourceFiles\MacrosLIST_CCRPC.lst</p>
+</li>
+<li>
+<p>This will open a “Save As” dialog box. Navigate to the CompiledUI
+    folder (Drive:\CCRPC\ResourceFiles\CompiledUI) and save over the
+    ccrpc_ui.dbd file in this location. (Figure 2).</p>
+</li>
+</ol>
+<p><span id="_Ref506376983" class="anchor"></span>Figure 2: Compiling to UI</p>
+<p><img src="./docs2/assets/media/image6.png"
+style="width:6.5in;height:3.53681in" /></p>
+<ol>
+<li>Return to the TransCAD menu and Select: Tools &gt; Setup Add-Ins and
+    fill in the fields as shown in Figure 3. To set the “UI Database”
+    field, the user should browse to the UI Database (“ccrpc_ui.dbd”)
+    that was created in the previous step.</li>
+</ol>
+<p><span id="_Ref506377011" class="anchor"></span>Figure 3: Setup Add-ins</p>
+<p><img src="./docs2/assets/media/image7.png"
+style="width:4.5in;height:5.60417in" /></p>
+<h2 id="reinstalling-other-versions-of-the-model">(Re)Installing other Versions of the Model</h2>
+<p>CCRPC model users may need to install more than one version of the
+model. A straightforward approach is to copy the entire root directory
+folder and save with a modified version name. The user can then again
+follow the steps outlined above only this time setting a new and
+distinct “Description” when setting up the add-in, and selecting the new
+and distinct file path for the second installations UI Database.</p>
+<h2 id="launching-the-model">Launching The Model</h2>
+<p>This section describes the general steps and procedures involved in
+loading and configuring CCRPC inputs using the model interface. Section
+3.0 provides detailed instructions for creating a new scenario.</p>
+<ol>
+<li>Open the TransCAD interface by selecting Tools &gt; Add-Ins &gt;CCRPC
+    (Figure 4).</li>
+</ol>
+<p><span id="_Ref506207416" class="anchor"></span>Figure 4: Model Interface</p>
+<p><img src="./docs2/assets/media/image8.png"
+style="width:4.76845in;height:7.44512in" /></p>
+<ol>
+<li>Select setup – this opens a new dialog box</li>
+</ol>
+<p><span id="_Toc508626696" class="anchor"></span>Figure 5: Project
+Scenarios Menu</p>
+<p><img src="./docs2/assets/media/image9.png"
+style="width:6.28125in;height:4in" /></p>
+<ol>
+<li>
+<p>To add a new scenario, select “Copy”, which will create a new
+    project scenario line. Enter a name for the scenario in the “Name”
+    field and set the “Dir” (directory) button to the main directory of
+    the scenario.</p>
+</li>
+<li>
+<p>Systematically step through each item in the “Steps” menu, first
+    highlighting the item and then clicking on the “Input Files” tab
+    (see Figure 6). Carefully check the “Status” of each input file. If
+    any of the files have a “missing” status, then the user needs to
+    manually identify the input file. To do so, highlight the missing
+    file, click the “Change File” button, and navigate to the input
+    file. Click “Ok” when all the files are listed as “Exists” in the
+    “Status” menu. Ensure the scenarioYear parameter in the Trip
+    Generation section is set to the target year being considered in the
+    scenario.</p>
+</li>
+<li>
+<p>Click “Ok” to exit the “Project Scenarios” menu.</p>
+</li>
+</ol>
+<p><span id="_Ref506205385" class="anchor"></span>Figure 6: Defining Inputs</p>
+<p><img src="./docs2/assets/media/image10.png"
+style="width:6.34375in;height:6.27083in" /></p>
+<h2 id="running-the-ccrpc-model">Running the CCRPC Model</h2>
+<p>The CCRPC model can execute a single step or run all steps with an
+indefinite number of iterations until the model has converged, an
+equilibrium where the input assumptions are consistent with output
+results. Typically, users should run the model to convergence.
+Developers and advanced users may occasionally want to execute a single
+step or loop. This section describes the normal operation of the CCRPC
+model – running to convergence.</p>
+<ol>
+<li>
+<p>Return to the CCRPC Model interface (see Figure 4).</p>
+</li>
+<li>
+<p>Click the “RUN ALL” button.</p>
+</li>
+</ol>
+<h1 id="creating-a-new-scenario">Creating A New Scenario</h1>
+<p>This section describes the procedures involved in creating new scenarios
+for the CCRPC Regional Travel Model. New scenarios might feature edits
+to the highway network, transit system, or land use data. Section 3.1 |
+steps through the process of using the Network Manager to update the
+master network and export a new scenario network and section 3.2 |
+outlines instructions for creating a new scenario.</p>
+<p>Table 1 presents an outline of the type of edits that might need to be
+made in creating a new scenario. The likelihood of the user needing to
+make an edit is indicated, with “high” meaning that a new scenario would
+likely need changes to this input, “medium” meaning that a new scenario
+would occasionally involve changes to this input, “low” meaning that a
+new scenario rarely would involve changes to this input, and “very low”
+meaning that new scenario would almost never involve changes to this
+input.</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 22%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Input Type</strong></th>
+<th><p><strong>Update</strong></p>
+<p><strong>Liklihood</strong></p></th>
+<th><strong>Editing Could Corrupt Other Inputs?</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Highway Network</td>
+<td>High</td>
+<td>Yes. Although the transit network was designed to automatically
+update for changes to the highway network, there is a small chance
+highway edits could inadvertently cause a misalignment of the transit
+system. After implementing a new network, the user should run the model
+and check to see if any transit routes were misaligned. If so the user
+should repair the transit routes, as necessary.</td>
+</tr>
+<tr class="even">
+<td>Transit Network</td>
+<td>Medium</td>
+<td>No.</td>
+</tr>
+<tr class="odd">
+<td>Land Use</td>
+<td>High</td>
+<td>No.</td>
+</tr>
+<tr class="even">
+<td>TAZ Layer</td>
+<td>Very Low</td>
+<td>Yes. Editing the structure of the TAZ layer has a major impact on
+several model systems. Such a change would require edits to the
+underlying code and adjustments to the shape of all matrix inputs</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="network-manager">Network Manager</h2>
+<p>The master network contains the complete roadway network for every
+scenario. Roadway links that exist in the baseline model network have a
+value of 1 entered in the “Base” field. Links that exist only in
+alternative scenarios have a 0 entered for this field.</p>
+<p>The Network Manager tool, accessed through the model GUI, allows the
+user to create alternative roadway networks. User-defined projects
+(specified in various [projects].bin files) control the adding,
+removing, and/or modifying of roadway links and nodes, while scenarios
+(specified in various [scenario].txt files) contain a list of
+projects. This section details the associated files and step-by-step
+instructions for using the network manager.</p>
+<p>The network manager uses three primary files: master network (.dbd),
+project (.bin), and scenario files (.txt).</p>
+<p>Roadway projects that may add or remove links and modify link and node
+attributes are stored in .bin files. The user can create future roadway
+projects by using the projects template, which is the
+Project_Template.bin file. The project files contain five fields:
+Project_ID, Action, ID, Field_Name, Field_Value, and Notes. The four
+options for the Action field are listed below in Table 2, with an
+example of a project file in Figure 7.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Action</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add</td>
+<td>Adds a link to the scenario</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>Removes a link from the scenario</td>
+</tr>
+<tr>
+<td>Modify</td>
+<td>Alters the indicated link field</td>
+</tr>
+<tr>
+<td>Node</td>
+<td>Alters the indicated node field</td>
+</tr>
+</tbody>
+</table>
+<p><span id="_Ref506292484" class="anchor"></span>Figure 7: Example Project
+.BIN File</p>
+<p><img src="./docs2/assets/media/image11.png"
+style="width:6.5in;height:3.04097in" /></p>
+<p>Scenarios are created using text files that list out which projects
+(various [project].bin files) to be included in the scenario. Figure 8
+shows an example scenario file. The names of the project files are
+divided by line breaks; these names must match the name of the project
+.bin files exactly. An optional project description can be added to the
+project filename if separated by a semicolon (e.g. 2025wTIP; Includes
+all FY 2018-2021 Front of Book TIP projects). The user can create any
+desirable scenario by adding or removing projects that correspond to
+project files. It is important to note that the Base project represents
+the base year network and does not correspond to a specific project
+file.</p>
+<p>The [scenario].txt file must have a name that is 11 characters long or
+shorter. Using longer filenames for the scenario files will cause the
+model to crash.</p>
+<p><span id="_Ref506292502" class="anchor"></span>Figure 8: Scenario
+Example</p>
+<p><img src="./docs2/assets/media/image12.png"
+style="width:6.5in;height:1.48194in" /></p>
+<p>To run the Network Manager, follow the steps outlined below:</p>
+<ol>
+<li>
+<p>Open the CCRPC model interface (Figure 4) and launch the Network
+    Manager; this will open the Network Manager dialog box.</p>
+</li>
+<li>
+<p>In the Network Manager window (Figure 9), enter a name for the
+    network scenario.</p>
+</li>
+</ol>
+<p><span id="_Ref506296572" class="anchor"></span>Figure 9: Network Manager</p>
+<blockquote>
+<p><img src="./docs2/assets/media/image13.png"
+style="width:2.33431in;height:3.14107in" /></p>
+</blockquote>
+<ol>
+<li>Browse to the master network folder.</li>
+</ol>
+<blockquote>
+<p><img src="./docs2/assets/media/image14.png"
+style="width:2.88403in;height:0.98819in" /></p>
+</blockquote>
+<ol>
+<li>Browse to the MasterNetwork_Streets.dbd and click Open.</li>
+</ol>
+<blockquote>
+<p><img src="./docs2/assets/media/image15.png"
+style="width:4.70973in;height:0.69234in" /></p>
+</blockquote>
+<ol>
+<li>Browse to the Highway Network [Scenario].txt file and click Open</li>
+</ol>
+<blockquote>
+<p><img src="./docs2/assets/media/image16.png"
+style="width:4.51887in;height:0.86663in" /></p>
+</blockquote>
+<ol>
+<li>Browse to the Transit Route System .rts file and click Open</li>
+</ol>
+<blockquote>
+<p><img src="./docs2/assets/media/image17.png"
+style="width:4.60137in;height:0.70236in" /></p>
+</blockquote>
+<ol>
+<li>Navigate to the output folder, choose a name for the output network
+    scenario, then click Create Network.</li>
+</ol>
+<h2 id="create-a-new-scenario">Create A New Scenario</h2>
+<p>This section outlines a step-by-step set of instructions for creating a
+new scenario and starting a full scenario run.</p>
+<ol>
+<li>
+<p>Create a copy of the model folder structure with a new overall
+    folder name for the scenario under consideration.</p>
+</li>
+<li>
+<p>Populate the inputs folders with all necessary input files (copy
+    from a previous scenario and replace files as necessary to represent
+    the scenario in question)</p>
+</li>
+<li>
+<p>For a complete new model run, clear all former run outputs:</p>
+<ol>
+<li>
+<p>Delete the outputs folder.</p>
+</li>
+<li>
+<p>Copy the empty outputs folder.</p>
+</li>
+<li>
+<p>Rename this copy as “Outputs”.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Return to the model GUI (Figure 4), navigate to “Setup” and create a
+    new scenario by copying and modifying an existing scenario.</p>
+<ol>
+<li>
+<p>Set the overall parent folder path for this scenario.</p>
+</li>
+<li>
+<p>Under “Steps”, go to “Trip Generation” and make sure the
+    scenario year is equal to the year of your future year scenario.
+    The “calibYear” should remain 2015, which is the year to which
+    the base model is calibrated.</p>
+</li>
+<li>
+<p>Check that all input files exist by scrolling though the various
+    steps.</p>
+</li>
+<li>
+<p>In the “Create Network” step, specify the streets layer if the
+    alternative includes a streets network different from the 2015
+    base. Click “Change File” and then select the scenario roads
+    layer.</p>
+</li>
+<li>
+<p>Click “Run All” to run a full scenario</p>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="required-model-files">Required Model FIles</h1>
+<p>The following sections describe the files required to run the model.
+Refer to TransCAD documentation for further information.</p>
+<h2 id="road-network">Road Network</h2>
+<p>The following network files required for the model:</p>
+<ul>
+<li>
+<p>Highway/Streets Line Layer ([street layer].dbd) – This file
+  describes the physical location and connectivity of the road system,
+  and contains many attributes used to describe flow, for example
+  classification, capacity, and one-way information.</p>
+</li>
+<li>
+<p>Highway/Streets Node Layer – This layer is included in the *.dbd
+  mentioned above but contains node-specific attributes like class and
+  capacity.</p>
+</li>
+<li>
+<p>Link-Type Lookup Table (LTLTable.bin) – This table contains
+  volume-delay parameters by road class. The class is specified by an
+  attribute in the line layer.</p>
+</li>
+<li>
+<p>Node-Type Lookup Table (NTLTable.bin) – This table contains node class
+  values by intersection type. The class is specified by an attribute in
+  the node layer.</p>
+</li>
+<li>
+<p>Turn Prohibitions Table (Link_TurnProhibitions.bin) – This table
+  describes base penalties or prohibitions applied to specific turning
+  movements throughout the network.</p>
+</li>
+<li>
+<p>Facility Type Penalty Table (FC_TurnProhibitions.bin) – This table
+  describes facility type –to– facility type movement penalties. The
+  current implementation penalizes access to interstate ramps to prevent
+  very short interstate trips.</p>
+</li>
+</ul>
+<p>The relationships between these files are stored in what TransCAD calls
+the Network file (.net). This file refers to the Highway/Streets file,
+the Link-Type Lookup, and the Turn Penalty Table which together describe
+the network, as well as details such as which attribute in the
+Highway/Streets layer represents Road Class or Capacity. The tables
+below, list the attributes of these key input files along with a
+description and indication if the field is manually coded by the user
+(User) or if it is automatically calculated by TransCAD during a model
+run (TransCAD).</p>
+<p><span id="_Toc508626701" class="anchor"></span>Figure 10: Link Type
+Lookup Table</p>
+<table>
+<thead>
+<tr>
+<th><strong>Field_Name</strong></th>
+<th><strong>Comment</strong></th>
+<th><strong>Populated By</strong></th>
+<th><strong>Units</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LinkClass</td>
+<td>Numberic code for link class</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Class Type</td>
+<td>Description of link type</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>Speed Limit for link class</td>
+<td>User</td>
+<td>MPH</td>
+</tr>
+<tr>
+<td>CapPerLane</td>
+<td>Number of vehicles per lane for level of service F</td>
+<td>User</td>
+<td>Vehicles per Lane</td>
+</tr>
+<tr>
+<td>c1</td>
+<td>link delay paramter c1</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>c2</td>
+<td>link delay paramter c2</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>c3</td>
+<td>link delay paramter c3</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>c4</td>
+<td>link delay paramter c4</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>p1</td>
+<td>node delay parameter p1</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>p2</td>
+<td>node delay parameter p2</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>p3</td>
+<td>node delay parameter p3</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>p4</td>
+<td>node delay parameter p4</td>
+<td>User</td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p><span id="_Toc508626702" class="anchor"></span>Figure 11: Node Type
+Lookup Table</p>
+<table>
+<thead>
+<tr>
+<th><strong>Field_Name</strong></th>
+<th><strong>Comment</strong></th>
+<th><strong>Populated By</strong></th>
+<th><strong>Units</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NodeClass</td>
+<td>Numeric code for node class</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Class Type</td>
+<td>Description of node type</td>
+<td>User</td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p><span id="_Toc508626703" class="anchor"></span>Figure 12: Highway/street
+Line Layer Attributes</p>
+<table>
+<thead>
+<tr>
+<th><strong>Field_Name</strong></th>
+<th><strong>Comment</strong></th>
+<th><strong>Populated By</strong></th>
+<th><strong>Units</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>Link index number created by TransCAD</td>
+<td>TransCAD</td>
+<td> </td>
+</tr>
+<tr>
+<td>Dir</td>
+<td>Direction of flow with respect to link coding: two-way (0) or one-way with (1) or against (-1) the link's topology.</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Length</td>
+<td>Length of link</td>
+<td>TransCAD</td>
+<td>Miles</td>
+</tr>
+<tr>
+<td>TWN_NM</td>
+<td>Abreviated town name</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Class</td>
+<td>Numerical code for link class</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Class_Type</td>
+<td>Description of link class</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Mode</td>
+<td>Mode of transportation: 1 (Bus), 2 (Rail), or 3 (Auto)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Walk Link</td>
+<td>Indication of pedestrian use: allowed (1) or prohibited (0)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Drive Link</td>
+<td>Indication of vehicle use: allowed (1) or prohibited (0)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>EnhancedTransit</td>
+<td>Presense (1) or lack (0) of transit signal priority or BRT.</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Area</td>
+<td>Not used</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>Travel speed from link type lookup table</td>
+<td>TransCAD</td>
+<td>MPH</td>
+</tr>
+<tr>
+<td>Speed_UI</td>
+<td>User specified speed (overrides lookup value)</td>
+<td>User</td>
+<td>MPH</td>
+</tr>
+<tr>
+<td>Lanes</td>
+<td>Travel lanes per direction (if 4 lane x-section, '2')</td>
+<td>User</td>
+<td>Lanes</td>
+</tr>
+<tr>
+<td>CapPerLane</td>
+<td>Link capacity per lane fom link type lookup table</td>
+<td>TransCAD</td>
+<td>Vehicles/Lane</td>
+</tr>
+<tr>
+<td>CapPerLane_UI</td>
+<td>User specified capacity per lane (overrides lookup value)</td>
+<td>User</td>
+<td>Vehicles/Lane</td>
+</tr>
+<tr>
+<td>Capacity</td>
+<td>Total link capacity in vehicles</td>
+<td>TransCAD</td>
+<td>Vehicles</td>
+</tr>
+<tr>
+<td>WalkTime</td>
+<td>Walk time at 3 mph</td>
+<td>TransCAD</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td>FreeFlowTT</td>
+<td>Free-flow travel time</td>
+<td>TransCAD</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>Master netwowrk indicatio if included (1) or excluded (0) from the base scenario network</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Toll</td>
+<td>Toll value</td>
+<td>User</td>
+<td> Cents</td>
+</tr>
+<tr>
+<td>Ramp</td>
+<td>Indication if link is a highway ramp (1)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>TAZ_Connector</td>
+<td>Indication if link is a TAZ connector (1)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>External</td>
+<td>Indication if link is an external connector (1)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Street name</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>SelectedAreaLink</td>
+<td>Indication if link is part of selected area analysis (1)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>TruckExclusion</td>
+<td>Indication if link allows or prohibits trucks (Not Used)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>AB_AM_Count</td>
+<td>Calibration count in AB direction for AM peak hour</td>
+<td>User</td>
+<td>All Vehicles</td>
+</tr>
+<tr>
+<td>BA_AM_Count</td>
+<td>Calibration count in BA direction for AM peak hour</td>
+<td>User</td>
+<td>All Vehicles</td>
+</tr>
+<tr>
+<td>AB_AM_AutoCount</td>
+<td>Calibration count in AB direction for AM peak hour</td>
+<td>User</td>
+<td>Autos</td>
+</tr>
+<tr>
+<td>BA_AM_AutoCount</td>
+<td>Calibration count in BA direction for AM peak hour</td>
+<td>User</td>
+<td>Autos</td>
+</tr>
+<tr>
+<td>AB_AM_MedTruckCount</td>
+<td>Calibration count in AB direction for AM peak hour</td>
+<td>User</td>
+<td>Med Trucks</td>
+</tr>
+<tr>
+<td>BA_AM_MedTruckCount</td>
+<td>Calibration count in BA direction for AM peak hour</td>
+<td>User</td>
+<td>Med Trucks</td>
+</tr>
+<tr>
+<td>AB_AM_HeavyTruckCount</td>
+<td>Calibration count in AB direction for AM peak hour</td>
+<td>User</td>
+<td>Heavy Trucks</td>
+</tr>
+<tr>
+<td>BA_AM_HeavyTruckCount</td>
+<td>Calibration count in BA direction for AM peak hour</td>
+<td>User</td>
+<td>Heavy Trucks</td>
+</tr>
+<tr>
+<td>AB_PM_Count</td>
+<td>Calibration count in AB direction for PM peak hour</td>
+<td>User</td>
+<td>All Vehicles</td>
+</tr>
+<tr>
+<td>BA_PM_Count</td>
+<td>Calibration count in BA direction for PM peak hour</td>
+<td>User</td>
+<td>All Vehicles</td>
+</tr>
+<tr>
+<td>AB_PM_AutoCount</td>
+<td>Calibration count in AB direction for PM peak hour</td>
+<td>User</td>
+<td>Autos</td>
+</tr>
+<tr>
+<td>BA_PM_AutoCount</td>
+<td>Calibration count in BA direction for PM peak hour</td>
+<td>User</td>
+<td>Autos</td>
+</tr>
+<tr>
+<td>AB_PM_MedTruckCount</td>
+<td>Calibration count in AB direction for PM peak hour</td>
+<td>User</td>
+<td>Med Trucks</td>
+</tr>
+<tr>
+<td>BA_PM_MedTruckCount</td>
+<td>Calibration count in BA direction for PM peak hour</td>
+<td>User</td>
+<td>Med Trucks</td>
+</tr>
+<tr>
+<td>AB_PM_HeavyTruckCount</td>
+<td>Calibration count in AB direction for PM peak hour</td>
+<td>User</td>
+<td>Heavy Trucks</td>
+</tr>
+<tr>
+<td>BA_PM_HeavyTruckCount</td>
+<td>Calibration count in BA direction for PM peak hour</td>
+<td>User</td>
+<td>Heavy Trucks</td>
+</tr>
+<tr>
+<td>AB_DLY_Count</td>
+<td>Calibration count in AB direction for entire day</td>
+<td>User</td>
+<td>All Vehicles</td>
+</tr>
+<tr>
+<td>BA_DLY_Count</td>
+<td>Calibration count in BA direction for entire day</td>
+<td>User</td>
+<td>All Vehicles</td>
+</tr>
+<tr>
+<td>AB_DLY_AutoCount</td>
+<td>Calibration count in AB direction for entire day</td>
+<td>User</td>
+<td>Autos</td>
+</tr>
+<tr>
+<td>BA_DLY_AutoCount</td>
+<td>Calibration count in BA direction for entire day</td>
+<td>User</td>
+<td>Autos</td>
+</tr>
+<tr>
+<td>AB_DLY_MedTruckCount</td>
+<td>Calibration count in AB direction for entire day</td>
+<td>User</td>
+<td>Med Trucks</td>
+</tr>
+<tr>
+<td>BA_DLY_MedTruckCount</td>
+<td>Calibration count in BA direction for entire day</td>
+<td>User</td>
+<td>Med Trucks</td>
+</tr>
+<tr>
+<td>AB_DLY_HeavyTruckCount</td>
+<td>Calibration count in AB direction for entire day</td>
+<td>User</td>
+<td>Heavy Trucks</td>
+</tr>
+<tr>
+<td>BA_DLY_HeavyTruckCount</td>
+<td>Calibration count in BA direction for entire day</td>
+<td>User</td>
+<td>Heavy Trucks</td>
+</tr>
+<tr>
+<td>ABBA_DLY_Count</td>
+<td>Calibration count in both directions for entire day</td>
+<td>User</td>
+<td>All Vehicles</td>
+</tr>
+<tr>
+<td>ABBA_DLY_AutoCount</td>
+<td>Calibration count in both directions for entire day</td>
+<td>User</td>
+<td>Autos</td>
+</tr>
+<tr>
+<td>ABBA_DLY_MedTruckCount</td>
+<td>Calibration count in both directions for entire day</td>
+<td>User</td>
+<td>Med Trucks</td>
+</tr>
+<tr>
+<td>ABBA_DLY_HeavyTruckCount</td>
+<td>Calibration count in both directions for entire day</td>
+<td>User</td>
+<td>Heavy Trucks</td>
+</tr>
+<tr>
+<td>Centroid Connector</td>
+<td>Indication if link is a centroid connector (1) or not (0)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>AB_Dir</td>
+<td>Direction of flow for AB topology</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>BA_Dir</td>
+<td>Direction of flow for BA tobology</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Urban</td>
+<td>Indication if link is in (1) or outside (0) an "urban" area</td>
+<td>User</td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p><span id="_Toc508626704" class="anchor"></span>Figure 13: Node Layer
+Attributes</p>
+<table>
+<thead>
+<tr>
+<th><strong>Field_Name</strong></th>
+<th><strong>Comment</strong></th>
+<th><strong>Populated By</strong></th>
+<th><strong>Units</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>Node index number created by TransCAD</td>
+<td>TransCAD</td>
+<td> </td>
+</tr>
+<tr>
+<td>Longitude</td>
+<td>Longitude of node</td>
+<td>TransCAD</td>
+<td>Degrees x 10^6</td>
+</tr>
+<tr>
+<td>Latitude</td>
+<td>Latitude of node</td>
+<td>TransCAD</td>
+<td>Degrees x 10^6</td>
+</tr>
+<tr>
+<td>Elevation</td>
+<td>Elevation of node (not used)</td>
+<td>TransCAD</td>
+<td> </td>
+</tr>
+<tr>
+<td>TAZ</td>
+<td>Inidcation if node is a TAZ (1)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>TAZ_Name</td>
+<td>TAZ identification number (1-960 internal, 10001-10017 external)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>External</td>
+<td>Indication if node is an external (1)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Label</td>
+<td>Either null, "Centroid", or "External"</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Exit</td>
+<td>Indication of node is a highway exit (1)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Exit_Number</td>
+<td>Highway Exit number</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Class</td>
+<td>Node class</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>ParkandRide</td>
+<td>Indication if node is a park and ride location - (not used)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Capacity</td>
+<td>Vehicle capacity of node</td>
+<td>User</td>
+<td>Vehicles/hour</td>
+</tr>
+<tr>
+<td>Town</td>
+<td>Abreviation of town name</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Special Delay Link1</td>
+<td>Upstream node id for first stop-controlled approach</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Special Delay Link2</td>
+<td>Upstream node id for second stop-controlled approach</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Special Delay Link3</td>
+<td>Upstream node id for third stop-controlled approach</td>
+<td>User</td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<h2 id="trip-generation">Trip Generation</h2>
+<p>The following land-use files inform the model trip generation.</p>
+<ul>
+<li>
+<p>TAZ Layer (“TAZ_CCRPC.dbd”) – A geographic file that contains the
+  structural detail and stores the attributes of the TAZ layer.</p>
+</li>
+<li>
+<p>LandUse.bin – A Fixed-Format Binary (FFB) file containing the scenario
+  land-use (households and employment) for each TAZ.</p>
+</li>
+<li>
+<p>GQuarters.bin – A FFB file containing the number of group quarters
+  dwelling units for each TAZ, and whether these are “institutional”
+  (correctional facility) or “uninstititutional” (dormitory, etc.)</p>
+</li>
+<li>
+<p>Household and Vehicle Percents by TAZ (HHandVeh_Percent.bin) – A FFB
+  file which contains the non-group quarter households categorized by
+  household size and vehicle ownership.</p>
+</li>
+<li>
+<p>Production Rate Table (ProdRates.bin) – A FFB file that lists trip
+  production rates by the joint distribution of trip purpose, household
+  size, and number of vehicles..</p>
+</li>
+<li>
+<p>Internal-External Trip Production Percentage (IXProdPercentage.bin) –
+  A FFB file containing the percentage of trips generated by the
+  internal TAZs that end in external zones.</p>
+</li>
+<li>
+<p>Internal-External/External-Internal External Trip Ends
+  (IXXI_ExternalTripEnds.bin) – A FFB file containing the total trip
+  ends in external TAZs.</p>
+</li>
+<li>
+<p>Internal-External/External-Internal Truck Trip Ends (IXXI_Truck.bin) –
+  A FFB file containing the percent of truck trips to and from external
+  TAZs.</p>
+</li>
+<li>
+<p>External to External trips (XXTrips.mtx) – a TransCAD matrix file
+  containing trips between external zone pairs.</p>
+</li>
+<li>
+<p>External trips growth rate (ExtTAZGR.bin) – a FFB file containing the
+  annual growth rate to be applied to external zone pair trips in future
+  year scenarios.</p>
+</li>
+<li>
+<p>Attraction model parameter files (HBW.mod, NHB.mod, HBO.mod,
+  LCOMM.mod, MCOMM.mod, HCOMM.mod) – contain the model parameters for
+  attractions by trip type.</p>
+</li>
+</ul>
+<p>The following files are outputs of the trip generation model.</p>
+<ul>
+<li>Productions and Attractions to and from each zone by trip type
+  (BalancedPA.bin) – A file showing how many trips are produced in each
+  TAZ or are attracted to each TAZ by trip type.</li>
+</ul>
+<h2 id="roadway-travel-time-skims">Roadway Travel Time Skims</h2>
+<p>The following files are inputs to the travel time skim model.</p>
+<ul>
+<li>
+<p>Vehicle Network Geographic File ([street layer].dbd) – Similar to an</p>
+<blockquote>
+<p>ArcView shapefile, this file contains the road and intersection
+information for every link and node within the vehicle network.</p>
+</blockquote>
+</li>
+<li>
+<p>TransCAD Vehicle Network (network.NET) – This file is created by</p>
+<blockquote>
+<p>TransCAD and holds information needed to create a network for use in
+assignment.</p>
+</blockquote>
+</li>
+<li>
+<p>Terminal Delay Times (TerminalTimes.bin) – A FFB file containing the</p>
+<blockquote>
+<p>time to add to each trip based on origin and destination TAZs.</p>
+</blockquote>
+</li>
+</ul>
+<p>The following files are outputs of the travel time skim model.</p>
+<ul>
+<li>Travel Time Skim with Terminal Times ([AM]Skims+termtimes.mtx) –<blockquote>
+<p>TransCAD matrix files containing congested travel time plus terminal
+times between each O-D pair.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="trip-distribution">Trip Distribution</h2>
+<p>The following files are inputs to the trip distribution model.</p>
+<ul>
+<li>
+<p>Productions and Attractions to and from each zone by trip type</p>
+<blockquote>
+<p>(BalancedPA.bin) – A file showing how many trips are produced in
+each TAZ or are attracted to each TAZ by trip type.</p>
+</blockquote>
+</li>
+<li>
+<p>Travel Time Skim with Terminal Times ([AM]Skims+termtimes.mtx) –</p>
+<blockquote>
+<p>Files containing the travel time (free flow travel time plus
+terminal times in the first iteration and congested travel time plus
+terminal times in each subsequent iteration) between each O-D pair.</p>
+</blockquote>
+</li>
+</ul>
+<p>The following files are outputs of the trip distribution model.</p>
+<ul>
+<li>Daily Person Origin and Destination Matrix (AutoTripsInput.mtx) – The<blockquote>
+<p>TransCAD matrix file reporting the number of trips distributed to
+each O-D pair, by trip type.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="mode-choice">Mode Choice</h2>
+<p>The following files are inputs to the mode choice model.</p>
+<ul>
+<li>
+<p>Travel Time Skim with Terminal Times ([AM]Skims+termtimes.mtx) – A
+  file containing the travel time (free flow travel time plus terminal
+  times in the first iteration and congested travel time plus terminal
+  times in each subsequent iteration) between each O-D pair.</p>
+</li>
+<li>
+<p>Transit Route System (*.rts) – A file which contains all of the bus
+  and rail routes in the region</p>
+</li>
+<li>
+<p>Daily Person Origin and Destination Matrix (*.mtx) – The TransCAD
+  matrix file reporting the number of trips distributed to each O-D
+  pair, by trip type.</p>
+</li>
+</ul>
+<p>The following files are outputs of the mode choice model.</p>
+<ul>
+<li>
+<p>Nested Logit Probability Matrices by trip type (*.mtx) – The TransCAD
+  matrix file containing the percentage of the trips applied to each
+  mode.</p>
+</li>
+<li>
+<p>Nested Logit Applied Totals Matrices by trip type (*.mtx) – The
+  TransCAD matrix file containing the number of the trips derived for
+  each mode.</p>
+</li>
+<li>
+<p>Nested Logit Utility Matrices by trip type (*.mtx) – The TransCAD
+  matrix file containing the utility of using each mode.</p>
+</li>
+<li>
+<p>Diurnal Distribution Input Table (*.MTX) – A trip matrix containing
+  the daily auto, bus and/or rail trips by trip type.</p>
+</li>
+</ul>
+<h2 id="auto-trips-by-time-of-day">Auto Trips by Time-of-Day</h2>
+<p>The following files are inputs to the auto trips model.</p>
+<ul>
+<li>
+<p>Daily Person Origin and Destination Matrix (autoTripsInput.mtx) – The
+  TransCAD matrix file reporting the number of person trips distributed
+  to each O-D pair, by trip type.</p>
+</li>
+<li>
+<p>Walk-Bike Ride Share (non_motorized.bin) – A FFB file containing the
+  percent of trips that are walk or bike based on the length of the trip
+  in miles.</p>
+</li>
+<li>
+<p>Transit Ride Share (transit.bin) – A FFB file containing the percent
+  of trips that utilize transit based on the length of the trip in
+  miles.</p>
+</li>
+<li>
+<p>Hourly Look-up Table (hourlyLookupTable.bin) – A FFB file describing
+  the distribution of trips by each hour of the day.</p>
+</li>
+</ul>
+<p>The following files are outputs of the auto trips model.</p>
+<ul>
+<li>Hourly Vehicle Origin and Destination Matrix (odVehicleTripByHour.MTX)
+  – The TransCAD matrix file reporting the number of vehicle trips
+  distributed to each O-D pair, by trip type for each hour of the day.</li>
+</ul>
+<h2 id="auto-traffic-assignment">Auto Traffic Assignment</h2>
+<p>The following files are inputs to the assignment model.</p>
+<ul>
+<li>
+<p>Vehicle Network Geographic File ([street layer].dbd) – The
+  geographic file containing all the information necessary for a
+  transportation network including: link length, number of lanes, link
+  capacity, and link speed.</p>
+</li>
+<li>
+<p>Hourly Vehicle Origin and Destination Matrix (odVehicleTripByHour.mtx)
+  – The TransCAD matrix file reporting the number of vehicle trips
+  distributed to each O-D pair, by trip type for each hour of the day.</p>
+</li>
+<li>
+<p>Query File (“*.qry”) – An optional query file that may be used in
+  assignment.</p>
+</li>
+</ul>
+<p>The following files are outputs of the assignment model.</p>
+<ul>
+<li>
+<p>Updated Vehicle Network showing simulated volumes and metrics
+  (NetworkOut.dbd) – The TransCAD geographic file with updated link
+  volumes.</p>
+</li>
+<li>
+<p>Final Assignment table (finalAssignmentTable.bin) – A FFB file
+  containing the simulated volumes and speeds, broken out by vehicle
+  type (total, auto, medium truck, and heavy truck), along with volume
+  to capacity ratios on each model link for each hour of the day.</p>
+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../input/" class="btn btn-neutral float-left" title="Documentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../input/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
