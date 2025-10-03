@@ -1,58 +1,9 @@
-|                                                                                            |                                                                                                              |
-|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| <img src="assets/media/image1.jpeg"                                                 
- style="width:3.12658in;height:2.08066in"                                                    
- alt="A car driving down a country road Description generated with very high confidence" />  | <img src="assets/media/image2.jpeg"                                                                   
+
+<span id="_Ref489376902" class="anchor"></span>Table : List of TAZs by Town
+
+<img src="assets/media/image2.jpeg"                                                                   
                                                                                               style="width:5.48101in;height:2.09827in"                                                                      
-                                                                                              alt="A large body of water with a city in the background Description generated with very high confidence" />  |
-|                                                                                            |                                                                                                              |
-
-<span id="_Ref491957006" class="anchor"></span>Table : List of
-Municipalities in the CCRPC Model
-
-<table>
-<caption><p><span id="_Ref489376902" class="anchor"></span>Table : List
-of TAZs by Town</p></caption>
-<colgroup>
-<col style="width: 32%" />
-<col style="width: 67%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th rowspan="8">180 Battery Street, Suite 350<br />
-Burlington, VT 05401<br />
-802.383.0118<br />
-<strong>www.rsginc.com</strong></th>
-<th></th>
-</tr>
-<tr class="odd">
-<th><strong>prepared for:</strong></th>
-</tr>
-<tr class="header">
-<th>Chittenden County Regional Planning Commission</th>
-</tr>
-<tr class="odd">
-<th><strong>Submitted By:</strong></th>
-</tr>
-<tr class="header">
-<th>rsg</th>
-</tr>
-<tr class="odd">
-<th></th>
-</tr>
-<tr class="header">
-<th></th>
-</tr>
-<tr class="odd">
-<th></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
-<span id="_Ref489376902" class="anchor"></span>Table : List of TAZs by
-Town
+                                                                                              alt="A large body of water with a city in the background Description generated with very high confidence" />
 
 [1.0 Introduction [1](#introduction)](#introduction)
 
