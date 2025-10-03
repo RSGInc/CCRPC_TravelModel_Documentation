@@ -16,6 +16,7 @@ venv/
 
 # Word, Excel and other Data
 source_docs/
+model-documentation/site/
 
 #*.xlsx
 #.csv

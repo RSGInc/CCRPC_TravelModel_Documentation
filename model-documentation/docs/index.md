@@ -1,6 +1,6 @@
 |                                                                                            |                                                                                                              |
 |--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| <img src="assets/media/image1.jpeg"                                                 
+| <img src="../assets/media/image1.jpeg"                                                 
  style="width:3.12658in;height:2.08066in"                                                    
  alt="A car driving down a country road Description generated with very high confidence" />  | <img src="assets/media/image2.jpeg"                                                                   
                                                                                               style="width:5.48101in;height:2.09827in"                                                                      
