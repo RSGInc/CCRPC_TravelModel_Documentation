@@ -3,7 +3,8 @@ nav:
   - Home: index.md
   - User Guide: userguide.md
 theme: 
-  name: readthedocs
+  name: mkdocs
+  navigation_depth: 3
   highlightjs: true
   hljs_languages:
     - yaml

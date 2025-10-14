@@ -1,404 +1,3 @@
-
-<span id="_Ref489376902" class="anchor"></span>Table : List of TAZs by Town
-
-<img src="assets/media/image2.jpeg"                                                                   
-                                                                                              style="width:5.48101in;height:2.09827in"                                                                      
-                                                                                              alt="A large body of water with a city in the background Description generated with very high confidence" />
-
-[1.0 Introduction [1](#introduction)](#introduction)
-
-[1.1 \| About CCRPC [1](#about-ccrpc)](#about-ccrpc)
-
-[1.2 \| About Modeling Requirements
-[1](#about-modeling-requirements)](#about-modeling-requirements)
-
-[2.0 CCRPC Model Overview
-[2](#ccrpc-model-overview)](#ccrpc-model-overview)
-
-[2.1 \| Conceptual Overview of Model Structure
-[2](#conceptual-overview-of-model-structure)](#conceptual-overview-of-model-structure)
-
-[2.2 \| Brief Description of Model Components
-[4](#brief-description-of-model-components)](#brief-description-of-model-components)
-
-[3.0 Network and Zonal Structure
-[5](#network-and-zonal-structure)](#network-and-zonal-structure)
-
-[3.1 \| TAZ Structure [5](#taz-structure)](#taz-structure)
-
-[3.2 \| Network Structure [7](#network-structure)](#network-structure)
-
-[3.3 \| External TAZs [8](#external-tazs)](#external-tazs)
-
-[4.0 Socioeconomic Data [9](#socioeconomic-data)](#socioeconomic-data)
-
-[4.1 \| Households [9](#households)](#households)
-
-[4.2 \| Employment [9](#employment)](#employment)
-
-[5.0 Trip Generation [11](#trip-generation)](#trip-generation)
-
-[5.1 \| Model Structure [11](#model-structure)](#model-structure)
-
-[5.2 \| Trip Production Rates
-[12](#trip-production-rates)](#trip-production-rates)
-
-[5.3 \| Internal Trip Attractions
-[14](#internal-trip-attractions)](#internal-trip-attractions)
-
-[5.4 \| External Trips [15](#external-trips)](#external-trips)
-
-[External Travel Survey
-[17](#external-travel-survey)](#external-travel-survey)
-
-[External-External Trip Base-Year Assumptions
-[18](#external-external-trip-base-year-assumptions)](#external-external-trip-base-year-assumptions)
-
-[IXXI Trip Base-Year Assumptions
-[19](#ixxi-trip-base-year-assumptions)](#ixxi-trip-base-year-assumptions)
-
-[External Trip Growth Rates
-[21](#external-trip-growth-rates)](#external-trip-growth-rates)
-
-[5.5 \| Trip Balancing [21](#trip-balancing)](#trip-balancing)
-
-[6.0 Trip Distribution [22](#trip-distribution)](#trip-distribution)
-
-[6.1 \| Model Structure [22](#model-structure-1)](#model-structure-1)
-
-[6.2 \| Data Sources [22](#data-sources)](#data-sources)
-
-[6.3 \| Parameter Estimation
-[23](#parameter-estimation)](#parameter-estimation)
-
-[7.0 Time-of-Day Distribution
-[24](#time-of-day-distribution)](#time-of-day-distribution)
-
-[7.1 \| Model Structure [24](#model-structure-2)](#model-structure-2)
-
-[7.2 \| Data Sources [24](#data-sources-1)](#data-sources-1)
-
-[7.3 \| Parameter Estimation
-[24](#parameter-estimation-1)](#parameter-estimation-1)
-
-[8.0 Vehicle Assignment [27](#vehicle-assignment)](#vehicle-assignment)
-
-[8.1 \| Model Structure [27](#model-structure-3)](#model-structure-3)
-
-[8.2 \| Data Sources [27](#data-sources-2)](#data-sources-2)
-
-[8.3 \| Parameter Estimation
-[28](#parameter-estimation-2)](#parameter-estimation-2)
-
-[8.4 \| Allocation of Intersection Capacity to Links
-[30](#allocation-of-intersection-capacity-to-links)](#allocation-of-intersection-capacity-to-links)
-
-[8.5 \| Auto Occupancy [34](#auto-occupancy)](#auto-occupancy)
-
-[9.0 Mode Choice [35](#mode-choice)](#mode-choice)
-
-[9.1 \| Model Structure [35](#model-structure-4)](#model-structure-4)
-
-[Pre-distribution Non-motorized Mode Choice Model
-[36](#pre-distribution-non-motorized-mode-choice-model)](#pre-distribution-non-motorized-mode-choice-model)
-
-[“Drive” vs. “Carpool” [38](#drive-vs.-carpool)](#drive-vs.-carpool)
-
-[Transit Pathfinding and Assignment
-[38](#transit-pathfinding-and-assignment)](#transit-pathfinding-and-assignment)
-
-[9.2 \| Data Sources [38](#data-sources-3)](#data-sources-3)
-
-[9.3 \| Parameters [38](#parameters)](#parameters)
-
-[10.0 Travel Model Validation
-[41](#travel-model-validation)](#travel-model-validation)
-
-[10.1 \| Traffic Assignment
-[41](#traffic-assignment)](#traffic-assignment)
-
-[Coefficient of Correlation
-[41](#coefficient-of-correlation)](#coefficient-of-correlation)
-
-[Root Mean Squared Error
-[41](#root-mean-squared-error)](#root-mean-squared-error)
-
-[Absolute Error [42](#absolute-error)](#absolute-error)
-
-[Sum of Differences [42](#sum-of-differences)](#sum-of-differences)
-
-[Comparison to Calibration Guidelines
-[42](#comparison-to-calibration-guidelines)](#comparison-to-calibration-guidelines)
-
-[Comparison to HPMS Daily VMT
-[44](#comparison-to-hpms-daily-vmt)](#comparison-to-hpms-daily-vmt)
-
-[10.2 \| Transit Assignment
-[44](#transit-assignment)](#transit-assignment)
-
-[10.3 \| Survey Comparisons
-[45](#survey-comparisons)](#survey-comparisons)
-
-[11.0 Land Use Input Files
-[49](#land-use-input-files)](#land-use-input-files)
-
-[11.1 \| Model Structure [49](#model-structure-5)](#model-structure-5)
-
-[12.0 Guidelines for Working with Complex Models
-[51](#guidelines-for-working-with-complex-models)](#guidelines-for-working-with-complex-models)
-
-[12.1 \| Transportation Improvements
-[51](#transportation-improvements)](#transportation-improvements)
-
-[12.2 \| Changes in Land-Use Activity
-[52](#changes-in-land-use-activity)](#changes-in-land-use-activity)
-
-[12.3 \| Demand Management Strategies
-[53](#demand-management-strategies)](#demand-management-strategies)
-
-[Parking Pricing [54](#parking-pricing)](#parking-pricing)
-
-[SOV Reduction Strategies
-[54](#sov-reduction-strategies)](#sov-reduction-strategies)
-
-[Changes in Transit Operations
-[54](#changes-in-transit-operations)](#changes-in-transit-operations)
-
-[Road Pricing and HOV Lanes
-[54](#road-pricing-and-hov-lanes)](#road-pricing-and-hov-lanes)
-
-[13.0 Model Versions [55](#model-versions)](#model-versions)
-
-[13.1 \| Model Versions [55](#model-versions-1)](#model-versions-1)
-
-[V 1.0.0 (TransCAD 4.7 build 267)
-[55](#v-1.0.0-transcad-4.7-build-267)](#v-1.0.0-transcad-4.7-build-267)
-
-[V 1.1.0 (TransCAD 4.7 build 267)
-[55](#v-1.1.0-transcad-4.7-build-267)](#v-1.1.0-transcad-4.7-build-267)
-
-[V 2.1.0 (TransCAD 4.7 build 267)
-[55](#v-2.1.0-transcad-4.7-build-267)](#v-2.1.0-transcad-4.7-build-267)
-
-[V 2.1.1 (TransCAD 4.7 build 267)
-[55](#v-2.1.1-transcad-4.7-build-267)](#v-2.1.1-transcad-4.7-build-267)
-
-[V 2.1.2 (TransCAD 4.7 build 267)
-[55](#v-2.1.2-transcad-4.7-build-267)](#v-2.1.2-transcad-4.7-build-267)
-
-[V 2.1.3 – 12/12/2005 (TransCAD 4.7 build 267)
-[55](#v-2.1.3-12122005-transcad-4.7-build-267)](#v-2.1.3-12122005-transcad-4.7-build-267)
-
-[V 2.2.0 – 1/17/2006 (TransCAD 4.7 build 267)
-[55](#v-2.2.0-1172006-transcad-4.7-build-267)](#v-2.2.0-1172006-transcad-4.7-build-267)
-
-[V 2.2.1 – 1/25/2006 (TransCAD 4.7 build 267)
-[56](#v-2.2.1-1252006-transcad-4.7-build-267)](#v-2.2.1-1252006-transcad-4.7-build-267)
-
-[V 2.2.2 – 3/30/2006 (TransCAD 4.7 build 267)
-[56](#v-2.2.2-3302006-transcad-4.7-build-267)](#v-2.2.2-3302006-transcad-4.7-build-267)
-
-[V 2.2.3 – 4/4/2006 (TransCAD 4.7 build 267)
-[57](#v-2.2.3-442006-transcad-4.7-build-267)](#v-2.2.3-442006-transcad-4.7-build-267)
-
-[V 2.2.4 – 5/10/2006 (TransCAD 4.7 build 267)
-[57](#v-2.2.4-5102006-transcad-4.7-build-267)](#v-2.2.4-5102006-transcad-4.7-build-267)
-
-[V 2.2.5 – 8/28/2006 (TransCAD 4.7 build 267)
-[57](#v-2.2.5-8282006-transcad-4.7-build-267)](#v-2.2.5-8282006-transcad-4.7-build-267)
-
-[V 2.3.0 – 1/22/2008 (TransCAD 4.8 build 500)
-[58](#v-2.3.0-1222008-transcad-4.8-build-500)](#v-2.3.0-1222008-transcad-4.8-build-500)
-
-[V 3.0.0 – 3/30/2009 (TransCAD 5.0 build 1545)
-[58](#v-3.0.0-3302009-transcad-5.0-build-1545)](#v-3.0.0-3302009-transcad-5.0-build-1545)
-
-[V 3.1 – 09/17/2010 (TransCAD 5.0 build 1545)
-[58](#v-3.1-09172010-transcad-5.0-build-1545)](#v-3.1-09172010-transcad-5.0-build-1545)
-
-[V 3.2-3 – 05/23/2012 (TransCAD 5.0 build 1545)
-[59](#v-3.2-3-05232012-transcad-5.0-build-1545)](#v-3.2-3-05232012-transcad-5.0-build-1545)
-
-[V 4.0-0 – 08/21/2017 (TransCAD 7.0 build 12365)
-[59](#v-4.0-0-08212017-transcad-7.0-build-12365)](#v-4.0-0-08212017-transcad-7.0-build-12365)
-
-**List of Figures**
-
-[Figure 1: 4-Step Model Concept [2](#_Ref489356643)](#_Ref489356643)
-
-[Figure 2: 4-Step Model Concept with Feedback
-[3](#_Ref489356654)](#_Ref489356654)
-
-[Figure 3: Feedback in the CCRPC Model Structure
-[3](#_Ref489356699)](#_Ref489356699)
-
-[Figure 4: Complete CCRPC Model Structure
-[4](#_Toc491103321)](#_Toc491103321)
-
-[Figure 5: Burlington Area TAZ Structure
-[5](#_Ref489367508)](#_Ref489367508)
-
-[Figure 6: Chittenden County TAZ Structure
-[6](#_Ref489367509)](#_Ref489367509)
-
-[Figure 7: Modeled Road Network in Burlington
-[7](#_Ref489377220)](#_Ref489377220)
-
-[Figure 8: Employment by SIC and Sector Categories with Trip Attraction
-Rates [10](#_Ref489378885)](#_Ref489378885)
-
-[Figure 9: Complete Person-Days By Number of Trips Per Day (rMove™ 2016)
-[14](#_Toc491103326)](#_Toc491103326)
-
-[Figure 10: Location of External TAZs
-[16](#_Toc491103327)](#_Toc491103327)
-
-[Figure 11: Friction Factor Plots [23](#_Ref490659563)](#_Ref490659563)
-
-[Figure 12: Diurnal Distribution for Passenger Trips
-[24](#_Ref490662340)](#_Ref490662340)
-
-[Figure 13: Diurnal Distribution for Truck and External Trips
-[25](#_Ref490662362)](#_Ref490662362)
-
-[Figure 14: Volume-Delay Curves for Principal Arterials
-[30](#_Ref490682871)](#_Ref490682871)
-
-[Figure 15: Node Capacity Assumptions for Intersections
-[31](#_Ref491110735)](#_Ref491110735)
-
-[Figure 16: Sample Allocation of Node Capacity for Signalized
-Intersection [33](#_Toc491103332)](#_Toc491103332)
-
-[Figure 17: Sample Allocation of Node Capacity for Un-signalized
-Intersection [34](#_Ref490685008)](#_Ref490685008)
-
-[Figure 18: Mode Choice Model Nesting Structure
-[36](#_Toc491103334)](#_Toc491103334)
-
-[Figure 19: Walkable Zones [37](#_Ref491097681)](#_Ref491097681)
-
-[Figure 20: Comparison of Individual Link Level Error using MDOT
-Criteria (Daily comparison) [43](#_Toc491103336)](#_Toc491103336)
-
-[Figure 21: Transit Assignment [45](#_Ref491097926)](#_Ref491097926)
-
-[Figure 22: HBW Trip Length Frequency Distribution (NHTS versus Model)
-[46](#_Ref490835241)](#_Ref490835241)
-
-[Figure 23: HBO Trip Length Frequency Distribution (NHTS versus Model)
-[47](#_Ref490835253)](#_Ref490835253)
-
-[Figure 24: NHB Trip Length Frequency Distribution (NHTS versus Model)
-[47](#_Ref490835260)](#_Ref490835260)
-
-[Figure 25: Modified % Available Developable Land
-[50](#_Toc491103341)](#_Toc491103341)
-
-**List of Tables**
-
-[Table 1: List of Municipalities in the CCRPC Model
-[6](#_Ref491957006)](#_Ref491957006)
-
-[Table 2: List of TAZs by Town [7](#_Ref489376902)](#_Ref489376902)
-
-[Table 3: External Traffic Zones [8](#_Toc491103344)](#_Toc491103344)
-
-[Table 4: Regional Distribution of Households by Size and Autos
-[9](#_Toc491103345)](#_Toc491103345)
-
-[Table 5: Trip Purpose Definitions [11](#_Ref489429618)](#_Ref489429618)
-
-[Table 6: HBW, HBO, and NHB Person Trip Production Rates
-[12](#_Ref489433593)](#_Ref489433593)
-
-[Table 7: Total Trips by Trip Purpose
-[13](#_Ref489434397)](#_Ref489434397)
-
-[Table 8: Total Trips per Household by Purpose (NHTS versus Model)
-[13](#_Toc491103349)](#_Toc491103349)
-
-[Table 9: Daily Internal Person Trip Attraction Rates
-[14](#_Toc491103350)](#_Toc491103350)
-
-[Table 10: Daily Internal Person Trip Attraction Rates by Trip Purpose
-per Employee [14](#_Ref489442729)](#_Ref489442729)
-
-[Table 11: External-to-External Trips (Passengers & Trucks)
-[18](#_Toc491103352)](#_Toc491103352)
-
-[Table 12: 2015 IX and XI Daily Vehicle Trips, by External TAZ
-[19](#_Toc491103353)](#_Toc491103353)
-
-[Table 13: Internal-to-External Trip Assumptions (% of internal
-productions) [20](#_Toc491103354)](#_Toc491103354)
-
-[Table 14: Percent IX and XI by District (NHTS versus Model)
-[21](#_Toc491103355)](#_Toc491103355)
-
-[Table 15: Diurnal Distribution %s [26](#_Toc491103356)](#_Toc491103356)
-
-[Table 16: Link Delay Parameters [29](#_Ref490682849)](#_Ref490682849)
-
-[Table 17: Node Class Definitions [31](#_Toc492568564)](#_Toc492568564)
-
-[Table 18: Auto Occupancy Factors [34](#_Toc492568565)](#_Toc492568565)
-
-[Table 19: Transit Pathfinding Parameters
-[39](#_Ref490742002)](#_Ref490742002)
-
-[Table 20: FHWA Assignment Calibration Guidelines
-[42](#_Ref490748713)](#_Ref490748713)
-
-[Table 21: Michigan DOT Volume-based Calibration Standards
-[43](#_Toc491103361)](#_Toc491103361)
-
-[Table 22: Comparison of Daily Vehicle Miles of Travel (HPMS versus
-Model) [44](#_Toc491103362)](#_Toc491103362)
-
-[Table 23: Average Trip Distance by Purpose (NHTS versus Model)
-[46](#_Ref490816485)](#_Ref490816485)
-
-[Table 24: Comparison of Mode Shares (2009 NHTS versus Model)
-[48](#_Ref490836468)](#_Ref490836468)
-
-**List of Equations**
-
-[Equation 1: Gravity Model Functional Form
-[22](#_Ref490658963)](#_Ref490658963)
-
-[Equation 2: Friction Factor Functional Form
-[23](#_Ref490659541)](#_Ref490659541)
-
-[Equation 3: Logit-Based Volume Delay Function
-[28](#_Ref490682787)](#_Ref490682787)
-
-[Equation 4: Example of Logit Model
-[35](#_Ref490738200)](#_Ref490738200)
-
-[Equation 5: Pre-distribution Mode Choice Model Utility Equations
-[39](#_Ref490741731)](#_Ref490741731)
-
-[Equation 6: Post-Distribution Mode Choice Model Utility Equations
-[39](#_Toc491103371)](#_Toc491103371)
-
-[Equation 7: COEFFICIENT of Correlation
-[41](#_Toc491103372)](#_Toc491103372)
-
-[Equation 8: Root Mean Squared Error
-[41](#_Toc491103373)](#_Toc491103373)
-
-[Equation 9: Absolute Error [42](#_Toc491103374)](#_Toc491103374)
-
-[Equation 10: Sum of Differences [42](#_Toc491103375)](#_Toc491103375)
-
-[Equation 11: Generalized Attractiveness
-[49](#_Toc491103376)](#_Toc491103376)
-
-[Equation 12: Modified Percentage [49](#_Toc491103377)](#_Toc491103377)
-
-[Equation 13: Land Use Allocation [50](#_Toc491103378)](#_Toc491103378)
-
 # Introduction
 
 ## About CCRPC
@@ -517,109 +116,57 @@ trips are split into each respective mode (e.g. auto, bus). Finally, the
 vehicle trips are assigned to the highway network in the assignment
 model.
 
-<span id="_Ref489356643" class="anchor"></span>Figure : 4-Step Model
-Concept
+Figure 1: 4-Step Model Concept
 
 <img src="assets/media/image5.png"
 style="width:6.25in;height:0.50681in" />
 
-The model has an important feedback loop that has been added in Figure
-2. Accessibility, which is a measure of the relative ease of travel, is
-calculated based on outputs from the assignment model, which is also an
-important determinant of trip distribution. Simply put, the decisions
-individuals make about where and how far to travel are a function of
-congestion levels and travel times. Therefore, it is customary to
-iterate between the trip distribution and assignment models in order to
-reach a convergent solution. The iteration loop in Figure 2 occurs
-within a given simulation year.
+The model has an important feedback loop that has been added in the following figure. 
 
-<span id="_Ref489356654" class="anchor"></span>Figure : 4-Step Model
-Concept with Feedback
+Accessibility, which is a measure of the relative ease of travel, is calculated based on outputs from the assignment model, which is also an important determinant of trip distribution. Simply put, the decisions individuals make about where and how far to travel are a function of congestion levels and travel times. Therefore, it is customary to iterate between the trip distribution and assignment models in order to
+reach a convergent solution. The iteration loop in Figure 2 occurs within a given simulation year.
+
+Figure 1 : 4-Step Model Concept with Feedback
 
 <img src="assets/media/image6.png"
 style="width:6.25in;height:1.41961in" />
 
-While transit travel is critical for many people in the CCRPC region,
-the reality is that transit carries a relatively small portion of the
-overall travel market in the region at this time. Since transit demand
-in the CCRPC region does not measurably impact roadway level-of-service,
-a decision was made to not include the mode choice model in the feedback
-loop to reduce model run time and complexity. However, the mode choice
-model is still part of the overall model, and the CCRPC model operates
-as presented in Figure 3. This model application decision does not limit
-the ability of the modeling system to adequately represent non-auto
-modes, and does not bias the model results, but it does significantly
-reduce model run time since the mode choice component takes the longest
-to run due to the nature of the complex path-building that is required.
+While transit travel is critical for many people in the CCRPC region, the reality is that transit carries a relatively small portion of the
+overall travel market in the region at this time. Since transit demand in the CCRPC region does not measurably impact roadway level-of-service, a decision was made to not include the mode choice model in the feedback loop to reduce model run time and complexity. However, the mode choice model is still part of the overall model, and the CCRPC model operates as presented in Figure 3. This model application decision does not limit the ability of the modeling system to adequately represent non-auto modes, and does not bias the model results, but it does significantly reduce model run time since the mode choice component takes the longest to run due to the nature of the complex path-building that is required.
 
-<span id="_Ref489356699" class="anchor"></span>Figure : Feedback in the
-CCRPC Model Structure
+Figure 3: Feedback in the CCRPC Model Structure
 
 <img src="assets/media/image7.png"
 style="width:6.25in;height:0.93616in" />
 
-The model is calibrated to reflect traffic conditions on an average
-weekday in September, 2015. September was chosen because it is a time
-during which public schools and colleges are in session, while seasonal
-(summer) traffic is still observed.
+The model is calibrated to reflect traffic conditions on an average weekday in September, 2015. September was chosen because it is a time during which public schools and colleges are in session, while seasonal (summer) traffic is still observed.
 
-The model is a daily model that performs hourly traffic assignments so
-as to account for both travel across an entire day and to adequately
-depict peak hour congestion. To accomplish this, the model relies on
-static time of day factors that divide the daily trips by hour for the
-purposes of assignment. This process is illustrated in Figure 4.
+The model is a daily model that performs hourly traffic assignments so as to account for both travel across an entire day and to adequately depict peak hour congestion. To accomplish this, the model relies on static time of day factors that divide the daily trips by hour for the purposes of assignment. This process is illustrated in Figure 4.
 
-<span id="_Toc491103321" class="anchor"></span>Figure : Complete CCRPC
-Model Structure
+Figure 4 : Complete CCRPC Model Structure
 
 <img src="assets/media/image8.png"
 style="width:6.25in;height:1.50775in" />
 
+
+
 ## Brief Description of Model Components
 
-While the model is a traditional 4-step model, the modeling process
-itself consists of several steps worth noting. Each of the steps below
+While the model is a traditional 4-step model, the modeling process itself consists of several steps worth noting. Each of the steps below
 will be discussed in-depth later in the document.
 
-- **Daily trip generation**, which calculates the number of person trip
-  ends generated by and attracted to each zone.
-
-- **Daily trip distribution**, which pairs the trip-ends for each zone
-  for each of six trip purposes. The result of this is a person trip
-  table for each trip type. One output of trip distribution is the
-  person trip table for home to work that can be compared to the
-  “Journey-to-Work” data provided by the Census Bureau.
-
-- **Time of day (diurnal) distribution**, which takes the daily
-  production-attraction trip matrices and converts them to
-  origin-destination matrices by time period (e.g. AM peak hour). Trips
-  by time of day were initially estimated using the CCRPC trip diary
-  survey and the NHTS in the previous version of this model (version 3).
-  For this effort, adjustments to the diurnal distribution were made
-  based on daily traffic profiles observed from over 30 automatic
-  traffic recorder (ATR) count stations across Chittenden County.
-
-- **Vehicle assignment**, the most widely used model, which locates the
-  best routes between each origin/destination pair and assigns the
-  vehicle trips accordingly. An important output of this step is the
-  number of vehicles on each roadway segment. Several other pieces of
-  data can be extracted, including operating speeds, travel times, VMT,
-  VHT, and V/C. In addition, one can configure the vehicle assignment to
-  save all the vehicle trips that use a single link in either direction
-  (select link analysis) or all the vehicle trips that originate or are
-  destined for a zone (select zone analysis).
-
-- **Highway/transit skim builder** finds the best available travel path
-  via each of the travel modes explicitly modeled, and describes the
-  attributes of the best paths for each mode (i.e. travel time, cost,
-  distance, etc.). Several modes are explicitly modeled in the CCRPC
-  model, including auto, transit modes (bus, rail) and non-motorized
-  modes. Skims are reasonable approximations of the travel time and cost
-  between all pairs of TAZs, and skims are described for each travel
-  mode. The path-finding algorithms are calibrated based on observed
-  travel paths and observed relationships between volumes and congested
-  speeds.
-
+- **Daily trip generation**, which calculates the number of person trip ends generated by and attracted to each zone.
+  
+- **Daily trip distribution**, which pairs the trip-ends for each zone for each of six trip purposes. The result of this is a person trip
+  table for each trip type. One output of trip distribution is the person trip table for home to work that can be compared to the “Journey-to-Work” data provided by the Census Bureau.
+  
+- **Time of day (diurnal) distribution**, which takes the daily production-attraction trip matrices and converts them to
+  origin-destination matrices by time period (e.g. AM peak hour). Trips by time of day were initially estimated using the CCRPC trip diary survey and the NHTS in the previous version of this model (version 3). For this effort, adjustments to the diurnal distribution were made based on daily traffic profiles observed from over 30 automatic traffic recorder (ATR) count stations across Chittenden County.
+  
+- **Vehicle assignment**, the most widely used model, which locates the best routes between each origin/destination pair and assigns the vehicle trips accordingly. An important output of this step is the number of vehicles on each roadway segment. Several other pieces of data can be extracted, including operating speeds, travel times, VMT, VHT, and V/C. In addition, one can configure the vehicle assignment to save all the vehicle trips that use a single link in either direction (select link analysis) or all the vehicle trips that originate or are destined for a zone (select zone analysis).
+  
+- **Highway/transit skim builder** finds the best available travel path via each of the travel modes explicitly modeled, and describes the attributes of the best paths for each mode (i.e. travel time, cost, distance, etc.). Several modes are explicitly modeled in the CCRPC model, including auto, transit modes (bus, rail) and non-motorized modes. Skims are reasonable approximations of the travel time and cost between all pairs of TAZs, and skims are described for each travel mode. The path-finding algorithms are calibrated based on observed travel paths and observed relationships between volumes and congested speeds.
+  
 - **Mode choice model** calculates which mode the person trips are
   likely to take based on availability and mode-specific parameters
   (e.g. time, cost, transit frequency). Mode choice provides a breakdown
@@ -641,17 +188,12 @@ internal Transportation Analysis Zones (TAZs) covering the 19
 municipalities in Chittenden County. Traffic entering and exiting the
 region does so through 17 external zones.
 
-Figure 5 shows the TAZ structure for a portion of Burlington. Figure 6
-shows the TAZ structure for the entire county.
-
-<span id="_Ref489367508" class="anchor"></span>Figure : Burlington Area
-TAZ Structure
+Figure 5 shows the TAZ structure for a portion of Burlington.
 
 <img src="assets/media/image9.png"
 style="width:4.46269in;height:5.63149in" />
 
-<span id="_Ref489367509" class="anchor"></span>Figure : Chittenden
-County TAZ Structure
+Figure  6: Chittenden County TAZ Structure
 
 <img src="assets/media/image10.png"
 style="width:5.03827in;height:6.45038in" />
@@ -659,8 +201,6 @@ style="width:5.03827in;height:6.45038in" />
 The following municipalities are included in the CCRPC Model.
 
 <table>
-<caption><p><span id="_Toc491103344" class="anchor"></span>Table :
-External Traffic Zones</p></caption>
 <colgroup>
 <col style="width: 34%" />
 <col style="width: 35%" />
@@ -699,49 +239,51 @@ External Traffic Zones</p></caption>
 </tbody>
 </table>
 
-<span id="_Toc491103344" class="anchor"></span>Table : External Traffic
-Zones
+
 
 Table 2 contains a list of TAZ numbers by town.
 
-| Town           | TAZs      | Town             | TAZs          |
-|----------------|-----------|------------------|---------------|
-| Bolton         | 1 - 5     | Milton           | 528 - 561     |
-| Buel’s Gore    | 30        | Richmond         | 586 - 600     |
-| Burlington     | 55 - 177  | Shelburne        | 625 - 648     |
-| Charlotte      | 202 - 215 | South Burlington | 673 - 759     |
-| Colchester     | 240 - 280 | St George        | 784 - 785     |
-| Essex Junction | 305 - 324 | Underhill        | 810 - 813     |
-| Essex          | 349 - 384 | Westford         | 838 - 843     |
-| Hinesburg      | 409 - 431 | Williston        | 868 - 921     |
-| Huntington     | 456 - 463 | Winooski         | 946 - 960     |
-| Jericho        | 488 - 503 | Externals        | 10001 - 10017 |
+| Town             | TAZs          |
+| ---------------- | ------------- |
+| Bolton           | 1 - 5         |
+| Buel’s Gore      | 30            |
+| Burlington       | 55 - 177      |
+| Charlotte        | 202 - 215     |
+| Colchester       | 240 - 280     |
+| Essex Junction   | 305 - 324     |
+| Essex            | 349 - 384     |
+| Hinesburg        | 409 - 431     |
+| Huntington       | 456 - 463     |
+| Jericho          | 488 - 503     |
+| Milton           | 528 - 561     |
+| Richmond         | 586 - 600     |
+| Shelburne        | 625 - 648     |
+| South Burlington | 673 - 759     |
+| St George        | 784 - 785     |
+| Underhill        | 810 - 813     |
+| Westford         | 838 - 843     |
+| Williston        | 868 - 921     |
+| Winooski         | 946 - 960     |
+| Externals        | 10001 - 10017 |
 
-<span id="_Toc491103345" class="anchor"></span>Table : Regional
-Distribution of Households by Size and Autos
+
+
+
 
 ## Network Structure
 
-Major roadways within the modeling region were selected to reliably
-represent the entire road network. There are approximately 2,500 road
-segments represented as links, of which approximately 240 are one-way
-only. There are over 1,500 TAZs and intersections represented as
-endpoints also known as nodes. Figure 7 shows a portion of the TransCAD
-network in the vicinity of the City of Burlington.
+Major roadways within the modeling region were selected to reliably represent the entire road network. There are approximately 2,500 road segments represented as links, of which approximately 240 are one-way only. There are over 1,500 TAZs and intersections represented as endpoints also known as nodes. Figure 7 shows a portion of the TransCAD network in the vicinity of the City of Burlington.
 
-<span id="_Ref489377220" class="anchor"></span>Figure : Modeled Road
-Network in Burlington
+Figure 7: Modeled Road Network in Burlington
 
 <img src="assets/media/image11.png"
 style="width:4.50286in;height:3.49419in" />
 
+
+
 ## External TAZs
 
-A trip with one origin or destination outside of the model boundary is
-considered an external trip. To assist in accounting for these types of
-trips, counts are taken at selected roads at the boundary of the model.
-These roads are termed external load links. Trips from outside the
-network are loaded into the network through these links.
+A trip with one origin or destination outside of the model boundary is considered an external trip. To assist in accounting for these types of trips, counts are taken at selected roads at the boundary of the model. These roads are termed external load links. Trips from outside the network are loaded into the network through these links.
 
 | External TAZ | Roadway            | Count Location                         | External TAZ | Roadway     | Count Location              |
 |--------------|--------------------|----------------------------------------|--------------|-------------|-----------------------------|
@@ -773,6 +315,8 @@ The housing data includes the total number of households per TAZ,
 classified by household size and auto ownership. The household size and
 auto ownership distribution assumptions come from the 2010 Census, at
 the Census Tract level.
+
+Table : Regional Distribution of Households by Size and Autos
 
 | Household Size | \# of Vehicles |     |     |     |
 |----------------|----------------|-----|-----|-----|
@@ -955,11 +499,9 @@ respondents completed 8 trips per day or fewer.
 | NHB       | 4.4      | 2.54     |
 | **Total** | **10.2** | **7.95** |
 
-<span id="_Ref489442729" class="anchor"></span>Table : Daily Internal
-Person Trip Attraction Rates by Trip Purpose per Employee
+Table : Daily Internal Person Trip Attraction Rates by Trip Purpose per Employee
 
-<span id="_Toc491103326" class="anchor"></span>Figure : Complete
-Person-Days By Number of Trips Per Day (rMove™ 2016)
+Figure : Complete Person-Days By Number of Trips Per Day (rMove™ 2016)
 
 ## Internal Trip Attractions
 
@@ -1002,26 +544,18 @@ External-to-External Trips (Passengers & Trucks)
 | Special Retail     | 0.717 | 16.736 | 9.465 | 1.776  | 0.506  | 0.13   |
 | Households         | 0     | 0.24   | 0.12  | 0.502  | 0.198  | 0      |
 
-<span id="_Toc491103353" class="anchor"></span>Table : 2015 IX and XI
-Daily Vehicle Trips, by External TAZ
+Table : 2015 IX and XI Daily Vehicle Trips, by External TAZ
+
+
 
 ## External Trips
 
-Trips are further categorized based on whether both the origin and
-destination are internal to Chittenden County, or whether the trip has
-an external trip end. External trips can be classified as
-internal-to-external (IX), external-to-internal (XI), or
-external-to-external (XX).
+Trips are further categorized based on whether both the origin and destination are internal to Chittenden County, or whether the trip has
+an external trip end. External trips can be classified as internal-to-external (IX), external-to-internal (XI), or external-to-external (XX). 
 
-Simple trip generation and distribution models cannot estimate these
-types of trips since land use data would need to be estimated for all
-areas outside the model region. Instead, to assist in estimating these
-types of trips, counts are taken at selected roads at the boundary of
-the model. These roads are termed external load links. Trips from
-outside the network are loaded into the network through these links.
+Simple trip generation and distribution models cannot estimate these types of trips since land use data would need to be estimated for all areas outside the model region. Instead, to assist in estimating these types of trips, counts are taken at selected roads at the boundary of the model. These roads are termed external load links. Trips from outside the network are loaded into the network through these links.
 
-<span id="_Toc491103327" class="anchor"></span>Figure : Location of
-External TAZs
+Figure : Location of External TAZs
 
 <img src="assets/media/image13.png"
 style="width:5.28148in;height:7.17672in" />
@@ -1126,13 +660,11 @@ differently for IX trips (produced inside the region) and XI trips
 | **10017**    | 7,944                      | 4,277                      |
 | **ALL**      | 63,579                     | 35,870                     |
 
-<span id="_Toc491103355" class="anchor"></span>Table : Percent IX and XI
-by District (NHTS versus Model)
 
-The IX internal trip generation rates vary by town and were estimated
-using the 2000 Census data. Residents of towns that are closer to the
-model boundary generate more IX trips as a percent of the residents’
-trip-making.
+
+The IX internal trip generation rates vary by town and were estimated using the 2000 Census data. Residents of towns that are closer to the model boundary generate more IX trips as a percent of the residents’ trip-making.
+
+Table : Percent IX and XI by District (NHTS versus Model)
 
 | Town             | Model%\_IX | Census % IX |
 |------------------|------------|-------------|
@@ -1155,8 +687,7 @@ trip-making.
 | Westford         | 11.4%      | 11.4%       |
 | Williston        | 7.3%       | 7.3%        |
 
-<span id="_Toc491103356" class="anchor"></span>Table : Diurnal
-Distribution %s
+Table : Diurnal Distribution %s
 
 The internal ends of the XI trips are estimated based on the total
 attractions in each TAZ, and the distance from the external station. The
@@ -1189,22 +720,18 @@ Huntington, Buel’s Gore, Hinesburg and Charlotte.
 | Inner                  | 5.9%  | 4.8%  | Inner                  | 38.7% | 36.6% |
 | Outer                  | 10.2% | 9.8%  | Outer                  | 5.2%  | 8.7%  |
 
-<span id="_Ref490682849" class="anchor"></span>Table : Link Delay
-Parameters
+Table : Link Delay Parameters
+
+
 
 ### External Trip Growth Rates
 
-Future year external trips are assumed to grow annually at a
-user-specified rate, which can vary by external TAZ. In the model, the
-external trips are initially assumed to have a growth rate of 0.5% per
-year but this rate is adjustable.
+Future year external trips are assumed to grow annually at a user-specified rate, which can vary by external TAZ. In the model, the
+external trips are initially assumed to have a growth rate of 0.5% per year but this rate is adjustable.
 
 ## Trip Balancing
 
-It is common practice in transportation modeling to balance attractions
-to productions. The rationale is that productions are more fundamental.
-More housing will produce more trips; more retail space may simply draw
-customers from other retail space.
+It is common practice in transportation modeling to balance attractions to productions. The rationale is that productions are more fundamental. More housing will produce more trips; more retail space may simply draw customers from other retail space.
 
 This practice has important implications for using the model to analyze
 regional traffic impacts emanating from changes in employment land use.
@@ -1253,23 +780,15 @@ trip generation.
 
 ## Model Structure
 
-The functional form of the distribution model is shown in Equation 1. We
-have chosen to use a doubly constrained gravity model for all trip types
-except the external trips, which are singly constrained to the external
-trip end totals. The trip distribution model is doubly constrained to
-ensure that the total productions and attractions for each zone do not
-deviate from the balanced trip generation output. To doubly-constrain a
-trip distribution, an iterative process is used that alternatively
-balances to productions by evaluating the first equation and then
+The functional form of the distribution model is shown in Equation 1. We have chosen to use a doubly constrained gravity model for all trip types except the external trips, which are singly constrained to the external trip end totals. The trip distribution model is doubly constrained to ensure that the total productions and attractions for each zone do not deviate from the balanced trip generation output. To doubly-constrain a trip distribution, an iterative process is used that alternatively balances to productions by evaluating the first equation and then
 balances to attractions by evaluating the second equation. The iterative
 process is complete when either the convergence criterion is met (error
 of 0.01) or the maximum number of iterations is reached (30). This
 function is applied separately for each of the trip types.
 
-<span id="_Ref490658963" class="anchor"></span>Equation : Gravity Model
-Functional Form
+Equation : Gravity Model Functional Form
 
-![](assets/media/image14.emf)
+![](assets\media\gravitymodelform.png)
 
 ## Data Sources
 
@@ -1812,8 +1331,11 @@ data.
 
 ## Parameters
 
-The mode choice model parameters are shown in Equation 5 and
-![](assets/media/image25.emf)
+The mode choice model parameters are shown in Equation 5 and[ image ]
+
+
+
+
 
 Equation 6 below.
 
@@ -1863,8 +1385,11 @@ transit network file, and are reported in Table 19.
 | Max Xfer Walk Time          | 20             | Minutes   |
 | Max Total Time              | 240            | Minutes   |
 
-<span id="_Toc491103361" class="anchor"></span>Table : Michigan DOT
-Volume-based Calibration Standards
+
+
+Table : Michigan DOT Volume-based Calibration Standards
+
+
 
 # Travel Model Validation
 
@@ -1892,8 +1417,7 @@ correlation, and an r value of -1 would indicate a perfect inverse
 correlation. The value of r can be estimated using the following
 formula.
 
-<span id="_Toc491103372" class="anchor"></span>Equation : COEFFICIENT of
-Correlation
+Equation : COEFFICIENT of Correlation
 
 <img src="assets/media/image28.wmf"
 style="width:2.75694in;height:0.67361in" />
@@ -1915,8 +1439,7 @@ is always higher than the actual average network error because of the
 weighting scheme. This is discussed in the following section on absolute
 error. RMSE is calculated as:
 
-<span id="_Toc491103373" class="anchor"></span>Equation : Root Mean
-Squared Error
+Equation : Root Mean Squared Error
 
 <img src="assets/media/image29.wmf"
 style="width:1.75694in;height:0.84028in" />
@@ -2028,17 +1551,9 @@ Mode Shares (2009 NHTS versus Model)
 
 ## Transit Assignment
 
-The CCRPC Version 4 travel model also includes a transit assignment
-procedure which loads the hourly transit trip matrices onto the transit
-route system. The bus assignment provides a link-by-link assignment of
-transit flows allowing the analyst to query total transit flow on a link
-or for any individual route. The transit assignment also saves the walk
-access/egress paths which allows the analyst to examine the patterns of
-pedestrian travel needed to access the bus network.
+The CCRPC Version 4 travel model also includes a transit assignment procedure which loads the hourly transit trip matrices onto the transit route system. The bus assignment provides a link-by-link assignment of transit flows allowing the analyst to query total transit flow on a link or for any individual route. The transit assignment also saves the walk access/egress paths which allows the analyst to examine the patterns of pedestrian travel needed to access the bus network.
 
-The transit assignment was not validated for this version due to absence
-of available boarding data from CCTA. With the data available, the
-transit assignment can be validated by comparing model estimated route
+The transit assignment was not validated for this version due to absence of available boarding data from CCTA. With the data available, the transit assignment can be validated by comparing model estimated route
 boardings (on’s & off’s) to actual observed counted route ridership. For
 the validation of the transit assignment results produced by the model,
 route boardings can be compared against annual CCTA ridership data.
@@ -2046,11 +1561,11 @@ Annual CCTA ridership by route should be converted to daily boardings
 using a factor of 280 for comparison. Figure 21 below shows the daily
 model boardings from transit assignment by route.
 
-<span id="_Ref491097926" class="anchor"></span>Figure : Transit
-Assignment
+Figure : Transit Assignment
 
-<img src="assets/media/image32.emf"
-style="width:6.5in;height:3.9in" />
+![](assets\media\transit_assignment.png)
+
+
 
 ## Survey Comparisons
 
@@ -2105,11 +1620,9 @@ Frequency Distribution (NHTS versus Model)
 <img src="assets/media/image34.emf"
 style="width:4.99028in;height:2.99028in" />
 
-<span id="_Ref490835260" class="anchor"></span>Figure : NHB Trip Length
-Frequency Distribution (NHTS versus Model)
+Figure : NHB Trip Length Frequency Distribution (NHTS versus Model)
 
-<img src="assets/media/image35.emf"
-style="width:4.99028in;height:2.99028in" />
+![](assets\media\nhb_trip_length.png)
 
 The NHTS data includes only 18 weekday trips in Chittenden County which
 use a transit mode. Therefore the survey provides little valuable
@@ -2173,30 +1686,22 @@ TAZ based on who portion of its space is current build out.
 <span id="_Toc491103376" class="anchor"></span>Equation : Generalized
 Attractiveness
 
-![](assets/media/image36.wmf)
+![](assets\media\LUAM_generalized_attractiveness.png)
 
-The actual available percentage is simply 1-existing/available. This
-percentage is modified to create a curve that decreases the impact of
-TAZs with very large available land percentages. The equation for
-modified percentage of available land is:
+The actual available percentage is simply 1-existing/available. This percentage is modified to create a curve that decreases the impact of TAZs with very large available land percentages. The equation for modified percentage of available land is:
 
-<span id="_Toc491103377" class="anchor"></span>Equation : Modified
-Percentage
+Equation : Modified Percentage
 
 ![](assets/media/image37.wmf)
 
 The Intercept and Exponent were estimated based on historical growth.
 The MP calculation results in the curve shown below:
 
-<span id="_Toc491103341" class="anchor"></span>Figure : Modified %
-Available Developable Land
+Figure : Modified % Available Developable Land
 
-The generalized attractiveness (GATTn) is essentially a weighted
-attractiveness of each TAZ for households and employment. The final step
-is simply to allocate the control totals proportional to the generalized
-accessibility.
+The generalized attractiveness (GATTn) is essentially a weighted attractiveness of each TAZ for households and employment. The final step is simply to allocate the control totals proportional to the generalized accessibility.
 
-<span id="_Toc491103378" class="anchor"></span>Equation : Land Use
+Equation : Land Use
 Allocation
 
 ![](assets/media/image38.wmf)
