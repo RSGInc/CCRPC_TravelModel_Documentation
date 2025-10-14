@@ -1,331 +1,432 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
-      <link rel="shortcut icon" href="img/favicon.ico" />
-    <title>CCRPC Travel Demand Model Documentation</title>
-    <link rel="stylesheet" href="css/theme.css" />
-    <link rel="stylesheet" href="css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-    
-      <script>
-        // Current page data
-        var mkdocs_page_name = "Home";
-        var mkdocs_page_input_path = "index.md";
-        var mkdocs_page_url = null;
-      </script>
-    
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.min.js"></script>
-    <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>CCRPC Travel Demand Model Documentation</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
-      <script>hljs.highlightAll();</script> 
-</head>
+        <script>hljs.highlightAll();</script> 
+    </head>
 
-<body class="wy-body-for-nav" role="document">
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">CCRPC Travel Demand Model Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-          <a href="." class="icon icon-home"> CCRPC Travel Demand Model Documentation
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="." class="nav-link active" aria-current="page">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="userguide/" class="nav-link">User Guide</a>
+                            </li>
+                        </ul>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Home</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#about-ccrpc">About CCRPC</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#about-modeling-requirements">About Modeling Requirements</a>
-    </li>
-    </ul>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="userguide/">User Guide</a>
-                </li>
-              </ul>
-      </div>
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="userguide/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
     </div>
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href=".">CCRPC Travel Demand Model Documentation</a>
-        
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Home</li>
-    <li class="wy-breadcrumbs-aside">
-    </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <p><span id="_Ref489376902" class="anchor"></span>Table : List of TAZs by Town</p>
-<p><img src="assets/media/image2.jpeg"                                                                 <br />                                                                                              style="width:5.48101in;height:2.09827in"                                                                    <br />                                                                                              alt="A large body of water with a city in the background Description generated with very high confidence" /></p>
-<p><a href="#introduction">1.0 Introduction [1](#introduction)</a></p>
-<p><a href="#about-ccrpc">1.1 | About CCRPC [1](#about-ccrpc)</a></p>
-<p><a href="#about-modeling-requirements">1.2 | About Modeling Requirements
-[1](#about-modeling-requirements)</a></p>
-<p><a href="#ccrpc-model-overview">2.0 CCRPC Model Overview
-[2](#ccrpc-model-overview)</a></p>
-<p><a href="#conceptual-overview-of-model-structure">2.1 | Conceptual Overview of Model Structure
-[2](#conceptual-overview-of-model-structure)</a></p>
-<p><a href="#brief-description-of-model-components">2.2 | Brief Description of Model Components
-[4](#brief-description-of-model-components)</a></p>
-<p><a href="#network-and-zonal-structure">3.0 Network and Zonal Structure
-[5](#network-and-zonal-structure)</a></p>
-<p><a href="#taz-structure">3.1 | TAZ Structure [5](#taz-structure)</a></p>
-<p><a href="#network-structure">3.2 | Network Structure [7](#network-structure)</a></p>
-<p><a href="#external-tazs">3.3 | External TAZs [8](#external-tazs)</a></p>
-<p><a href="#socioeconomic-data">4.0 Socioeconomic Data [9](#socioeconomic-data)</a></p>
-<p><a href="#households">4.1 | Households [9](#households)</a></p>
-<p><a href="#employment">4.2 | Employment [9](#employment)</a></p>
-<p><a href="#trip-generation">5.0 Trip Generation [11](#trip-generation)</a></p>
-<p><a href="#model-structure">5.1 | Model Structure [11](#model-structure)</a></p>
-<p><a href="#trip-production-rates">5.2 | Trip Production Rates
-[12](#trip-production-rates)</a></p>
-<p><a href="#internal-trip-attractions">5.3 | Internal Trip Attractions
-[14](#internal-trip-attractions)</a></p>
-<p><a href="#external-trips">5.4 | External Trips [15](#external-trips)</a></p>
-<p><a href="#external-travel-survey">External Travel Survey
-[17](#external-travel-survey)</a></p>
-<p><a href="#external-external-trip-base-year-assumptions">External-External Trip Base-Year Assumptions
-[18](#external-external-trip-base-year-assumptions)</a></p>
-<p><a href="#ixxi-trip-base-year-assumptions">IXXI Trip Base-Year Assumptions
-[19](#ixxi-trip-base-year-assumptions)</a></p>
-<p><a href="#external-trip-growth-rates">External Trip Growth Rates
-[21](#external-trip-growth-rates)</a></p>
-<p><a href="#trip-balancing">5.5 | Trip Balancing [21](#trip-balancing)</a></p>
-<p><a href="#trip-distribution">6.0 Trip Distribution [22](#trip-distribution)</a></p>
-<p><a href="#model-structure-1">6.1 | Model Structure [22](#model-structure-1)</a></p>
-<p><a href="#data-sources">6.2 | Data Sources [22](#data-sources)</a></p>
-<p><a href="#parameter-estimation">6.3 | Parameter Estimation
-[23](#parameter-estimation)</a></p>
-<p><a href="#time-of-day-distribution">7.0 Time-of-Day Distribution
-[24](#time-of-day-distribution)</a></p>
-<p><a href="#model-structure-2">7.1 | Model Structure [24](#model-structure-2)</a></p>
-<p><a href="#data-sources-1">7.2 | Data Sources [24](#data-sources-1)</a></p>
-<p><a href="#parameter-estimation-1">7.3 | Parameter Estimation
-[24](#parameter-estimation-1)</a></p>
-<p><a href="#vehicle-assignment">8.0 Vehicle Assignment [27](#vehicle-assignment)</a></p>
-<p><a href="#model-structure-3">8.1 | Model Structure [27](#model-structure-3)</a></p>
-<p><a href="#data-sources-2">8.2 | Data Sources [27](#data-sources-2)</a></p>
-<p><a href="#parameter-estimation-2">8.3 | Parameter Estimation
-[28](#parameter-estimation-2)</a></p>
-<p><a href="#allocation-of-intersection-capacity-to-links">8.4 | Allocation of Intersection Capacity to Links
-[30](#allocation-of-intersection-capacity-to-links)</a></p>
-<p><a href="#auto-occupancy">8.5 | Auto Occupancy [34](#auto-occupancy)</a></p>
-<p><a href="#mode-choice">9.0 Mode Choice [35](#mode-choice)</a></p>
-<p><a href="#model-structure-4">9.1 | Model Structure [35](#model-structure-4)</a></p>
-<p><a href="#pre-distribution-non-motorized-mode-choice-model">Pre-distribution Non-motorized Mode Choice Model
-[36](#pre-distribution-non-motorized-mode-choice-model)</a></p>
-<p><a href="#drive-vs.-carpool">“Drive” vs. “Carpool” [38](#drive-vs.-carpool)</a></p>
-<p><a href="#transit-pathfinding-and-assignment">Transit Pathfinding and Assignment
-[38](#transit-pathfinding-and-assignment)</a></p>
-<p><a href="#data-sources-3">9.2 | Data Sources [38](#data-sources-3)</a></p>
-<p><a href="#parameters">9.3 | Parameters [38](#parameters)</a></p>
-<p><a href="#travel-model-validation">10.0 Travel Model Validation
-[41](#travel-model-validation)</a></p>
-<p><a href="#traffic-assignment">10.1 | Traffic Assignment
-[41](#traffic-assignment)</a></p>
-<p><a href="#coefficient-of-correlation">Coefficient of Correlation
-[41](#coefficient-of-correlation)</a></p>
-<p><a href="#root-mean-squared-error">Root Mean Squared Error
-[41](#root-mean-squared-error)</a></p>
-<p><a href="#absolute-error">Absolute Error [42](#absolute-error)</a></p>
-<p><a href="#sum-of-differences">Sum of Differences [42](#sum-of-differences)</a></p>
-<p><a href="#comparison-to-calibration-guidelines">Comparison to Calibration Guidelines
-[42](#comparison-to-calibration-guidelines)</a></p>
-<p><a href="#comparison-to-hpms-daily-vmt">Comparison to HPMS Daily VMT
-[44](#comparison-to-hpms-daily-vmt)</a></p>
-<p><a href="#transit-assignment">10.2 | Transit Assignment
-[44](#transit-assignment)</a></p>
-<p><a href="#survey-comparisons">10.3 | Survey Comparisons
-[45](#survey-comparisons)</a></p>
-<p><a href="#land-use-input-files">11.0 Land Use Input Files
-[49](#land-use-input-files)</a></p>
-<p><a href="#model-structure-5">11.1 | Model Structure [49](#model-structure-5)</a></p>
-<p><a href="#guidelines-for-working-with-complex-models">12.0 Guidelines for Working with Complex Models
-[51](#guidelines-for-working-with-complex-models)</a></p>
-<p><a href="#transportation-improvements">12.1 | Transportation Improvements
-[51](#transportation-improvements)</a></p>
-<p><a href="#changes-in-land-use-activity">12.2 | Changes in Land-Use Activity
-[52](#changes-in-land-use-activity)</a></p>
-<p><a href="#demand-management-strategies">12.3 | Demand Management Strategies
-[53](#demand-management-strategies)</a></p>
-<p><a href="#parking-pricing">Parking Pricing [54](#parking-pricing)</a></p>
-<p><a href="#sov-reduction-strategies">SOV Reduction Strategies
-[54](#sov-reduction-strategies)</a></p>
-<p><a href="#changes-in-transit-operations">Changes in Transit Operations
-[54](#changes-in-transit-operations)</a></p>
-<p><a href="#road-pricing-and-hov-lanes">Road Pricing and HOV Lanes
-[54](#road-pricing-and-hov-lanes)</a></p>
-<p><a href="#model-versions">13.0 Model Versions [55](#model-versions)</a></p>
-<p><a href="#model-versions-1">13.1 | Model Versions [55](#model-versions-1)</a></p>
-<p><a href="#v-1.0.0-transcad-4.7-build-267">V 1.0.0 (TransCAD 4.7 build 267)
-[55](#v-1.0.0-transcad-4.7-build-267)</a></p>
-<p><a href="#v-1.1.0-transcad-4.7-build-267">V 1.1.0 (TransCAD 4.7 build 267)
-[55](#v-1.1.0-transcad-4.7-build-267)</a></p>
-<p><a href="#v-2.1.0-transcad-4.7-build-267">V 2.1.0 (TransCAD 4.7 build 267)
-[55](#v-2.1.0-transcad-4.7-build-267)</a></p>
-<p><a href="#v-2.1.1-transcad-4.7-build-267">V 2.1.1 (TransCAD 4.7 build 267)
-[55](#v-2.1.1-transcad-4.7-build-267)</a></p>
-<p><a href="#v-2.1.2-transcad-4.7-build-267">V 2.1.2 (TransCAD 4.7 build 267)
-[55](#v-2.1.2-transcad-4.7-build-267)</a></p>
-<p><a href="#v-2.1.3-12122005-transcad-4.7-build-267">V 2.1.3 – 12/12/2005 (TransCAD 4.7 build 267)
-[55](#v-2.1.3-12122005-transcad-4.7-build-267)</a></p>
-<p><a href="#v-2.2.0-1172006-transcad-4.7-build-267">V 2.2.0 – 1/17/2006 (TransCAD 4.7 build 267)
-[55](#v-2.2.0-1172006-transcad-4.7-build-267)</a></p>
-<p><a href="#v-2.2.1-1252006-transcad-4.7-build-267">V 2.2.1 – 1/25/2006 (TransCAD 4.7 build 267)
-[56](#v-2.2.1-1252006-transcad-4.7-build-267)</a></p>
-<p><a href="#v-2.2.2-3302006-transcad-4.7-build-267">V 2.2.2 – 3/30/2006 (TransCAD 4.7 build 267)
-[56](#v-2.2.2-3302006-transcad-4.7-build-267)</a></p>
-<p><a href="#v-2.2.3-442006-transcad-4.7-build-267">V 2.2.3 – 4/4/2006 (TransCAD 4.7 build 267)
-[57](#v-2.2.3-442006-transcad-4.7-build-267)</a></p>
-<p><a href="#v-2.2.4-5102006-transcad-4.7-build-267">V 2.2.4 – 5/10/2006 (TransCAD 4.7 build 267)
-[57](#v-2.2.4-5102006-transcad-4.7-build-267)</a></p>
-<p><a href="#v-2.2.5-8282006-transcad-4.7-build-267">V 2.2.5 – 8/28/2006 (TransCAD 4.7 build 267)
-[57](#v-2.2.5-8282006-transcad-4.7-build-267)</a></p>
-<p><a href="#v-2.3.0-1222008-transcad-4.8-build-500">V 2.3.0 – 1/22/2008 (TransCAD 4.8 build 500)
-[58](#v-2.3.0-1222008-transcad-4.8-build-500)</a></p>
-<p><a href="#v-3.0.0-3302009-transcad-5.0-build-1545">V 3.0.0 – 3/30/2009 (TransCAD 5.0 build 1545)
-[58](#v-3.0.0-3302009-transcad-5.0-build-1545)</a></p>
-<p><a href="#v-3.1-09172010-transcad-5.0-build-1545">V 3.1 – 09/17/2010 (TransCAD 5.0 build 1545)
-[58](#v-3.1-09172010-transcad-5.0-build-1545)</a></p>
-<p><a href="#v-3.2-3-05232012-transcad-5.0-build-1545">V 3.2-3 – 05/23/2012 (TransCAD 5.0 build 1545)
-[59](#v-3.2-3-05232012-transcad-5.0-build-1545)</a></p>
-<p><a href="#v-4.0-0-08212017-transcad-7.0-build-12365">V 4.0-0 – 08/21/2017 (TransCAD 7.0 build 12365)
-[59](#v-4.0-0-08212017-transcad-7.0-build-12365)</a></p>
-<p><strong>List of Figures</strong></p>
-<p><a href="#_Ref489356643">Figure 1: 4-Step Model Concept [2](#_Ref489356643)</a></p>
-<p><a href="#_Ref489356654">Figure 2: 4-Step Model Concept with Feedback
-[3](#_Ref489356654)</a></p>
-<p><a href="#_Ref489356699">Figure 3: Feedback in the CCRPC Model Structure
-[3](#_Ref489356699)</a></p>
-<p><a href="#_Toc491103321">Figure 4: Complete CCRPC Model Structure
-[4](#_Toc491103321)</a></p>
-<p><a href="#_Ref489367508">Figure 5: Burlington Area TAZ Structure
-[5](#_Ref489367508)</a></p>
-<p><a href="#_Ref489367509">Figure 6: Chittenden County TAZ Structure
-[6](#_Ref489367509)</a></p>
-<p><a href="#_Ref489377220">Figure 7: Modeled Road Network in Burlington
-[7](#_Ref489377220)</a></p>
-<p><a href="#_Ref489378885">Figure 8: Employment by SIC and Sector Categories with Trip Attraction
-Rates [10](#_Ref489378885)</a></p>
-<p><a href="#_Toc491103326">Figure 9: Complete Person-Days By Number of Trips Per Day (rMove™ 2016)
-[14](#_Toc491103326)</a></p>
-<p><a href="#_Toc491103327">Figure 10: Location of External TAZs
-[16](#_Toc491103327)</a></p>
-<p><a href="#_Ref490659563">Figure 11: Friction Factor Plots [23](#_Ref490659563)</a></p>
-<p><a href="#_Ref490662340">Figure 12: Diurnal Distribution for Passenger Trips
-[24](#_Ref490662340)</a></p>
-<p><a href="#_Ref490662362">Figure 13: Diurnal Distribution for Truck and External Trips
-[25](#_Ref490662362)</a></p>
-<p><a href="#_Ref490682871">Figure 14: Volume-Delay Curves for Principal Arterials
-[30](#_Ref490682871)</a></p>
-<p><a href="#_Ref491110735">Figure 15: Node Capacity Assumptions for Intersections
-[31](#_Ref491110735)</a></p>
-<p><a href="#_Toc491103332">Figure 16: Sample Allocation of Node Capacity for Signalized
-Intersection [33](#_Toc491103332)</a></p>
-<p><a href="#_Ref490685008">Figure 17: Sample Allocation of Node Capacity for Un-signalized
-Intersection [34](#_Ref490685008)</a></p>
-<p><a href="#_Toc491103334">Figure 18: Mode Choice Model Nesting Structure
-[36](#_Toc491103334)</a></p>
-<p><a href="#_Ref491097681">Figure 19: Walkable Zones [37](#_Ref491097681)</a></p>
-<p><a href="#_Toc491103336">Figure 20: Comparison of Individual Link Level Error using MDOT
-Criteria (Daily comparison) [43](#_Toc491103336)</a></p>
-<p><a href="#_Ref491097926">Figure 21: Transit Assignment [45](#_Ref491097926)</a></p>
-<p><a href="#_Ref490835241">Figure 22: HBW Trip Length Frequency Distribution (NHTS versus Model)
-[46](#_Ref490835241)</a></p>
-<p><a href="#_Ref490835253">Figure 23: HBO Trip Length Frequency Distribution (NHTS versus Model)
-[47](#_Ref490835253)</a></p>
-<p><a href="#_Ref490835260">Figure 24: NHB Trip Length Frequency Distribution (NHTS versus Model)
-[47](#_Ref490835260)</a></p>
-<p><a href="#_Toc491103341">Figure 25: Modified % Available Developable Land
-[50](#_Toc491103341)</a></p>
-<p><strong>List of Tables</strong></p>
-<p><a href="#_Ref491957006">Table 1: List of Municipalities in the CCRPC Model
-[6](#_Ref491957006)</a></p>
-<p><a href="#_Ref489376902">Table 2: List of TAZs by Town [7](#_Ref489376902)</a></p>
-<p><a href="#_Toc491103344">Table 3: External Traffic Zones [8](#_Toc491103344)</a></p>
-<p><a href="#_Toc491103345">Table 4: Regional Distribution of Households by Size and Autos
-[9](#_Toc491103345)</a></p>
-<p><a href="#_Ref489429618">Table 5: Trip Purpose Definitions [11](#_Ref489429618)</a></p>
-<p><a href="#_Ref489433593">Table 6: HBW, HBO, and NHB Person Trip Production Rates
-[12](#_Ref489433593)</a></p>
-<p><a href="#_Ref489434397">Table 7: Total Trips by Trip Purpose
-[13](#_Ref489434397)</a></p>
-<p><a href="#_Toc491103349">Table 8: Total Trips per Household by Purpose (NHTS versus Model)
-[13](#_Toc491103349)</a></p>
-<p><a href="#_Toc491103350">Table 9: Daily Internal Person Trip Attraction Rates
-[14](#_Toc491103350)</a></p>
-<p><a href="#_Ref489442729">Table 10: Daily Internal Person Trip Attraction Rates by Trip Purpose
-per Employee [14](#_Ref489442729)</a></p>
-<p><a href="#_Toc491103352">Table 11: External-to-External Trips (Passengers &amp; Trucks)
-[18](#_Toc491103352)</a></p>
-<p><a href="#_Toc491103353">Table 12: 2015 IX and XI Daily Vehicle Trips, by External TAZ
-[19](#_Toc491103353)</a></p>
-<p><a href="#_Toc491103354">Table 13: Internal-to-External Trip Assumptions (% of internal
-productions) [20](#_Toc491103354)</a></p>
-<p><a href="#_Toc491103355">Table 14: Percent IX and XI by District (NHTS versus Model)
-[21](#_Toc491103355)</a></p>
-<p><a href="#_Toc491103356">Table 15: Diurnal Distribution %s [26](#_Toc491103356)</a></p>
-<p><a href="#_Ref490682849">Table 16: Link Delay Parameters [29](#_Ref490682849)</a></p>
-<p><a href="#_Toc492568564">Table 17: Node Class Definitions [31](#_Toc492568564)</a></p>
-<p><a href="#_Toc492568565">Table 18: Auto Occupancy Factors [34](#_Toc492568565)</a></p>
-<p><a href="#_Ref490742002">Table 19: Transit Pathfinding Parameters
-[39](#_Ref490742002)</a></p>
-<p><a href="#_Ref490748713">Table 20: FHWA Assignment Calibration Guidelines
-[42](#_Ref490748713)</a></p>
-<p><a href="#_Toc491103361">Table 21: Michigan DOT Volume-based Calibration Standards
-[43](#_Toc491103361)</a></p>
-<p><a href="#_Toc491103362">Table 22: Comparison of Daily Vehicle Miles of Travel (HPMS versus
-Model) [44](#_Toc491103362)</a></p>
-<p><a href="#_Ref490816485">Table 23: Average Trip Distance by Purpose (NHTS versus Model)
-[46](#_Ref490816485)</a></p>
-<p><a href="#_Ref490836468">Table 24: Comparison of Mode Shares (2009 NHTS versus Model)
-[48](#_Ref490836468)</a></p>
-<p><strong>List of Equations</strong></p>
-<p><a href="#_Ref490658963">Equation 1: Gravity Model Functional Form
-[22](#_Ref490658963)</a></p>
-<p><a href="#_Ref490659541">Equation 2: Friction Factor Functional Form
-[23](#_Ref490659541)</a></p>
-<p><a href="#_Ref490682787">Equation 3: Logit-Based Volume Delay Function
-[28](#_Ref490682787)</a></p>
-<p><a href="#_Ref490738200">Equation 4: Example of Logit Model
-[35](#_Ref490738200)</a></p>
-<p><a href="#_Ref490741731">Equation 5: Pre-distribution Mode Choice Model Utility Equations
-[39](#_Ref490741731)</a></p>
-<p><a href="#_Toc491103371">Equation 6: Post-Distribution Mode Choice Model Utility Equations
-[39](#_Toc491103371)</a></p>
-<p><a href="#_Toc491103372">Equation 7: COEFFICIENT of Correlation
-[41](#_Toc491103372)</a></p>
-<p><a href="#_Toc491103373">Equation 8: Root Mean Squared Error
-[41](#_Toc491103373)</a></p>
-<p><a href="#_Toc491103374">Equation 9: Absolute Error [42](#_Toc491103374)</a></p>
-<p><a href="#_Toc491103375">Equation 10: Sum of Differences [42](#_Toc491103375)</a></p>
-<p><a href="#_Toc491103376">Equation 11: Generalized Attractiveness
-[49](#_Toc491103376)</a></p>
-<p><a href="#_Toc491103377">Equation 12: Modified Percentage [49](#_Toc491103377)</a></p>
-<p><a href="#_Toc491103378">Equation 13: Land Use Allocation [50](#_Toc491103378)</a></p>
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#about-ccrpc" class="nav-link">About CCRPC</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#about-modeling-requirements" class="nav-link">About Modeling Requirements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#ccrpc-model-overview" class="nav-link">CCRPC Model Overview</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#conceptual-overview-of-model-structure" class="nav-link">Conceptual Overview of Model Structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#brief-description-of-model-components" class="nav-link">Brief Description of Model Components</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#network-and-zonal-structure" class="nav-link">Network and Zonal Structure</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#taz-structure" class="nav-link">TAZ Structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#network-structure" class="nav-link">Network Structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#external-tazs" class="nav-link">External TAZs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#socioeconomic-data" class="nav-link">Socioeconomic Data</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#households" class="nav-link">Households</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#employment" class="nav-link">Employment</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#trip-generation" class="nav-link">Trip Generation</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#model-structure" class="nav-link">Model Structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#trip-production-rates" class="nav-link">Trip Production Rates</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#internal-trip-attractions" class="nav-link">Internal Trip Attractions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#external-trips" class="nav-link">External Trips</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="3"><a href="#external-travel-survey" class="nav-link">External Travel Survey</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#external-external-trip-base-year-assumptions" class="nav-link">External-External Trip Base-Year Assumptions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#ixxi-trip-base-year-assumptions" class="nav-link">IXXI Trip Base-Year Assumptions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#external-trip-growth-rates" class="nav-link">External Trip Growth Rates</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#trip-balancing" class="nav-link">Trip Balancing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#trip-distribution" class="nav-link">Trip Distribution</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#model-structure_1" class="nav-link">Model Structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#data-sources" class="nav-link">Data Sources</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#parameter-estimation" class="nav-link">Parameter Estimation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#time-of-day-distribution" class="nav-link">Time-of-Day Distribution</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#model-structure_2" class="nav-link">Model Structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#data-sources_1" class="nav-link">Data Sources</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#parameter-estimation_1" class="nav-link">Parameter Estimation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#vehicle-assignment" class="nav-link">Vehicle Assignment</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#model-structure_3" class="nav-link">Model Structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#data-sources_2" class="nav-link">Data Sources</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#parameter-estimation_2" class="nav-link">Parameter Estimation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#allocation-of-intersection-capacity-to-links" class="nav-link">Allocation of Intersection Capacity to Links</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#auto-occupancy" class="nav-link">Auto Occupancy</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#mode-choice" class="nav-link">Mode Choice</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#model-structure_4" class="nav-link">Model Structure</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="3"><a href="#pre-distribution-non-motorized-mode-choice-model" class="nav-link">Pre-distribution Non-motorized Mode Choice Model</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#drive-vs-carpool" class="nav-link">“Drive” vs. “Carpool”</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#transit-pathfinding-and-assignment" class="nav-link">Transit Pathfinding and Assignment</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#data-sources_3" class="nav-link">Data Sources</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#parameters" class="nav-link">Parameters</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#travel-model-validation" class="nav-link">Travel Model Validation</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#traffic-assignment" class="nav-link">Traffic Assignment</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="3"><a href="#coefficient-of-correlation" class="nav-link">Coefficient of Correlation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#root-mean-squared-error" class="nav-link">Root Mean Squared Error</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#absolute-error" class="nav-link">Absolute Error</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#sum-of-differences" class="nav-link">Sum of Differences</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#comparison-to-calibration-guidelines" class="nav-link">Comparison to Calibration Guidelines</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#comparison-to-hpms-daily-vmt" class="nav-link">Comparison to HPMS Daily VMT</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#transit-assignment" class="nav-link">Transit Assignment</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#survey-comparisons" class="nav-link">Survey Comparisons</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#land-use-input-files" class="nav-link">Land Use Input Files</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#model-structure_5" class="nav-link">Model Structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#guidelines-for-working-with-complex-models" class="nav-link">Guidelines for Working with Complex Models</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#transportation-improvements" class="nav-link">Transportation Improvements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#changes-in-land-use-activity" class="nav-link">Changes in Land-Use Activity</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#demand-management-strategies" class="nav-link">Demand Management Strategies</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="3"><a href="#parking-pricing" class="nav-link">Parking Pricing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#sov-reduction-strategies" class="nav-link">SOV Reduction Strategies</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#changes-in-transit-operations" class="nav-link">Changes in Transit Operations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#road-pricing-and-hov-lanes" class="nav-link">Road Pricing and HOV Lanes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#model-versions" class="nav-link">Model Versions</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#model-versions_1" class="nav-link">Model Versions</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="3"><a href="#v-100-transcad-47-build-267" class="nav-link">V 1.0.0 (TransCAD 4.7 build 267)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#v-110-transcad-47-build-267" class="nav-link">V 1.1.0 (TransCAD 4.7 build 267)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#v-210-transcad-47-build-267" class="nav-link">V 2.1.0 (TransCAD 4.7 build 267)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#v-211-transcad-47-build-267" class="nav-link">V 2.1.1 (TransCAD 4.7 build 267)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#v-212-transcad-47-build-267" class="nav-link">V 2.1.2 (TransCAD 4.7 build 267)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#v-213-12122005-transcad-47-build-267" class="nav-link">V 2.1.3 – 12/12/2005 (TransCAD 4.7 build 267)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#v-220-1172006-transcad-47-build-267" class="nav-link">V 2.2.0 – 1/17/2006 (TransCAD 4.7 build 267)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#v-221-1252006-transcad-47-build-267" class="nav-link">V 2.2.1 – 1/25/2006 (TransCAD 4.7 build 267)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#v-222-3302006-transcad-47-build-267" class="nav-link">V 2.2.2 – 3/30/2006 (TransCAD 4.7 build 267)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#v-223-442006-transcad-47-build-267" class="nav-link">V 2.2.3 – 4/4/2006 (TransCAD 4.7 build 267)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#v-224-5102006-transcad-47-build-267" class="nav-link">V 2.2.4 – 5/10/2006 (TransCAD 4.7 build 267)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#v-225-8282006-transcad-47-build-267" class="nav-link">V 2.2.5 – 8/28/2006 (TransCAD 4.7 build 267)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#v-230-1222008-transcad-48-build-500" class="nav-link">V 2.3.0 – 1/22/2008 (TransCAD 4.8 build 500)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#v-300-3302009-transcad-50-build-1545" class="nav-link">V 3.0.0 – 3/30/2009 (TransCAD 5.0 build 1545)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#v-31-09172010-transcad-50-build-1545" class="nav-link">V 3.1 – 09/17/2010 (TransCAD 5.0 build 1545)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#v-32-3-05232012-transcad-50-build-1545" class="nav-link">V 3.2-3 – 05/23/2012 (TransCAD 5.0 build 1545)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="3"><a href="#v-40-0-08212017-transcad-70-build-12365" class="nav-link">V 4.0-0 – 08/21/2017 (TransCAD 7.0 build 12365)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
 <h1 id="introduction">Introduction</h1>
 <h2 id="about-ccrpc">About CCRPC</h2>
 <p>The U.S. Department of Transportation requires every metropolitan area
@@ -445,100 +546,45 @@ destinations in the distribution model. In the next step, the person
 trips are split into each respective mode (e.g. auto, bus). Finally, the
 vehicle trips are assigned to the highway network in the assignment
 model.</p>
-<p><span id="_Ref489356643" class="anchor"></span>Figure : 4-Step Model
-Concept</p>
+<p>Figure 1: 4-Step Model Concept</p>
 <p><img src="assets/media/image5.png"
 style="width:6.25in;height:0.50681in" /></p>
-<p>The model has an important feedback loop that has been added in Figure
-2. Accessibility, which is a measure of the relative ease of travel, is
-calculated based on outputs from the assignment model, which is also an
-important determinant of trip distribution. Simply put, the decisions
-individuals make about where and how far to travel are a function of
-congestion levels and travel times. Therefore, it is customary to
-iterate between the trip distribution and assignment models in order to
-reach a convergent solution. The iteration loop in Figure 2 occurs
-within a given simulation year.</p>
-<p><span id="_Ref489356654" class="anchor"></span>Figure : 4-Step Model
-Concept with Feedback</p>
+<p>The model has an important feedback loop that has been added in the following figure. </p>
+<p>Accessibility, which is a measure of the relative ease of travel, is calculated based on outputs from the assignment model, which is also an important determinant of trip distribution. Simply put, the decisions individuals make about where and how far to travel are a function of congestion levels and travel times. Therefore, it is customary to iterate between the trip distribution and assignment models in order to
+reach a convergent solution. The iteration loop in Figure 2 occurs within a given simulation year.</p>
+<p>Figure 1 : 4-Step Model Concept with Feedback</p>
 <p><img src="assets/media/image6.png"
 style="width:6.25in;height:1.41961in" /></p>
-<p>While transit travel is critical for many people in the CCRPC region,
-the reality is that transit carries a relatively small portion of the
-overall travel market in the region at this time. Since transit demand
-in the CCRPC region does not measurably impact roadway level-of-service,
-a decision was made to not include the mode choice model in the feedback
-loop to reduce model run time and complexity. However, the mode choice
-model is still part of the overall model, and the CCRPC model operates
-as presented in Figure 3. This model application decision does not limit
-the ability of the modeling system to adequately represent non-auto
-modes, and does not bias the model results, but it does significantly
-reduce model run time since the mode choice component takes the longest
-to run due to the nature of the complex path-building that is required.</p>
-<p><span id="_Ref489356699" class="anchor"></span>Figure : Feedback in the
-CCRPC Model Structure</p>
+<p>While transit travel is critical for many people in the CCRPC region, the reality is that transit carries a relatively small portion of the
+overall travel market in the region at this time. Since transit demand in the CCRPC region does not measurably impact roadway level-of-service, a decision was made to not include the mode choice model in the feedback loop to reduce model run time and complexity. However, the mode choice model is still part of the overall model, and the CCRPC model operates as presented in Figure 3. This model application decision does not limit the ability of the modeling system to adequately represent non-auto modes, and does not bias the model results, but it does significantly reduce model run time since the mode choice component takes the longest to run due to the nature of the complex path-building that is required.</p>
+<p>Figure 3: Feedback in the CCRPC Model Structure</p>
 <p><img src="assets/media/image7.png"
 style="width:6.25in;height:0.93616in" /></p>
-<p>The model is calibrated to reflect traffic conditions on an average
-weekday in September, 2015. September was chosen because it is a time
-during which public schools and colleges are in session, while seasonal
-(summer) traffic is still observed.</p>
-<p>The model is a daily model that performs hourly traffic assignments so
-as to account for both travel across an entire day and to adequately
-depict peak hour congestion. To accomplish this, the model relies on
-static time of day factors that divide the daily trips by hour for the
-purposes of assignment. This process is illustrated in Figure 4.</p>
-<p><span id="_Toc491103321" class="anchor"></span>Figure : Complete CCRPC
-Model Structure</p>
+<p>The model is calibrated to reflect traffic conditions on an average weekday in September, 2015. September was chosen because it is a time during which public schools and colleges are in session, while seasonal (summer) traffic is still observed.</p>
+<p>The model is a daily model that performs hourly traffic assignments so as to account for both travel across an entire day and to adequately depict peak hour congestion. To accomplish this, the model relies on static time of day factors that divide the daily trips by hour for the purposes of assignment. This process is illustrated in Figure 4.</p>
+<p>Figure 4 : Complete CCRPC Model Structure</p>
 <p><img src="assets/media/image8.png"
 style="width:6.25in;height:1.50775in" /></p>
 <h2 id="brief-description-of-model-components">Brief Description of Model Components</h2>
-<p>While the model is a traditional 4-step model, the modeling process
-itself consists of several steps worth noting. Each of the steps below
+<p>While the model is a traditional 4-step model, the modeling process itself consists of several steps worth noting. Each of the steps below
 will be discussed in-depth later in the document.</p>
 <ul>
 <li>
-<p><strong>Daily trip generation</strong>, which calculates the number of person trip
-  ends generated by and attracted to each zone.</p>
+<p><strong>Daily trip generation</strong>, which calculates the number of person trip ends generated by and attracted to each zone.</p>
 </li>
 <li>
-<p><strong>Daily trip distribution</strong>, which pairs the trip-ends for each zone
-  for each of six trip purposes. The result of this is a person trip
-  table for each trip type. One output of trip distribution is the
-  person trip table for home to work that can be compared to the
-  “Journey-to-Work” data provided by the Census Bureau.</p>
+<p><strong>Daily trip distribution</strong>, which pairs the trip-ends for each zone for each of six trip purposes. The result of this is a person trip
+  table for each trip type. One output of trip distribution is the person trip table for home to work that can be compared to the “Journey-to-Work” data provided by the Census Bureau.</p>
 </li>
 <li>
-<p><strong>Time of day (diurnal) distribution</strong>, which takes the daily
-  production-attraction trip matrices and converts them to
-  origin-destination matrices by time period (e.g. AM peak hour). Trips
-  by time of day were initially estimated using the CCRPC trip diary
-  survey and the NHTS in the previous version of this model (version 3).
-  For this effort, adjustments to the diurnal distribution were made
-  based on daily traffic profiles observed from over 30 automatic
-  traffic recorder (ATR) count stations across Chittenden County.</p>
+<p><strong>Time of day (diurnal) distribution</strong>, which takes the daily production-attraction trip matrices and converts them to
+  origin-destination matrices by time period (e.g. AM peak hour). Trips by time of day were initially estimated using the CCRPC trip diary survey and the NHTS in the previous version of this model (version 3). For this effort, adjustments to the diurnal distribution were made based on daily traffic profiles observed from over 30 automatic traffic recorder (ATR) count stations across Chittenden County.</p>
 </li>
 <li>
-<p><strong>Vehicle assignment</strong>, the most widely used model, which locates the
-  best routes between each origin/destination pair and assigns the
-  vehicle trips accordingly. An important output of this step is the
-  number of vehicles on each roadway segment. Several other pieces of
-  data can be extracted, including operating speeds, travel times, VMT,
-  VHT, and V/C. In addition, one can configure the vehicle assignment to
-  save all the vehicle trips that use a single link in either direction
-  (select link analysis) or all the vehicle trips that originate or are
-  destined for a zone (select zone analysis).</p>
+<p><strong>Vehicle assignment</strong>, the most widely used model, which locates the best routes between each origin/destination pair and assigns the vehicle trips accordingly. An important output of this step is the number of vehicles on each roadway segment. Several other pieces of data can be extracted, including operating speeds, travel times, VMT, VHT, and V/C. In addition, one can configure the vehicle assignment to save all the vehicle trips that use a single link in either direction (select link analysis) or all the vehicle trips that originate or are destined for a zone (select zone analysis).</p>
 </li>
 <li>
-<p><strong>Highway/transit skim builder</strong> finds the best available travel path
-  via each of the travel modes explicitly modeled, and describes the
-  attributes of the best paths for each mode (i.e. travel time, cost,
-  distance, etc.). Several modes are explicitly modeled in the CCRPC
-  model, including auto, transit modes (bus, rail) and non-motorized
-  modes. Skims are reasonable approximations of the travel time and cost
-  between all pairs of TAZs, and skims are described for each travel
-  mode. The path-finding algorithms are calibrated based on observed
-  travel paths and observed relationships between volumes and congested
-  speeds.</p>
+<p><strong>Highway/transit skim builder</strong> finds the best available travel path via each of the travel modes explicitly modeled, and describes the attributes of the best paths for each mode (i.e. travel time, cost, distance, etc.). Several modes are explicitly modeled in the CCRPC model, including auto, transit modes (bus, rail) and non-motorized modes. Skims are reasonable approximations of the travel time and cost between all pairs of TAZs, and skims are described for each travel mode. The path-finding algorithms are calibrated based on observed travel paths and observed relationships between volumes and congested speeds.</p>
 </li>
 <li>
 <p><strong>Mode choice model</strong> calculates which mode the person trips are
@@ -559,20 +605,14 @@ collectors and above, as well as some more prominent local roads.</p>
 internal Transportation Analysis Zones (TAZs) covering the 19
 municipalities in Chittenden County. Traffic entering and exiting the
 region does so through 17 external zones.</p>
-<p>Figure 5 shows the TAZ structure for a portion of Burlington. Figure 6
-shows the TAZ structure for the entire county.</p>
-<p><span id="_Ref489367508" class="anchor"></span>Figure : Burlington Area
-TAZ Structure</p>
+<p>Figure 5 shows the TAZ structure for a portion of Burlington.</p>
 <p><img src="assets/media/image9.png"
 style="width:4.46269in;height:5.63149in" /></p>
-<p><span id="_Ref489367509" class="anchor"></span>Figure : Chittenden
-County TAZ Structure</p>
+<p>Figure  6: Chittenden County TAZ Structure</p>
 <p><img src="assets/media/image10.png"
 style="width:5.03827in;height:6.45038in" /></p>
 <p>The following municipalities are included in the CCRPC Model.</p>
 <table>
-<caption><p><span id="_Toc491103344" class="anchor"></span>Table :
-External Traffic Zones</p></caption>
 <colgroup>
 <col style="width: 34%" />
 <col style="width: 35%" />
@@ -611,14 +651,10 @@ External Traffic Zones</p></caption>
 </tbody>
 </table>
 
-<p><span id="_Toc491103344" class="anchor"></span>Table : External Traffic
-Zones</p>
 <p>Table 2 contains a list of TAZ numbers by town.</p>
 <table>
 <thead>
 <tr>
-<th>Town</th>
-<th>TAZs</th>
 <th>Town</th>
 <th>TAZs</th>
 </tr>
@@ -627,84 +663,92 @@ Zones</p>
 <tr>
 <td>Bolton</td>
 <td>1 - 5</td>
-<td>Milton</td>
-<td>528 - 561</td>
 </tr>
 <tr>
 <td>Buel’s Gore</td>
 <td>30</td>
-<td>Richmond</td>
-<td>586 - 600</td>
 </tr>
 <tr>
 <td>Burlington</td>
 <td>55 - 177</td>
-<td>Shelburne</td>
-<td>625 - 648</td>
 </tr>
 <tr>
 <td>Charlotte</td>
 <td>202 - 215</td>
-<td>South Burlington</td>
-<td>673 - 759</td>
 </tr>
 <tr>
 <td>Colchester</td>
 <td>240 - 280</td>
-<td>St George</td>
-<td>784 - 785</td>
 </tr>
 <tr>
 <td>Essex Junction</td>
 <td>305 - 324</td>
-<td>Underhill</td>
-<td>810 - 813</td>
 </tr>
 <tr>
 <td>Essex</td>
 <td>349 - 384</td>
-<td>Westford</td>
-<td>838 - 843</td>
 </tr>
 <tr>
 <td>Hinesburg</td>
 <td>409 - 431</td>
-<td>Williston</td>
-<td>868 - 921</td>
 </tr>
 <tr>
 <td>Huntington</td>
 <td>456 - 463</td>
-<td>Winooski</td>
-<td>946 - 960</td>
 </tr>
 <tr>
 <td>Jericho</td>
 <td>488 - 503</td>
+</tr>
+<tr>
+<td>Milton</td>
+<td>528 - 561</td>
+</tr>
+<tr>
+<td>Richmond</td>
+<td>586 - 600</td>
+</tr>
+<tr>
+<td>Shelburne</td>
+<td>625 - 648</td>
+</tr>
+<tr>
+<td>South Burlington</td>
+<td>673 - 759</td>
+</tr>
+<tr>
+<td>St George</td>
+<td>784 - 785</td>
+</tr>
+<tr>
+<td>Underhill</td>
+<td>810 - 813</td>
+</tr>
+<tr>
+<td>Westford</td>
+<td>838 - 843</td>
+</tr>
+<tr>
+<td>Williston</td>
+<td>868 - 921</td>
+</tr>
+<tr>
+<td>Winooski</td>
+<td>946 - 960</td>
+</tr>
+<tr>
 <td>Externals</td>
 <td>10001 - 10017</td>
 </tr>
 </tbody>
 </table>
-<p><span id="_Toc491103345" class="anchor"></span>Table : Regional
-Distribution of Households by Size and Autos</p>
 <h2 id="network-structure">Network Structure</h2>
-<p>Major roadways within the modeling region were selected to reliably
-represent the entire road network. There are approximately 2,500 road
-segments represented as links, of which approximately 240 are one-way
-only. There are over 1,500 TAZs and intersections represented as
-endpoints also known as nodes. Figure 7 shows a portion of the TransCAD
-network in the vicinity of the City of Burlington.</p>
-<p><span id="_Ref489377220" class="anchor"></span>Figure : Modeled Road
-Network in Burlington</p>
+<p>Major roadways within the modeling region were selected to reliably represent the entire road network. There are approximately 2,500 road segments represented as links, of which approximately 240 are one-way only. There are over 1,500 TAZs and intersections represented as endpoints also known as nodes. Figure 7 shows a portion of the TransCAD network in the vicinity of the City of Burlington.</p>
+<p>Figure 7: Modeled Road Network in Burlington</p>
 <p><img src="assets/media/image11.png"
 style="width:4.50286in;height:3.49419in" /></p>
 <h2 id="external-tazs">External TAZs</h2>
-<p>A trip with one origin or destination outside of the model boundary is
-considered an external trip. To assist in accounting for these types of
-trips, counts are taken at selected roads at the boundary of the model.
-These roads are termed external load links. Trips from outside the
-network are loaded into the network through these links.</p>
+<p>A trip with one origin or destination outside of the model boundary is considered an external trip. To assist in accounting for these types of trips, counts are taken at selected roads at the boundary of the model. These roads are termed external load links. Trips from outside the network are loaded into the network through these links.</p>
 <table>
 <thead>
 <tr>
@@ -805,6 +849,7 @@ development and growth trends. <span class="mark"></span></p>
 classified by household size and auto ownership. The household size and
 auto ownership distribution assumptions come from the 2010 Census, at
 the Census Tract level.</p>
+<p>Table : Regional Distribution of Households by Size and Autos</p>
 <table>
 <thead>
 <tr>
@@ -1219,10 +1264,8 @@ respondents completed 8 trips per day or fewer.</p>
 </tr>
 </tbody>
 </table>
-<p><span id="_Ref489442729" class="anchor"></span>Table : Daily Internal
-Person Trip Attraction Rates by Trip Purpose per Employee</p>
-<p><span id="_Toc491103326" class="anchor"></span>Figure : Complete
-Person-Days By Number of Trips Per Day (rMove™ 2016)</p>
+<p>Table : Daily Internal Person Trip Attraction Rates by Trip Purpose per Employee</p>
+<p>Figure : Complete Person-Days By Number of Trips Per Day (rMove™ 2016)</p>
 <h2 id="internal-trip-attractions">Internal Trip Attractions</h2>
 <p>Trip attraction models for HBW, HBO and NHB trip purposes were developed
 originally from the CCRPC diary survey and the light, medium and heavy
@@ -1407,22 +1450,12 @@ External-to-External Trips (Passengers &amp; Trucks)</p>
 </tr>
 </tbody>
 </table>
-<p><span id="_Toc491103353" class="anchor"></span>Table : 2015 IX and XI
-Daily Vehicle Trips, by External TAZ</p>
+<p>Table : 2015 IX and XI Daily Vehicle Trips, by External TAZ</p>
 <h2 id="external-trips">External Trips</h2>
-<p>Trips are further categorized based on whether both the origin and
-destination are internal to Chittenden County, or whether the trip has
-an external trip end. External trips can be classified as
-internal-to-external (IX), external-to-internal (XI), or
-external-to-external (XX).</p>
-<p>Simple trip generation and distribution models cannot estimate these
-types of trips since land use data would need to be estimated for all
-areas outside the model region. Instead, to assist in estimating these
-types of trips, counts are taken at selected roads at the boundary of
-the model. These roads are termed external load links. Trips from
-outside the network are loaded into the network through these links.</p>
-<p><span id="_Toc491103327" class="anchor"></span>Figure : Location of
-External TAZs</p>
+<p>Trips are further categorized based on whether both the origin and destination are internal to Chittenden County, or whether the trip has
+an external trip end. External trips can be classified as internal-to-external (IX), external-to-internal (XI), or external-to-external (XX). </p>
+<p>Simple trip generation and distribution models cannot estimate these types of trips since land use data would need to be estimated for all areas outside the model region. Instead, to assist in estimating these types of trips, counts are taken at selected roads at the boundary of the model. These roads are termed external load links. Trips from outside the network are loaded into the network through these links.</p>
+<p>Figure : Location of External TAZs</p>
 <p><img src="assets/media/image13.png"
 style="width:5.28148in;height:7.17672in" /></p>
 <p>In the base year, the total IX, XI and XX trips are set to match base
@@ -2019,12 +2052,8 @@ differently for IX trips (produced inside the region) and XI trips
 </tr>
 </tbody>
 </table>
-<p><span id="_Toc491103355" class="anchor"></span>Table : Percent IX and XI
-by District (NHTS versus Model)</p>
-<p>The IX internal trip generation rates vary by town and were estimated
-using the 2000 Census data. Residents of towns that are closer to the
-model boundary generate more IX trips as a percent of the residents’
-trip-making.</p>
+<p>The IX internal trip generation rates vary by town and were estimated using the 2000 Census data. Residents of towns that are closer to the model boundary generate more IX trips as a percent of the residents’ trip-making.</p>
+<p>Table : Percent IX and XI by District (NHTS versus Model)</p>
 <table>
 <thead>
 <tr>
@@ -2126,8 +2155,7 @@ trip-making.</p>
 </tr>
 </tbody>
 </table>
-<p><span id="_Toc491103356" class="anchor"></span>Table : Diurnal
-Distribution %s</p>
+<p>Table : Diurnal Distribution %s</p>
 <p>The internal ends of the XI trips are estimated based on the total
 attractions in each TAZ, and the distance from the external station. The
 notion is that XI trips are produced externally to the model, and tend
@@ -2195,18 +2223,12 @@ Huntington, Buel’s Gore, Hinesburg and Charlotte.</p>
 </tr>
 </tbody>
 </table>
-<p><span id="_Ref490682849" class="anchor"></span>Table : Link Delay
-Parameters</p>
+<p>Table : Link Delay Parameters</p>
 <h3 id="external-trip-growth-rates">External Trip Growth Rates</h3>
-<p>Future year external trips are assumed to grow annually at a
-user-specified rate, which can vary by external TAZ. In the model, the
-external trips are initially assumed to have a growth rate of 0.5% per
-year but this rate is adjustable.</p>
+<p>Future year external trips are assumed to grow annually at a user-specified rate, which can vary by external TAZ. In the model, the
+external trips are initially assumed to have a growth rate of 0.5% per year but this rate is adjustable.</p>
 <h2 id="trip-balancing">Trip Balancing</h2>
-<p>It is common practice in transportation modeling to balance attractions
-to productions. The rationale is that productions are more fundamental.
-More housing will produce more trips; more retail space may simply draw
-customers from other retail space.</p>
+<p>It is common practice in transportation modeling to balance attractions to productions. The rationale is that productions are more fundamental. More housing will produce more trips; more retail space may simply draw customers from other retail space.</p>
 <p>This practice has important implications for using the model to analyze
 regional traffic impacts emanating from changes in employment land use.
 For example, if traffic impacts of a proposed major employer are to be
@@ -2246,21 +2268,13 @@ square of the radius. Furthermore, trip end locations with higher trip
 generation will be more attractive than trip end locations with lower
 trip generation.</p>
 <h2 id="model-structure_1">Model Structure</h2>
-<p>The functional form of the distribution model is shown in Equation 1. We
-have chosen to use a doubly constrained gravity model for all trip types
-except the external trips, which are singly constrained to the external
-trip end totals. The trip distribution model is doubly constrained to
-ensure that the total productions and attractions for each zone do not
-deviate from the balanced trip generation output. To doubly-constrain a
-trip distribution, an iterative process is used that alternatively
-balances to productions by evaluating the first equation and then
+<p>The functional form of the distribution model is shown in Equation 1. We have chosen to use a doubly constrained gravity model for all trip types except the external trips, which are singly constrained to the external trip end totals. The trip distribution model is doubly constrained to ensure that the total productions and attractions for each zone do not deviate from the balanced trip generation output. To doubly-constrain a trip distribution, an iterative process is used that alternatively balances to productions by evaluating the first equation and then
 balances to attractions by evaluating the second equation. The iterative
 process is complete when either the convergence criterion is met (error
 of 0.01) or the maximum number of iterations is reached (30). This
 function is applied separately for each of the trip types.</p>
-<p><span id="_Ref490658963" class="anchor"></span>Equation : Gravity Model
-Functional Form</p>
-<p><img alt="" src="assets/media/image14.emf" /></p>
+<p>Equation : Gravity Model Functional Form</p>
+<p><img alt="" src="assets/media/gravitymodelform.png" /></p>
 <h2 id="data-sources">Data Sources</h2>
 <p>The inputs to trip distribution include productions and attractions by
 TAZ, and a travel time impedance matrix representing the travel time
@@ -3437,8 +3451,7 @@ representations of mode choice behavior. The pre-distribution
 non-motorized mode choice model was estimated from Census and 2009 NHTS
 data.</p>
 <h2 id="parameters">Parameters</h2>
-<p>The mode choice model parameters are shown in Equation 5 and
-<img alt="" src="assets/media/image25.emf" /></p>
+<p>The mode choice model parameters are shown in Equation 5 and[ image ]</p>
 <p>Equation 6 below.</p>
 <p><span id="_Ref490741731" class="anchor"></span>Equation :
 Pre-distribution Mode Choice Model Utility Equations</p>
@@ -3591,8 +3604,7 @@ transit network file, and are reported in Table 19.</p>
 </tr>
 </tbody>
 </table>
-<p><span id="_Toc491103361" class="anchor"></span>Table : Michigan DOT
-Volume-based Calibration Standards</p>
+<p>Table : Michigan DOT Volume-based Calibration Standards</p>
 <h1 id="travel-model-validation">Travel Model Validation</h1>
 <p>Calibration and validation is performed for each step in the model: land
 use, trip generation, trip distribution, mode split, and assignment. The
@@ -3613,8 +3625,7 @@ variables, an r value of 0 would indicate a completely random
 correlation, and an r value of -1 would indicate a perfect inverse
 correlation. The value of r can be estimated using the following
 formula.</p>
-<p><span id="_Toc491103372" class="anchor"></span>Equation : COEFFICIENT of
-Correlation</p>
+<p>Equation : COEFFICIENT of Correlation</p>
 <p><img src="assets/media/image28.wmf"
 style="width:2.75694in;height:0.67361in" /></p>
 <p>FHWA recommends a minimum r value of 0.88.</p>
@@ -3628,8 +3639,7 @@ the larger volume errors in a network. It should be noted that the RMSE
 is always higher than the actual average network error because of the
 weighting scheme. This is discussed in the following section on absolute
 error. RMSE is calculated as:</p>
-<p><span id="_Toc491103373" class="anchor"></span>Equation : Root Mean
-Squared Error</p>
+<p>Equation : Root Mean Squared Error</p>
 <p><img src="assets/media/image29.wmf"
 style="width:1.75694in;height:0.84028in" /></p>
 <p>where:</p>
@@ -3815,26 +3825,16 @@ style="width:6.5in;height:3.90205in" /></p>
 Mode Shares (2009 NHTS versus Model)</p>
 <p>* Model does not include many local roads.</p>
 <h2 id="transit-assignment">Transit Assignment</h2>
-<p>The CCRPC Version 4 travel model also includes a transit assignment
-procedure which loads the hourly transit trip matrices onto the transit
-route system. The bus assignment provides a link-by-link assignment of
-transit flows allowing the analyst to query total transit flow on a link
-or for any individual route. The transit assignment also saves the walk
-access/egress paths which allows the analyst to examine the patterns of
-pedestrian travel needed to access the bus network.</p>
-<p>The transit assignment was not validated for this version due to absence
-of available boarding data from CCTA. With the data available, the
-transit assignment can be validated by comparing model estimated route
+<p>The CCRPC Version 4 travel model also includes a transit assignment procedure which loads the hourly transit trip matrices onto the transit route system. The bus assignment provides a link-by-link assignment of transit flows allowing the analyst to query total transit flow on a link or for any individual route. The transit assignment also saves the walk access/egress paths which allows the analyst to examine the patterns of pedestrian travel needed to access the bus network.</p>
+<p>The transit assignment was not validated for this version due to absence of available boarding data from CCTA. With the data available, the transit assignment can be validated by comparing model estimated route
 boardings (on’s &amp; off’s) to actual observed counted route ridership. For
 the validation of the transit assignment results produced by the model,
 route boardings can be compared against annual CCTA ridership data.
 Annual CCTA ridership by route should be converted to daily boardings
 using a factor of 280 for comparison. Figure 21 below shows the daily
 model boardings from transit assignment by route.</p>
-<p><span id="_Ref491097926" class="anchor"></span>Figure : Transit
-Assignment</p>
-<p><img src="assets/media/image32.emf"
-style="width:6.5in;height:3.9in" /></p>
+<p>Figure : Transit Assignment</p>
+<p><img alt="" src="assets/media/transit_assignment.png" /></p>
 <h2 id="survey-comparisons">Survey Comparisons</h2>
 <p>The model output from specific steps in the model chain can be compared
 against observed survey data to assure that modeled trip length
@@ -3899,10 +3899,8 @@ style="width:4.99028in;height:2.99028in" /></p>
 Frequency Distribution (NHTS versus Model)</p>
 <p><img src="assets/media/image34.emf"
 style="width:4.99028in;height:2.99028in" /></p>
-<p><span id="_Ref490835260" class="anchor"></span>Figure : NHB Trip Length
-Frequency Distribution (NHTS versus Model)</p>
-<p><img src="assets/media/image35.emf"
-style="width:4.99028in;height:2.99028in" /></p>
+<p>Figure : NHB Trip Length Frequency Distribution (NHTS versus Model)</p>
+<p><img alt="" src="assets/media/nhb_trip_length.png" /></p>
 <p>The NHTS data includes only 18 weekday trips in Chittenden County which
 use a transit mode. Therefore the survey provides little valuable
 information that can be used to evaluate the transit component of the
@@ -4021,23 +4019,15 @@ amount of land use, and a modifier which adjusts the desirability of a
 TAZ based on who portion of its space is current build out.</p>
 <p><span id="_Toc491103376" class="anchor"></span>Equation : Generalized
 Attractiveness</p>
-<p><img alt="" src="assets/media/image36.wmf" /></p>
-<p>The actual available percentage is simply 1-existing/available. This
-percentage is modified to create a curve that decreases the impact of
-TAZs with very large available land percentages. The equation for
-modified percentage of available land is:</p>
-<p><span id="_Toc491103377" class="anchor"></span>Equation : Modified
-Percentage</p>
+<p><img alt="" src="assets/media/LUAM_generalized_attractiveness.png" /></p>
+<p>The actual available percentage is simply 1-existing/available. This percentage is modified to create a curve that decreases the impact of TAZs with very large available land percentages. The equation for modified percentage of available land is:</p>
+<p>Equation : Modified Percentage</p>
 <p><img alt="" src="assets/media/image37.wmf" /></p>
 <p>The Intercept and Exponent were estimated based on historical growth.
 The MP calculation results in the curve shown below:</p>
-<p><span id="_Toc491103341" class="anchor"></span>Figure : Modified %
-Available Developable Land</p>
-<p>The generalized attractiveness (GATTn) is essentially a weighted
-attractiveness of each TAZ for households and employment. The final step
-is simply to allocate the control totals proportional to the generalized
-accessibility.</p>
-<p><span id="_Toc491103378" class="anchor"></span>Equation : Land Use
+<p>Figure : Modified % Available Developable Land</p>
+<p>The generalized attractiveness (GATTn) is essentially a weighted attractiveness of each TAZ for households and employment. The final step is simply to allocate the control totals proportional to the generalized accessibility.</p>
+<p>Equation : Land Use
 Allocation</p>
 <p><img alt="" src="assets/media/image38.wmf" /></p>
 <p>This creates a proportional allocation of the control total (CT) across
@@ -4649,54 +4639,87 @@ ways</p>
 <p>[^1]: Housing from 2015 and Employment from 2016</p>
 <p>[^2]: For configurations not shown in the table, including roundabouts,
     use Highway Capacity Manual or professional judgement to derive the
-    total intersection capacity corresponding with LOS F.</p>
-              
+    total intersection capacity corresponding with LOS F.</p></div>
             </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="userguide/" class="btn btn-neutral float-right" title="User Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-  </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-          
         </div>
-      </div>
 
-    </section>
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
 
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-    
-    
-      <span><a href="userguide/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
 </div>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = ".";</script>
-    <script src="js/theme_extra.js"></script>
-    <script src="js/theme.js"></script>
-      <script src="search/main.js"></script>
-    <script>
-        jQuery(function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        });
-    </script>
 
-</body>
+    </body>
 </html>
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2025-10-03 03:22:22.216741+00:00
+Build Date UTC : 2025-10-14 01:43:24.475410+00:00
 -->
