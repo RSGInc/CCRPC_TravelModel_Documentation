@@ -1,4 +1,5 @@
 # Introduction
+#### Last updated: 5/19/2026
 
 ## About CCRPC
 
@@ -99,8 +100,7 @@ trips are split into each respective mode (e.g. auto, bus). Finally, the
 vehicle trips are assigned to the highway network in the assignment
 model.
 
-Figure 1: 4-Step Model Concept
-
+**Figure 1: 4-Step Model Concept**
 <img src="assets/media/image5.png"
 style="width:6.25in;height:0.50681in" />
 
@@ -109,16 +109,14 @@ The model has an important feedback loop that has been added in the following fi
 Accessibility, which is a measure of the relative ease of travel, is calculated based on outputs from the assignment model, which is also an important determinant of trip distribution. Simply put, the decisions individuals make about where and how far to travel are a function of congestion levels and travel times. Therefore, it is customary to iterate between the trip distribution and assignment models in order to
 reach a convergent solution. The iteration loop in Figure 2 occurs within a given simulation year.
 
-Figure 1 : 4-Step Model Concept with Feedback
-
+**Figure 2: 4-Step Model Concept with Feedback**
 <img src="assets/media/image6.png"
 style="width:6.25in;height:1.41961in" />
 
 While transit travel is critical for many people in the CCRPC region, the reality is that transit carries a relatively small portion of the
 overall travel market in the region at this time. Since transit demand in the CCRPC region does not measurably impact roadway level-of-service, a decision was made to not include the mode choice model in the feedback loop to reduce model run time and complexity. However, the mode choice model is still part of the overall model, and the CCRPC model operates as presented in Figure 3. This model application decision does not limit the ability of the modeling system to adequately represent non-auto modes, and does not bias the model results, but it does significantly reduce model run time since the mode choice component takes the longest to run due to the nature of the complex path-building that is required.
 
-Figure 3: Feedback in the CCRPC Model Structure
-
+**Figure 3: Feedback in the CCRPC Model Structure**
 <img src="assets/media/image7.png"
 style="width:6.25in;height:0.93616in" />
 
@@ -126,8 +124,7 @@ The model is calibrated to reflect traffic conditions on an average weekday in S
 
 The model is a daily model that performs hourly traffic assignments so as to account for both travel across an entire day and to adequately depict peak hour congestion. To accomplish this, the model relies on static time of day factors that divide the daily trips by hour for the purposes of assignment. This process is illustrated in Figure 4.
 
-Figure 4 : Complete CCRPC Model Structure
-
+**Figure 4 : Complete CCRPC Model Structure**
 <img src="assets/media/image8.png"
 style="width:6.25in;height:1.50775in" />
 
@@ -171,16 +168,17 @@ municipalities in Chittenden County. Traffic entering and exiting the region doe
 
 Figure 5 shows the TAZ structure for a portion of Burlington.
 
+**Figure 5: Burlington Area TAZ Structure**
 <img src="assets/media/image9.png"
 style="width:4.46269in;height:5.63149in" />
 
-Figure  6: Chittenden County TAZ Structure
-
+**Figure 6: Chittenden County TAZ Structure**
 <img src="assets/media/image10.png"
 style="width:5.03827in;height:6.45038in" />
 
 The following municipalities are included in the CCRPC Model.
 
+**Table 1: List of Municipalities in the CCRPC Model**
 <table>
 <colgroup>
 <col style="width: 34%" />
@@ -224,6 +222,7 @@ The following municipalities are included in the CCRPC Model.
 
 Table 2 contains a list of TAZ numbers by town.
 
+**Table 2: List of TAZs by Town**
 | Town             | TAZs          |
 | ---------------- | ------------- |
 | Bolton           | 1 - 5         |
@@ -255,8 +254,7 @@ Table 2 contains a list of TAZ numbers by town.
 
 Major roadways within the modeling region were selected to reliably represent the entire road network. There are approximately 2,500 road segments represented as links, of which approximately 240 are one-way only. There are over 1,500 TAZs and intersections represented as endpoints also known as nodes. Figure 7 shows a portion of the TransCAD network in the vicinity of the City of Burlington.
 
-Figure 7: Modeled Road Network in Burlington
-
+**Figure 7: Modeled Road Network in Burlington**
 <img src="assets/media/image11.png"
 style="width:4.50286in;height:3.49419in" />
 
@@ -266,6 +264,7 @@ style="width:4.50286in;height:3.49419in" />
 
 A trip with one origin or destination outside of the model boundary is considered an external trip. To assist in accounting for these types of trips, counts are taken at selected roads at the boundary of the model. These roads are termed external load links. Trips from outside the network are loaded into the network through these links.
 
+**Table 3: External Traffic Zones**
 | External TAZ | Roadway            | Count Location                         | External TAZ | Roadway     | Count Location              |
 |--------------|--------------------|----------------------------------------|--------------|-------------|-----------------------------|
 | 10001        | US-2               | Just west of Bear Trap Rd              | 10010        | US-2        | At Waterbury TL             |
@@ -296,19 +295,13 @@ classified by household size and auto ownership. The household size and
 auto ownership distribution assumptions come from the 2010 Census, at
 the Census Tract level.
 
-Table : Regional Distribution of Households by Size and Autos
-
-| Household Size | \# of Vehicles |     |     |     |
-|----------------|----------------|-----|-----|-----|
-|                | 0              | 1   | 2   | 3+  |
-| **1**          | 5%             | 19% | 3%  | 0%  |
-| **2**          | 2%             | 8%  | 23% | 5%  |
-| **3**          | 0%             | 3%  | 6%  | 5%  |
-| **4+**         | 0%             | 2%  | 10% | 7%  |
-
-
-
-
+**Table 4: Regional Distribution of Households by Size and Autos**
+| Household Size | 0 Vehicles | 1 Vehicle | 2 Vehicles | 3+ Vehicles |
+|----------------|------------|-----------|------------|-------------|
+| **1**          | 5%         |    19%    |     3%     |      0%     |
+| **2**          | 2%         |     8%    |    23%     |      5%     |
+| **3**          | 0%         |     3%    |     6%     |      5%     |
+| **4+**         | 0%         |     2%    |    10%     |      7%     |
 
 There are 68,272 households within the model region and 7,749 group quarters. Group quarters are treated as 75% one person-zero vehicle and 25% two person-one vehicle households. Group quarters are not multi-family or apartment buildings. These are most typically student housing, with one address but multiple residents.
 
@@ -338,10 +331,9 @@ College, Commercial, Industrial, Institutional, K-12 School, Retail,
 Special Commercial, and Special Retail. Figure 8 shows the
 categorization of the SIC codes.
 
-<span id="_Ref489378885" class="anchor"></span>Figure : Employment by
-SIC and Sector Categories with Trip Attraction Rates
+**Figure 8: Employment by SIC and Sector Categories with Trip Attraction Rates**
 
-<img src="assets/media/image12.wmf"
+<img src="assets/media/image12.png"
 style="width:5.51389in;height:8.56944in" />
 
 # Trip Generation
@@ -360,8 +352,7 @@ external station, are added as fixed inputs. Table 5 presents the 6
 internal trip types as well as the 3 commercial vehicle trip types and 3
 external trip types.
 
-Table : Trip Purpose Definitions
-
+**Table 5: Trip Purpose Definitions**
 | Trip Type            | Abbreviation | Description                                                                                               |
 |----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
 | Home Based Work      | HBW          | A trip where one end is home and the other end is work                                                    |
@@ -373,9 +364,6 @@ Table : Trip Purpose Definitions
 | Internal-to-External | IX           | A trip originating inside of the model and terminating outside of the model zone geography                |
 | External-to-Internal | XI           | A trip originating outside of the model zone geography and terminating inside of the model                |
 | External-to-External | XX           | A trip originating and terminating outside of the model geography, but passing through the model en route |
-
-<span id="_Ref489434397" class="anchor"></span>Table : Total Trips by
-Trip Purpose
 
 At this stage trip ends are categorized as “productions” and
 “attractions.” Production ends occur at the trip maker’s residence. Trip
@@ -415,30 +403,28 @@ of the resulting 16 household types (4 x 4).
 
 Table 6 shows the trip production rates for internal HBW, HBO and NHB trip productions. The production rates were estimated using the 1998 Chittenden County household survey and the 2001 NHTS survey. CCRPC purchased the Add-On data for the 2009 NHTS which was also used to check and update the trip production rates, and were further informed by an rMove™ convenience survey conducted by RSG for the CCRPC in the fall of Each number entered into the production tables is in units of person trips per household per day. The trip generation rates were adjusted by comparing them to rates from newer surveys for similar geographical regions.
 
-Table : HBW, HBO, and NHB Person Trip Production Rates
+**Table 6: HBW, HBO, and NHB Person Trip Production Rates**
+| Trip Type          | HH Size | 0 Vehicles | 1 Vehicle | 2 Vehicles |  3+ Vehicles |
+|--------------------|---------|------------|-----------|------------|--------------|
+|                    |         | 0          | 1         | 2          | 3+           |
+| **HBW Trip Rates** | **1**   | 0.3848     | 0.6864    | 0.7072     | 1.2064       |
+|                    | **2**   | 0.3952     | 1.092     | 1.4872     | 1.8408       |
+|                    | **3**   | 0.416      | 1.04      | 2.028      | 2.6936       |
+|                    | **4+**  | 0.8944     | 1.6848    | 2.0488     | 2.7144       |
+| **HBO Trip Rates** | **1**   | 1.5912     | 2.0384    | 2.3192     | 1.872        |
+|                    | **2**   | 2.444      | 4.3368    | 3.9        | 3.4944       |
+|                    | **3**   | 2.4648     | 4.7944    | 4.9608     | 4.316        |
+|                    | **4+**  | 5.8032     | 5.2728    | 8.0496     | 6.6872       |
+| **NHB Trip Rates** | **1**   | 0.78       | 1.4872    | 1.508      | 1.6536       |
+|                    | **2**   | 1.1752     | 1.872     | 2.288      | 2.2984       |
+|                    | **3**   | 0.8008     | 3.5048    | 2.7768     | 2.6728       |
+|                    | **4+**  | 4.0248     | 3.0472    | 4.1704     | 4.5656       |
 
-| Trip Type          | HH Size | HH Vehicles |        |        |        |
-|--------------------|---------|-------------|--------|--------|--------|
-|                    |         | 0           | 1      | 2      | 3+     |
-| **HBW Trip Rates** | **1**   | 0.3848      | 0.6864 | 0.7072 | 1.2064 |
-|                    | **2**   | 0.3952      | 1.092  | 1.4872 | 1.8408 |
-|                    | **3**   | 0.416       | 1.04   | 2.028  | 2.6936 |
-|                    | **4+**  | 0.8944      | 1.6848 | 2.0488 | 2.7144 |
-| **HBO Trip Rates** | **1**   | 1.5912      | 2.0384 | 2.3192 | 1.872  |
-|                    | **2**   | 2.444       | 4.3368 | 3.9    | 3.4944 |
-|                    | **3**   | 2.4648      | 4.7944 | 4.9608 | 4.316  |
-|                    | **4+**  | 5.8032      | 5.2728 | 8.0496 | 6.6872 |
-| **NHB Trip Rates** | **1**   | 0.78        | 1.4872 | 1.508  | 1.6536 |
-|                    | **2**   | 1.1752      | 1.872  | 2.288  | 2.2984 |
-|                    | **3**   | 0.8008      | 3.5048 | 2.7768 | 2.6728 |
-|                    | **4+**  | 4.0248      | 3.0472 | 4.1704 | 4.5656 |
-
-
-
+There are estimated to be an average of 773,567 daily person trips (Table 7) in the Chittenden County model region for the 2015 base year.
 
 
-Table : Total Trips per Household by Purpose (NHTS versus Model)
 
+**Table 7: Total Trips by Trip Purpose**
 | Trip Type            | \# of Trips | % of Total |
 |----------------------|-------------|------------|
 | Home Based Work      | 94,758      | 12.2%      |
@@ -452,14 +438,9 @@ Table : Total Trips per Household by Purpose (NHTS versus Model)
 | External-to-External | 3,227       | 0.4%       |
 | Total Person Trips   | 773,567     | 100.0%     |
 
-There are estimated to be an average of 773,567 daily person trips (Table 7) in the Chittenden County model region for the 2015 base year.
-
-
-
-Table : Daily Internal Person Trip Attraction Rates
-
 The total regional trip productions by purpose were compared to the trip rates extracted from the 2009 NHTS Add-On survey data that was purchased by CCRPC. The figure below compares the NHTS rates (trips per household) to the total regional trips estimated by the Version 4 travel model. While the overall Version 4 travel model trips per household are lower than the NHTS survey, they are in line with observed trips per household from the 2016 rMove™ survey, which noted approximately 85% of all respondents completed 8 trips per day or fewer.
 
+**Table 8: Total Trips per Household by Purpose (NHTS versus Model)**
 | Purpose   | NHTS     | Model    |
 |-----------|----------|----------|
 | HBW       | 1.2      | 1.39     |
@@ -467,22 +448,16 @@ The total regional trip productions by purpose were compared to the trip rates e
 | NHB       | 4.4      | 2.54     |
 | **Total** | **10.2** | **7.95** |
 
-
-
-Table : Daily Internal Person Trip Attraction Rates by Trip Purpose per Employee
-
-
-
-Figure : Complete Person-Days By Number of Trips Per Day (rMove™ 2016)
-
+**Figure 9: Complete Person-Days By Number of Trips Per Day (rMove™ 2016)**
+<img src="assets/media/figure9.png"
+style="width:5.32in;height:2.48in" />
 
 
 ## Internal Trip Attractions
 
 Trip attraction models for HBW, HBO and NHB trip purposes were developed originally from the CCRPC diary survey and the light, medium and heavy commercial trip rates came from FHWA’s Quick Response Freight Manual (DTFH61-93-C-00075 & DTFH61-93-C-00216, Sept-1996, <u>http://tmip.fhwa.dot.gov/resources/clearinghouse/docs/quick/quick.pdf</u>). The estimated model coefficients were then calibrated so that trip attractions by purpose would be consistent with trip productions and proportionate to historic ITE trip generation rates by land-use type. Each number entered into the attraction table (Table 10) is in units of person trips per employee or housing unit per day.
 
-
-
+**Table 9: Daily Internal Person Trip Attraction Rates**
 | Land Use Class     | Number of Employees | Percent of Total Employees | Average ITE Rate |
 |--------------------|---------------------|----------------------------|------------------|
 | Accommodations     | 1,911               | 1.6%                       | 5.72             |
@@ -495,10 +470,7 @@ Trip attraction models for HBW, HBO and NHB trip purposes were developed origina
 | Special Commercial | 2,547               | 2.1%                       | 15.98            |
 | Special Retail     | 5,525               | 4.6%                       | 29.33            |
 
-
-
-
-
+**Table 10: Daily Internal Person Trip Attraction Rates by Trip Purpose Per Employee**
 | Land-Use Class     | HBW   | HBO    | NHB   | L_COMM | M_COMM | H_COMM |
 |--------------------|-------|--------|-------|--------|--------|--------|
 | Accommodations     | 0.717 | 2.54   | 1.437 | 0.874  | 0.136  | 0.018  |
@@ -513,11 +485,6 @@ Trip attraction models for HBW, HBO and NHB trip purposes were developed origina
 | Households         | 0     | 0.24   | 0.12  | 0.502  | 0.198  | 0      |
 
 
-
-
-
-
-
 ## External Trips
 
 Trips are further categorized based on whether both the origin and destination are internal to Chittenden County, or whether the trip has
@@ -525,8 +492,7 @@ an external trip end. External trips can be classified as internal-to-external (
 
 Simple trip generation and distribution models cannot estimate these types of trips since land use data would need to be estimated for all areas outside the model region. Instead, to assist in estimating these types of trips, counts are taken at selected roads at the boundary of the model. These roads are termed external load links. Trips from outside the network are loaded into the network through these links.
 
-Figure : Location of External TAZs
-
+**Figure 10: Location of External TAZs**
 <img src="assets/media/image13.png"
 style="width:5.28148in;height:7.17672in" />
 
@@ -573,8 +539,7 @@ Base year external-external trips are added directly into the vehicle
 trip table. The external-external trips used in the 2015 model reflect
 daily traffic.
 
-**Table : External-to-External Trips (Passengers & Trucks)**
-
+**Table 11: External-to-External Trips (Passengers & Trucks)**
 | **External TAZ** | **10001** | **10002** | **10003** | **10004** | **10005** | **10006** | **10007** | **10008** | **10009** | **10010** | **10011** | **10012** | **10013** | **10014** | **10015** | **10016** | **10017** | **Total** |      |
 |------------------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|------|
 | **10001**        | 0         | 1         | 3         | 66        | 0         | 4         | 0         | 2         | 0         | 1         | 79        | 0         | 0         | 14        | 1         | 0         | 12        | 183       |      |
@@ -604,8 +569,7 @@ daily traffic.
 Base year IX and XI trips are set to match 2015 base year traffic count data at the external stations. The internal trip ends are estimated
 differently for IX trips (produced inside the region) and XI trips (produced outside the region).
 
-Table : 2015 IX and XI Daily Vehicle Trips, by External TAZ
-
+**Table 12: 2015 IX and XI Daily Vehicle Trips, by External TAZ**
 | External TAZ | External-to-Internal Trips | Internal-to-External Trips |
 |--------------|----------------------------|----------------------------|
 | **10001**    | 6,276                      | 3,133                      |
@@ -631,8 +595,7 @@ Table : 2015 IX and XI Daily Vehicle Trips, by External TAZ
 
 The IX internal trip generation rates vary by town and were estimated using the 2000 Census data. Residents of towns that are closer to the model boundary generate more IX trips as a percent of the residents’ trip-making.
 
-Table : Percent IX and XI by District (NHTS versus Model)
-
+**Table 13: Percent IX and XI by District (NHTS versus Model)**
 | Town             | Model%\_IX | Census % IX |
 |------------------|------------|-------------|
 | Bolton           | 16.8%      | 16.8%       |
@@ -653,8 +616,6 @@ Table : Percent IX and XI by District (NHTS versus Model)
 | Underhill        | 12.7%      | 12.7%       |
 | Westford         | 11.4%      | 11.4%       |
 | Williston        | 7.3%       | 7.3%        |
-
-Table : Diurnal Distribution %s
 
 The internal ends of the XI trips are estimated based on the total
 attractions in each TAZ, and the distance from the external station. The
@@ -680,17 +641,13 @@ Williston, Jericho, Richmond, St. George, and Shelburne. The ‘Outer’
 district is comprised of Milton, Westford, Underhill, Bolton,
 Huntington, Buel’s Gore, Hinesburg and Charlotte.
 
-Table :Internal-to-External Trip Assumptions (% of internal productions)
-
+**Table 14: Internal-to-External Trip Assumptions (% of internal productions)**
 | Percent IX by District |       |       | Percent XI by District |       |       |
 |------------------------|-------|-------|------------------------|-------|-------|
 | District               | NHTS  | Model | District               | NHTS  | Model |
 | Core                   | 5.0%  | 5.4%  | Core                   | 56.1% | 54.7% |
 | Inner                  | 5.9%  | 4.8%  | Inner                  | 38.7% | 36.6% |
 | Outer                  | 10.2% | 9.8%  | Outer                  | 5.2%  | 8.7%  |
-
-
-
 
 
 ### External Trip Growth Rates
@@ -755,8 +712,7 @@ process is complete when either the convergence criterion is met (error
 of 0.01) or the maximum number of iterations is reached (30). This
 function is applied separately for each of the trip types.
 
-Equation : Gravity Model Functional Form
-
+**Equation 1: Gravity Model Functional Form**
 ![](assets\media\gravitymodelform.png)
 
 ## Data Sources
@@ -787,12 +743,10 @@ HBO trips, and this is reflected in the calibrated friction factors. The
 truck trip friction factors came directly from the Quick Response
 Freight Manual.
 
-Equation : Friction Factor Functional Form
-
+**Equation 2: Friction Factor Functional Form**
 ![friction_factor](assets\media\friction_factor.png)
 
-Figure : Friction Factor Plots
-
+**Figure 11: Friction Factor Plots**
 ![friction_factor_plots](assets\media\friction_factor_plots.png)
 
 # Time-of-Day Distribution
@@ -828,14 +782,13 @@ are shown inFigure 13. In each case, the “DEP” stands for departing
 trips and implies trips from the production TAZ (home for home-based
 trips) to the attraction TAZ.
 
-**Figure : Diurnal Distribution for Passenger Trips**
-
+**Figure 12: Diurnal Distribution for Passenger Trips**
 ![diurnal_distribution](assets\media\diurnal_distribution.png)
 
-**Figure : Diurnal Distribution for Truck and External Trips**
-
+**Figure 13: Diurnal Distribution for Truck and External Trips**
 ![diurnal_distribution_trucks_external](assets\media\diurnal_distribution_trucks_external.png)
 
+**Table 15: Diurnal Distribution %s**
 | Hour    | DEP HBW | RET HBW | DEP HBO | RET HBO | DEP NHB | RET NHB | DEP Light COMM | RET Light COMM | DEP MEd Comm | RET Med Comm | DEP Heavy COMM | RET Heavy Comm | DEP EXT | RET EXT |
 |---------|---------|---------|---------|---------|---------|---------|----------------|----------------|--------------|--------------|----------------|----------------|---------|---------|
 | **0**   | 0.0%    | 0.3%    | 0.1%    | 0.4%    | 0.0%    | 0.0%    | 0.5%           | 0.5%           | 0.4%         | 0.4%         | 1.1%           | 1.1%           | 0.1%    | 0.3%    |
@@ -864,11 +817,6 @@ trips) to the attraction TAZ.
 | **23**  | 0.0%    | 1.1%    | 0.2%    | 0.5%    | 0.3%    | 0.3%    | 0.7%           | 0.7%           | 0.5%         | 0.5%         | 1.1%           | 1.1%           | 0.1%    | 1.0%    |
 | **Sum** | 50.0%   | 50.0%   | 50.0%   | 50.0%   | 50.0%   | 50.0%   | 50.0%          | 50.0%          | 50.0%        | 50.0%        | 50.0%          | 50.0%          | 50.0%   | 50.0%   |
 
-
-
-
-
-Table : Node Class Definitions
 
 # Vehicle Assignment
 
@@ -953,32 +901,10 @@ link delay and an estimated intersection delay.
 
 Previous versions of the CCRPC travel model (prior to version 3) used a custom node delay procedure that was developed by RSG. Link delays and volumes were derived using a typical Bureau of Public Roads (BPR) function. Based on the intersection approach volumes, an intersection delay was calculated and then added to the link delay to derive total congested travel times. While novel, this approach added considerable complexity to the model code and resulted in relatively long vehicle assignment runtimes for a highway network of this size. The logit based delay function available as a default built-in function within TransCAD calculates link and intersection delay simultaneously thereby reducing model complexity and significantly reducing model run time. The function parameters reflect TransCAD default values as well as calibrated parameters applied in other regional models. The facility type specific volume delay function parameters are presented in Table 16 below. The resulting volume-delay curve for principal arterials is depicted in Figure 14.
 
-**Equation : Logit-Based Volume Delay Function**
-
+**Equation 3: Logit-Based Volume Delay Function**
 ![logit_based_delay_function](assets\media\logit_based_delay_function.png)
 
-$$d = D_{l\ } + \ I_{l}$$
-
-$D_{l} = t_{0}{\bullet c}_{1}\left\lbrack \frac{1}{1 - \frac{c_{2}}{1 + \exp\left( c_{3} - c_{4\ } \bullet \ \frac{x}{C} \right)}} \right\rbrack$
-$I_{l} = d_{0}{\bullet p}_{1}\left\lbrack 1 + \frac{p_{2}}{1 + \exp\left( p_{3} - p_{4\ } \bullet \ \frac{x}{X} \right)} \right\rbrack$
-
-Where:
-
-$D_{l\ } = link\ delay\ $ $I_{l\ } = node\ delay\ $
-
-$t_{0\ } = freeflow\ travel\ time$
-$d_{0\ } = freeflow\ travel\ time\ of\ intersection$
-
-$x = traffic\ flow$ $x = traffic\ flow$
-
-$C = \ link\ capacity$ $X = \ node\ capacity$
-
-$c_{1\ },\ {\ c}_{2}\ ,\ {\ c}_{3}\ ,\ {\ c}_{4} = link\ parameters$
-$p_{1}\ ,\ {\ p}_{2}\ ,\ {\ p}_{3}\ ,\ {\ p}_{4} = node\ parameters$
-
-
-
-Table : Link Delay Parameters
+**Table 16: Link Delay Parameters**
 
 | Link Class | Class Type             | Speed | CapPerLane | C1   | C2   | C3   | C4   | P1   | P2  | P3   | P4   |
 |------------|------------------------|-------|------------|------|------|------|------|------|-----|------|------|
@@ -1000,8 +926,7 @@ Table : Link Delay Parameters
 
 
 
-Figure : Volume-Delay Curves for Principal Arterials
-
+**Figure 14: Volume-Delay Curves for Principal Arterials**
 ![vc_curves](assets\media\vc_curves.png)
 
 ## Allocation of Intersection Capacity to Links
@@ -1028,18 +953,10 @@ accommodate more vehicles than an approach with just a single lane and
 no turning bays. The node capacity assumptions for intersections are
 presented in Figure 15. Node class definitions are presented in Table 1.
 
-Figure : Node Capacity Assumptions for Intersections[^2]
+**Figure 15: Node Capacity Assumptions for Intersections[^2]**
+![node_capacity_allocation_signalized](assets\media\node_capacity.png)
 
-![node_capacity_allocation_signalized](assets\media\node_capacity_allocation_signalized.png)
-
-
-
-![node_capacity_allocation_unsignalized](assets\media\node_capacity_allocation_unsignalized.png)
-
-
-
-
-
+**Table 17: Node Class Definitions**
 | Node Class | Class Type         |
 |------------|--------------------|
 | 1          | Signalized         |
@@ -1051,10 +968,6 @@ Figure : Node Capacity Assumptions for Intersections[^2]
 | 7          | All-Way Stop       |
 | 8          | Internal Load Node |
 | 9          | External Load Node |
-
-Table : Transit Pathfinding Parameters
-
-
 
 The user defined total intersection capacity must be allocated to each
 approach link in order to apply the logit based volume delay function
@@ -1086,16 +999,12 @@ node delay portion of the delay function, specifically variable X.
 Figure 17 below illustrates a sample allocation of the total node
 capacity for a signalized intersection.
 
-<span id="_Toc491103332" class="anchor"></span>Figure : Sample
-Allocation of Node Capacity for Signalized Intersection
-
-<img src="assets/media/image21.emf"
+**Figure 16: Sample Allocation of Node Capacity for Signalized Intersection**
+<img src="assets/media/node_capacity_allocation_signalized.png"
 style="width:5.46528in;height:5.20833in" />
 
-<span id="_Ref490685008" class="anchor"></span>Figure : Sample
-Allocation of Node Capacity for Un-signalized Intersection
-
-<img src="assets/media/image22.emf"
+**Figure 17: Sample Allocation of Node Capacity for Un-signalized Intersection**
+<img src="assets/media/node_capacity_allocation_unsignalized.png"
 style="width:5.5625in;height:3.67361in" />
 
 ## Auto Occupancy
@@ -1104,8 +1013,7 @@ The average number of occupants in each vehicle was estimated using NHTS
 and CCRPC survey data. These values are used when converting from person
 trips to vehicle trips.
 
-Table : Auto Occupancy Factors
-
+**Table 18: Auto Occupancy Factors**
 | Trip Type     | Average Auto Occupancy |
 |---------------|------------------------|
 | HBW           | 1.15                   |
@@ -1142,10 +1050,8 @@ in the mode choice model is a function of the relative attractiveness of
 each mode. The attractiveness of each mode is a function of the
 characteristics of the mode and the preferences of different travelers.
 
-<span id="_Ref490738200" class="anchor"></span>Equation : Example of
-Logit Model
-
-<img src="assets/media/image23.wmf"
+**Equation 4: Example of Logit Model**
+<img src="assets/media/example_logit_model.png"
 style="width:3.88194in;height:1.65278in" />
 
 The “utility functions” (Vs) in this equation can contain mode-specific
@@ -1180,8 +1086,9 @@ mode. Presently, this includes an auto path and a bus path. The mode
 skims are then input to the mode split nested logit models and the trips
 are divided among the available modes.
 
-<span id="_Toc491103334" class="anchor"></span>Figure : Mode Choice
-Model Nesting Structure
+**Figure 18: Mode Choice Model Nesting Structure**
+<img src="assets/media/modechoice_nestingstructrue.png"
+style="width:6.0in;height:3.5in" />
 
 ### Pre-distribution Non-motorized Mode Choice Model
 
@@ -1233,8 +1140,7 @@ re-examined for the base year and the square root of the TAZ
 intersection density (intersection nodes per square mile) was capped at
 20, or 400 intersections per square mile.
 
-<span id="_Ref491097681" class="anchor"></span>Figure : Walkable Zones
-
+**Figure 19: Walkable Zones**
 <img src="assets/media/image24.jpeg"
 style="width:6.22917in;height:6.15625in"
 alt="C:\Users\ben\AppData\Local\Microsoft\Windows\INetCache\Content.Word\Walkable ZOnes.jpg" />
@@ -1291,33 +1197,20 @@ data.
 
 ## Parameters
 
-The mode choice model parameters are shown in Equation 5 and[ image ]
+The mode choice model parameters are shown in Equation 5 and Equation 6 below.
 
+**Equation 5: Pre-Distribution Mode Choice Model Utility Equations**
+<img src="assets/media/pre_distribution_mode_choice_utility.png"
+style="width:6.0in;height:3.5in" />
 
-
-
-
-Equation 6 below.
-
-<span id="_Ref490741731" class="anchor"></span>Equation :
-Pre-distribution Mode Choice Model Utility Equations
-
-$$Vi = \alpha + \ \beta_{1}WalkZones + \ \beta_{2}HH\_ Den + \ \beta_{3}EMP\_ Den + \ \beta_{4}Int\_ Den$$
-
-![](assets/media/image25.emf)
-
-<span id="_Toc491103371" class="anchor"></span>Equation :
-Post-Distribution Mode Choice Model Utility Equations
-
-![](assets/media/image26.wmf)
-
-![](assets/media/image27.emf)
+**Equation 5: Post-Distribution Mode Choice Model Utility Equations**
+<img src="assets/media/post_distribution_mode_choice_utility.png"
+style="width:6.0in;height:3.5in" />
 
 The parameters used in transit assignment are specified within the
 transit network file, and are reported in Table 19.
 
-
-
+**Table 19: Transit Pathfinding Parameters**
 | Parameter                   | Value          | Units     |
 |-----------------------------|----------------|-----------|
 | Max Trip Cost               | 999            | Minutes   |
@@ -1348,11 +1241,6 @@ transit network file, and are reported in Table 19.
 | Max Total Time              | 240            | Minutes   |
 
 
-
-Table : Michigan DOT Volume-based Calibration Standards
-
-
-
 # Travel Model Validation
 
 Calibration and validation is performed for each step in the model: land
@@ -1379,9 +1267,8 @@ correlation, and an r value of -1 would indicate a perfect inverse
 correlation. The value of r can be estimated using the following
 formula.
 
-Equation : COEFFICIENT of Correlation
-
-<img src="assets/media/image28.wmf"
+**Equation 7: Coefficient of Correlation**
+<img src="assets/media/coefficient_correlation.png"
 style="width:2.75694in;height:0.67361in" />
 
 FHWA recommends a minimum r value of 0.88.
@@ -1401,17 +1288,13 @@ is always higher than the actual average network error because of the
 weighting scheme. This is discussed in the following section on absolute
 error. RMSE is calculated as:
 
-Equation : Root Mean Squared Error
-
-<img src="assets/media/image29.wmf"
+**Equation 8: Root Mean Squared Error**
+<img src="assets/media/rootmean_square_error.png"
 style="width:1.75694in;height:0.84028in" />
 
 where:
-
 x = Ground count
-
 y = Calibration volume
-
 n = Number of observations
 
 The RMSE should generally be less than 40%.
@@ -1428,9 +1311,8 @@ The absolute error is the absolute value of the average, unweighted
 error. It reflects the average link error in the network and is
 reflected in the following formula:
 
-<span id="_Toc491103374" class="anchor"></span>Equation : Absolute Error
-
-<img src="assets/media/image30.wmf"
+**Equation 9: Absolute Error**
+<img src="assets/media/absolute_error.png"
 style="width:2.46528in;height:0.51389in" />
 
 The CCRPC Version 4 daily model has an absolute error of **23%.**
@@ -1444,10 +1326,9 @@ The CCRPC Version 4 PM model has an absolute error of **26%**.
 The sum of differences is the average error of the network. It is
 similar to FHWA’s “percent error region-wide standard”.
 
-<span id="_Toc491103375" class="anchor"></span>Equation : Sum of
-Differences
-
-$$SumDif = \frac{(\sum Volume - \sum Count)}{\sum Count}*100$$
+**Equation 10: Sum of Differences**
+<img src="assets/media/sum_differences.png"
+style="width:2.46528in;height:0.51389in" />
 
 The CCRPC Version 4 region-wide percent sum of differences for the daily
 model is **-1.61%.**
@@ -1464,20 +1345,18 @@ A comparison between the FHWA guidelines and the calibrated daily model
 is shown in Table 20. All measures of performance exceed guidelines
 published by the FHWA.
 
-Table : FHWA Assignment Calibration Guidelines
-
+**Table 20: FHWA Assignment Calibration Guidelines**
 | Measures of Performance                    | FHWA Guideline | Daily Model | AM Peak Model | PM Peak Model |
 |--------------------------------------------|----------------|-------------|---------------|---------------|
-| **Correlation Coefficient**                | 0.880          | 0.922       | 0.917         | 0.904         |
-| **Percent Error Region-Wide**              | \+ / - 5%      | -1.61%      | 0.55%         | -0.80%        |
-| **Sum of Differences by Functional Class** |                |             |               |               |
-| **Freeways**                               | \+ / - 7%      | -0.01%      | 3.63%         | -0.15%        |
-| **Principal Arterials**                    | \+ / - 10%     | 6.21%       | 6.37%         | 7.70%         |
-| **Minor Arterials**                        | \+ / - 15%     | -3.91%      | -0.65%        | -2.74%        |
-| **Collectors**                             | \+ / - 25%     | -4.17%      | 3.85%         | -0.38%        |
+| Correlation Coefficient                | 0.880          | 0.922       | 0.917         | 0.904         |
+| Percent Error Region-Wide              | \+ / - 5%      | -1.61%      | 0.55%         | -0.80%        |
+| Sum of Differences by Functional Class |                |             |               |               |
+| Freeways                               | \+ / - 7%      | -0.01%      | 3.63%         | -0.15%        |
+| Principal Arterials                    | \+ / - 10%     | 6.21%       | 6.37%         | 7.70%         |
+| Minor Arterials                        | \+ / - 15%     | -3.91%      | -0.65%        | -2.74%        |
+| Collectors                             | \+ / - 25%     | -4.17%      | 3.85%         | -0.38%        |
 
-Table : Comparison of Daily Vehicle Miles of Travel (HPMS versus Model)
-
+**Table 21: Comparison of Daily Vehicle Miles of Travel (HPMS versus Model)**
 | (Upper Bound) Link Volume | MDOT Error |
 |---------------------------|------------|
 | 0                         | 200%       |
@@ -1490,14 +1369,13 @@ Table : Comparison of Daily Vehicle Miles of Travel (HPMS versus Model)
 
 
 
-**Figure : Comparison of Individual Link Level Error using MDOT Criteria (Daily comparison)**
-
+**Figure 20: Comparison of Individual Link Level Error using MDOT Criteria (Daily comparison)**
 ![](assets\media\percent_error_links.png)
 
-**Table : Average Trip Distance by Purpose (NHTS versus Model)**
 
 ### Comparison to HPMS Daily VMT
 
+**Table 22: Comparison of Daily Vehicle Miles of Travel (HPMS versus Model)**
 | Facility Type   | Avg. Daily VMT (2015 HPMS) | Model VMT     |
 |-----------------|----------------------------|---------------|
 | **Interstates** | 1,444,852                  | 1,444,914     |
@@ -1520,11 +1398,8 @@ Annual CCTA ridership by route should be converted to daily boardings
 using a factor of 280 for comparison. Figure 21 below shows the daily
 model boardings from transit assignment by route.
 
-Figure : Transit Assignment
-
+**Figure 21: Transit Assignment**
 ![](assets\media\transit_assignment.png)
-
-
 
 ## Survey Comparisons
 
@@ -1553,6 +1428,7 @@ distances for HBW, HBO, and NHB trips are very comparable between the
 survey and the model. Note, the comparisons presented below are for
 internal trips (internal-to-internal) only.
 
+**Table 23: Average Trip Distance by Purpose (NHTS versus Model)**
 | Purpose | NHTS (miles) | Model (miles) |
 |---------|--------------|---------------|
 | **HBW** | 8.1          | 7.5           |
@@ -1562,18 +1438,13 @@ internal trips (internal-to-internal) only.
 The trip length frequency distributions were also extracted from the survey and the model to determine if the model was replicating the
 overall shape of the observed frequency distribution. Figure 22, Figure 23, and Figure 24 compare the NHTS and model trip length frequency distributions for HBW, HBO and NHB trips respectively. The model and the survey frequency distributions are examined at 2-mile distance bins (0-2 miles, 2-4 miles, etc).
 
-Figure : HBW Trip Length Frequency Distribution (NHTS versus Model)
-
+**Figure 22: HBW Trip Length Frequency Distribution (NHTS versus Model)**
 ![](assets\media\hbw_trip_length.png)
 
-
-
-Figure : HBO Trip Length Frequency Distribution (NHTS versus Model)
-
+**Figure 23: HBO Trip Length Frequency Distribution (NHTS versus Model)**
 ![](assets\media\hbo_trip_length.png)
 
-Figure : NHB Trip Length Frequency Distribution (NHTS versus Model)
-
+**Figure 24: NHB Trip Length Frequency Distribution (NHTS versus Model)**
 ![](assets\media\nhb_trip_length.png)
 
 The NHTS data includes only 18 weekday trips in Chittenden County which
@@ -1594,8 +1465,7 @@ walk/bike trips in the new version of the model is a result of
 discussions with the CCRPC and an analysis of rMove<sup>TM</sup> data
 collected as part of this project.
 
-**Table : Comparison of Mode Shares (2009 NHTS versus Model)**
-
+**Table 24: Comparison of Mode Shares (2009 NHTS versus Model)**
 | 2009 NHTS Mode Shares |       |         |           | Version 4 Model |       |         |           |
 |-----------------------|-------|---------|-----------|-----------------|-------|---------|-----------|
 | Trip Purpose          | Auto  | Transit | Walk/Bike | Trip Purpose    | Auto  | Transit | Walk/Bike |
@@ -1637,28 +1507,23 @@ The net growth is a function of the build out potential, the existing
 amount of land use, and a modifier which adjusts the desirability of a
 TAZ based on who portion of its space is current build out.
 
-<span id="_Toc491103376" class="anchor"></span>Equation : Generalized
-Attractiveness
-
+**Equation 11: Generalized Attractiveness**
 ![](assets\media\LUAM_generalized_attractiveness.png)
 
 The actual available percentage is simply 1-existing/available. This percentage is modified to create a curve that decreases the impact of TAZs with very large available land percentages. The equation for modified percentage of available land is:
 
-Equation : Modified Percentage
-
-![](C:\Github\CCRPC_TravelModel_Documentation\model-documentation\docs\assets\media\modified_percentage_LUAM.png)
+**Equation 12: Modified Percentage**
+![](assets\media\modified_percentage_LUAM.png)
 
 The Intercept and Exponent were estimated based on historical growth.
 The MP calculation results in the curve shown below:
 
-Figure : Modified % Available Developable Land
-
+**Figure 25: Modified % Available Developable Land**
 ![modified_avail_land](assets\media\modified_avail_land.png)
 
 The generalized attractiveness (GATTn) is essentially a weighted attractiveness of each TAZ for households and employment. The final step is simply to allocate the control totals proportional to the generalized accessibility.
 
-Equation : Land Use Allocation
-
+**Equation 13: Land Use Allocation**
 ![](assets\media\LUAM.png)
 
 This creates a proportional allocation of the control total (CT) across land use “n” for each TAZ.
