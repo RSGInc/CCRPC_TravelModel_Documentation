@@ -122,7 +122,7 @@ Install the GISDK program:
 1.  In the main TransCAD menu, select Tools and make sure the “GIS Developer’s Kit” is enabled.
 
 **Figure 1: GIS Developer’s Kit**
-<img src="assets/media/gisdk.png"
+<img src="../assets/media/gisdk.png"
 style="width:1.36441in;height:0.29163in" alt="GISDK_Tools.bmp" />
 
 2.  Click the “Compile to UI” button (icon with an arrow pointing to text, see Figure 1) and navigate to the GISDK list file located: Drive:\CCRPC\ResourceFiles\MacrosLIST_CCRPC.lst
@@ -130,13 +130,13 @@ style="width:1.36441in;height:0.29163in" alt="GISDK_Tools.bmp" />
 3.  This will open a “Save As” dialog box. Navigate to the CompiledUI folder (Drive:\CCRPC\ResourceFiles\CompiledUI) and save over the ccrpc_ui.dbd file in this location. (Figure 2).
 
 **Figure 2: Compiling to UI**
-<img src="assets/media/compiling_to_ui.png"
+<img src="../assets/media/compiling_to_ui.png"
 style="width:6.5in;height:3.53681in" />
 
 4.  Return to the TransCAD menu and Select: Tools > Setup Add-Ins and fill in the fields as shown in Figure 3. To set the “UI Database” field, the user should browse to the UI Database (“ccrpc_ui.dbd”) that was created in the previous step.
 
 **Figure 3: Setup Add-ins**
-<img src="assets/media/setup_add_ins.png"
+<img src="../assets/media/setup_add_ins.png"
 style="width:4.5in;height:5.60417in" />
 
 ## (Re)Installing other Versions of the Model
@@ -150,13 +150,13 @@ This section describes the general steps and procedures involved in loading and 
 1.  Open the TransCAD interface by selecting Tools > Add-Ins >CCRPC (Figure 4).
 
 **Figure 4: Model Interface**
-<img src="assets/media/model_interface.png"
+<img src="../assets/media/model_interface.png"
 style="width:4.76845in;height:7.44512in" />
 
 2.  Select setup – this opens a new dialog box
 
 **Figure 5: Project Scenarios Menu**
-<img src="assets/media/project_scenarios.png"
+<img src="../assets/media/project_scenarios.png"
 style="width:6.28125in;height:4in" />
 
 3.  To add a new scenario, select “Copy”, which will create a new project scenario line. Enter a name for the scenario in the “Name” field and set the “Dir” (directory) button to the main directory of the scenario.
@@ -166,7 +166,7 @@ style="width:6.28125in;height:4in" />
 5.  Click “Ok” to exit the “Project Scenarios” menu.
 
 **Figure 6: Defining Inputs**
-<img src="assets/media/defining_inputs.png"
+<img src="../assets/media/defining_inputs.png"
 style="width:6.34375in;height:6.27083in" />
 
 ## Running the CCRPC Model
@@ -240,6 +240,7 @@ The network manager uses three primary files: master network (.dbd), project (.b
 Roadway projects that may add or remove links and modify link and node attributes are stored in .bin files. The user can create future roadway projects by using the projects template, which is the Project_Template.bin file. The project files contain five fields: Project_ID, Action, ID, Field_Name, Field_Value, and Notes. The four options for the Action field are listed below in Table 2, with an example of a project file in Figure 7.
 
 **Table 2: Project Action Commands**
+
 | **Action** | **Description**                  |
 |------------|----------------------------------|
 | Add        | Adds a link to the scenario      |
@@ -248,7 +249,7 @@ Roadway projects that may add or remove links and modify link and node attribute
 | Node       | Alters the indicated node field  |
 
 **Figure 7: Example Project .BIN File**
-<img src="assets/media/example_project_bin_file.png"
+<img src="../assets/media/example_project_bin_file.png"
 style="width:6.5in;height:3.04097in" />
 
 Scenarios are created using text files that list out which projects (various \[project\].bin files) to be included in the scenario. Figure 8 shows an example scenario file. The names of the project files are divided by line breaks; these names must match the name of the project .bin files exactly. An optional project description can be added to the project filename if separated by a semicolon (e.g. 2025wTIP; Includes all FY 2018-2021 Front of Book TIP projects). The user can create any desirable scenario by adding or removing projects that correspond to project files. It is important to note that the Base project represents the base year network and does not correspond to a specific project file.
@@ -256,7 +257,7 @@ Scenarios are created using text files that list out which projects (various \[p
 The \[scenario\].txt file must have a name that is 11 characters long or shorter. Using longer filenames for the scenario files will cause the model to crash.
 
 **Figure 8: Scenario Example**
-<img src="assets/media/scenario_example.png"
+<img src="../assets/media/scenario_example.png"
 style="width:6.5in;height:1.48194in" />
 
 To run the Network Manager, follow the steps outlined below:
@@ -266,27 +267,27 @@ To run the Network Manager, follow the steps outlined below:
 2.  In the Network Manager window (Figure 9), enter a name for the network scenario.
 
 **Figure 9: Network Manager**
-<img src="assets/media/network_manager.png"
+<img src="../assets/media/network_manager.png"
 style="width:2.33431in;height:3.14107in" />
 
 3.  Browse to the master network folder.
 
-<img src="assets/media/master_network_folder.png"
+<img src="../assets/media/master_network_folder.png"
 style="width:2.88403in;height:0.98819in" />
 
 4.  Browse to the MasterNetwork_Streets.dbd and click Open.
 
-<img src="./docs2/assets/media/master_network_streets.png"
+<img src="../assets/media/master_network_streets.png"
 style="width:4.70973in;height:0.69234in" />
 
 5.  Browse to the Highway Network \[Scenario\].txt file and click Open
 
-<img src="assets/media/highway_network_scenario.png"
+<img src="../assets/media/highway_network_scenario.png"
 style="width:4.51887in;height:0.86663in" />
 
 6.  Browse to the Transit Route System .rts file and click Open
 
-<img src="assets/media/transit_route_system.png"
+<img src="../assets/media/transit_route_system.png"
 style="width:4.60137in;height:0.70236in" />
 
 7.  Navigate to the output folder, choose a name for the output network
@@ -364,6 +365,7 @@ The following network files required for the model:
 The relationships between these files are stored in what TransCAD calls the Network file (.net). This file refers to the Highway/Streets file, the Link-Type Lookup, and the Turn Penalty Table which together describe the network, as well as details such as which attribute in the Highway/Streets layer represents Road Class or Capacity. The tables below, list the attributes of these key input files along with a description and indication if the field is manually coded by the user (User) or if it is automatically calculated by TransCAD during a model run (TransCAD).
 
 **Figure 10: Link Type Lookup Table**
+
 | **Field_Name** | **Comment**                                        | **Populated By** | **Units**         |
 |----------------|----------------------------------------------------|------------------|-------------------|
 | LinkClass      | Numberic code for link class                       | User             |                   |
@@ -380,12 +382,14 @@ The relationships between these files are stored in what TransCAD calls the Netw
 | p4             | node delay parameter p4                            | User             |                   |
 
 **Figure 11: Node Type Lookup Table**
+
 | **Field_Name** | **Comment**                 | **Populated By** | **Units** |
 |----------------|-----------------------------|------------------|-----------|
 | NodeClass      | Numeric code for node class | User             |           |
 | Class Type     | Description of node type    | User             |           |
 
 **Figure 12: Highway/street Line Layer Attributes**
+
 | **Field_Name**           | **Comment**                                                                                                         | **Populated By** | **Units**     |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------|------------------|---------------|
 | ID                       | Link index number created by TransCAD                                                                               | TransCAD         |               |
@@ -449,6 +453,7 @@ The relationships between these files are stored in what TransCAD calls the Netw
 | Urban                    | Indication if link is in (1) or outside (0) an "urban" area                                                         | User             |               |
 
 **Figure 13: Node Layer Attributes**
+
 | **Field_Name**      | **Comment**                                                      | **Populated By** | **Units**      |
 |---------------------|------------------------------------------------------------------|------------------|----------------|
 | ID                  | Node index number created by TransCAD                            | TransCAD         |                |
