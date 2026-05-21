@@ -530,24 +530,24 @@ destinations in the distribution model. In the next step, the person
 trips are split into each respective mode (e.g. auto, bus). Finally, the
 vehicle trips are assigned to the highway network in the assignment
 model.</p>
-<p><strong>Figure 1: 4-Step Model Concept</strong>
-<img src="assets/media/image5.png"
+<p><strong>Figure 1: 4-Step Model Concept</strong></p>
+<p><img src="assets/media/image5.png"
 style="width:6.25in;height:0.50681in" /></p>
 <p>The model has an important feedback loop that has been added in the following figure. </p>
 <p>Accessibility, which is a measure of the relative ease of travel, is calculated based on outputs from the assignment model, which is also an important determinant of trip distribution. Simply put, the decisions individuals make about where and how far to travel are a function of congestion levels and travel times. Therefore, it is customary to iterate between the trip distribution and assignment models in order to
 reach a convergent solution. The iteration loop in Figure 2 occurs within a given simulation year.</p>
-<p><strong>Figure 2: 4-Step Model Concept with Feedback</strong>
-<img src="assets/media/image6.png"
+<p><strong>Figure 2: 4-Step Model Concept with Feedback</strong></p>
+<p><img src="assets/media/image6.png"
 style="width:6.25in;height:1.41961in" /></p>
 <p>While transit travel is critical for many people in the CCRPC region, the reality is that transit carries a relatively small portion of the
 overall travel market in the region at this time. Since transit demand in the CCRPC region does not measurably impact roadway level-of-service, a decision was made to not include the mode choice model in the feedback loop to reduce model run time and complexity. However, the mode choice model is still part of the overall model, and the CCRPC model operates as presented in Figure 3. This model application decision does not limit the ability of the modeling system to adequately represent non-auto modes, and does not bias the model results, but it does significantly reduce model run time since the mode choice component takes the longest to run due to the nature of the complex path-building that is required.</p>
-<p><strong>Figure 3: Feedback in the CCRPC Model Structure</strong>
-<img src="assets/media/image7.png"
+<p><strong>Figure 3: Feedback in the CCRPC Model Structure</strong></p>
+<p><img src="assets/media/image7.png"
 style="width:6.25in;height:0.93616in" /></p>
 <p>The model is calibrated to reflect traffic conditions on an average weekday in September, 2015. September was chosen because it is a time during which public schools and colleges are in session, while seasonal (summer) traffic is still observed.</p>
 <p>The model is a daily model that performs hourly traffic assignments so as to account for both travel across an entire day and to adequately depict peak hour congestion. To accomplish this, the model relies on static time of day factors that divide the daily trips by hour for the purposes of assignment. This process is illustrated in Figure 4.</p>
-<p><strong>Figure 4 : Complete CCRPC Model Structure</strong>
-<img src="assets/media/image8.png"
+<p><strong>Figure 4 : Complete CCRPC Model Structure</strong></p>
+<p><img src="assets/media/image8.png"
 style="width:6.25in;height:1.50775in" /></p>
 <h2 id="brief-description-of-model-components">Brief Description of Model Components</h2>
 <p>While the model is a traditional 4-step model, the modeling process itself consists of several steps worth noting. Each of the steps below
@@ -588,11 +588,11 @@ collectors and above, as well as some more prominent local roads.</p>
 <p>For the purposes of modeling traffic flow, the model includes 528 internal Transportation Analysis Zones (TAZs) covering the 19
 municipalities in Chittenden County. Traffic entering and exiting the region does so through 17 external zones.</p>
 <p>Figure 5 shows the TAZ structure for a portion of Burlington.</p>
-<p><strong>Figure 5: Burlington Area TAZ Structure</strong>
-<img src="assets/media/image9.png"
+<p><strong>Figure 5: Burlington Area TAZ Structure</strong></p>
+<p><img src="assets/media/image9.png"
 style="width:4.46269in;height:5.63149in" /></p>
-<p><strong>Figure 6: Chittenden County TAZ Structure</strong>
-<img src="assets/media/image10.png"
+<p><strong>Figure 6: Chittenden County TAZ Structure</strong></p>
+<p><img src="assets/media/image10.png"
 style="width:5.03827in;height:6.45038in" /></p>
 <p>The following municipalities are included in the CCRPC Model.</p>
 <p><strong>Table 1: List of Municipalities in the CCRPC Model</strong></p>
@@ -636,48 +636,191 @@ style="width:5.03827in;height:6.45038in" /></p>
 </table>
 
 <p>Table 2 contains a list of TAZ numbers by town.</p>
-<p><strong>Table 2: List of TAZs by Town</strong>
-| Town             | TAZs          |
-| ---------------- | ------------- |
-| Bolton           | 1 - 5         |
-| Buel’s Gore      | 30            |
-| Burlington       | 55 - 177      |
-| Charlotte        | 202 - 215     |
-| Colchester       | 240 - 280     |
-| Essex Junction   | 305 - 324     |
-| Essex            | 349 - 384     |
-| Hinesburg        | 409 - 431     |
-| Huntington       | 456 - 463     |
-| Jericho          | 488 - 503     |
-| Milton           | 528 - 561     |
-| Richmond         | 586 - 600     |
-| Shelburne        | 625 - 648     |
-| South Burlington | 673 - 759     |
-| St George        | 784 - 785     |
-| Underhill        | 810 - 813     |
-| Westford         | 838 - 843     |
-| Williston        | 868 - 921     |
-| Winooski         | 946 - 960     |
-| Externals        | 10001 - 10017 |</p>
+<p><strong>Table 2: List of TAZs by Town</strong></p>
+<table>
+<thead>
+<tr>
+<th>Town</th>
+<th>TAZs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bolton</td>
+<td>1 - 5</td>
+</tr>
+<tr>
+<td>Buel’s Gore</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Burlington</td>
+<td>55 - 177</td>
+</tr>
+<tr>
+<td>Charlotte</td>
+<td>202 - 215</td>
+</tr>
+<tr>
+<td>Colchester</td>
+<td>240 - 280</td>
+</tr>
+<tr>
+<td>Essex Junction</td>
+<td>305 - 324</td>
+</tr>
+<tr>
+<td>Essex</td>
+<td>349 - 384</td>
+</tr>
+<tr>
+<td>Hinesburg</td>
+<td>409 - 431</td>
+</tr>
+<tr>
+<td>Huntington</td>
+<td>456 - 463</td>
+</tr>
+<tr>
+<td>Jericho</td>
+<td>488 - 503</td>
+</tr>
+<tr>
+<td>Milton</td>
+<td>528 - 561</td>
+</tr>
+<tr>
+<td>Richmond</td>
+<td>586 - 600</td>
+</tr>
+<tr>
+<td>Shelburne</td>
+<td>625 - 648</td>
+</tr>
+<tr>
+<td>South Burlington</td>
+<td>673 - 759</td>
+</tr>
+<tr>
+<td>St George</td>
+<td>784 - 785</td>
+</tr>
+<tr>
+<td>Underhill</td>
+<td>810 - 813</td>
+</tr>
+<tr>
+<td>Westford</td>
+<td>838 - 843</td>
+</tr>
+<tr>
+<td>Williston</td>
+<td>868 - 921</td>
+</tr>
+<tr>
+<td>Winooski</td>
+<td>946 - 960</td>
+</tr>
+<tr>
+<td>Externals</td>
+<td>10001 - 10017</td>
+</tr>
+</tbody>
+</table>
 <h2 id="network-structure">Network Structure</h2>
 <p>Major roadways within the modeling region were selected to reliably represent the entire road network. There are approximately 2,500 road segments represented as links, of which approximately 240 are one-way only. There are over 1,500 TAZs and intersections represented as endpoints also known as nodes. Figure 7 shows a portion of the TransCAD network in the vicinity of the City of Burlington.</p>
-<p><strong>Figure 7: Modeled Road Network in Burlington</strong>
-<img src="assets/media/image11.png"
+<p><strong>Figure 7: Modeled Road Network in Burlington</strong></p>
+<p><img src="assets/media/image11.png"
 style="width:4.50286in;height:3.49419in" /></p>
 <h2 id="external-tazs">External TAZs</h2>
 <p>A trip with one origin or destination outside of the model boundary is considered an external trip. To assist in accounting for these types of trips, counts are taken at selected roads at the boundary of the model. These roads are termed external load links. Trips from outside the network are loaded into the network through these links.</p>
-<p><strong>Table 3: External Traffic Zones</strong>
-| External TAZ | Roadway            | Count Location                         | External TAZ | Roadway     | Count Location              |
-|--------------|--------------------|----------------------------------------|--------------|-------------|-----------------------------|
-| 10001        | US-2               | Just west of Bear Trap Rd              | 10010        | US-2        | At Waterbury TL             |
-| 10002        | Lake Rd            | At Georgia TL                          | 10011        | I-89        | Between Exits 10 and 11     |
-| 10003        | US-7               | North of Exit 18                       | 10012        | River Rd    | At Duxbury TL               |
-| 10004        | I-89               | North of Exit 18                       | 10013        | Main Rd     | At Buel’s Gore TL           |
-| 10005        | VT-104A            | Just East of Arrowhead Lake Rd         | 10014        | VT-116      | Just North of Starksboro TL |
-| 10006        | VT-128             | Between Westford-Milton Rd and Fairfax | 10015        | Silver St   | At Monkton TL               |
-| 10007        | Cambridge Rd       | Between VT-128 and Fairfax             | 10016        | Mt Philo Rd | Just South of Spear St      |
-| 10008        | VT-15              | Just South of Cambridge TL             | 10017        | US-7        | South of Ferry Rd           |
-| 10009        | Pleasant Valley Rd | By Chad Rd                             |              |             |                             |</p>
+<p><strong>Table 3: External Traffic Zones</strong></p>
+<table>
+<thead>
+<tr>
+<th>External TAZ</th>
+<th>Roadway</th>
+<th>Count Location</th>
+<th>External TAZ</th>
+<th>Roadway</th>
+<th>Count Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10001</td>
+<td>US-2</td>
+<td>Just west of Bear Trap Rd</td>
+<td>10010</td>
+<td>US-2</td>
+<td>At Waterbury TL</td>
+</tr>
+<tr>
+<td>10002</td>
+<td>Lake Rd</td>
+<td>At Georgia TL</td>
+<td>10011</td>
+<td>I-89</td>
+<td>Between Exits 10 and 11</td>
+</tr>
+<tr>
+<td>10003</td>
+<td>US-7</td>
+<td>North of Exit 18</td>
+<td>10012</td>
+<td>River Rd</td>
+<td>At Duxbury TL</td>
+</tr>
+<tr>
+<td>10004</td>
+<td>I-89</td>
+<td>North of Exit 18</td>
+<td>10013</td>
+<td>Main Rd</td>
+<td>At Buel’s Gore TL</td>
+</tr>
+<tr>
+<td>10005</td>
+<td>VT-104A</td>
+<td>Just East of Arrowhead Lake Rd</td>
+<td>10014</td>
+<td>VT-116</td>
+<td>Just North of Starksboro TL</td>
+</tr>
+<tr>
+<td>10006</td>
+<td>VT-128</td>
+<td>Between Westford-Milton Rd and Fairfax</td>
+<td>10015</td>
+<td>Silver St</td>
+<td>At Monkton TL</td>
+</tr>
+<tr>
+<td>10007</td>
+<td>Cambridge Rd</td>
+<td>Between VT-128 and Fairfax</td>
+<td>10016</td>
+<td>Mt Philo Rd</td>
+<td>Just South of Spear St</td>
+</tr>
+<tr>
+<td>10008</td>
+<td>VT-15</td>
+<td>Just South of Cambridge TL</td>
+<td>10017</td>
+<td>US-7</td>
+<td>South of Ferry Rd</td>
+</tr>
+<tr>
+<td>10009</td>
+<td>Pleasant Valley Rd</td>
+<td>By Chad Rd</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h1 id="socioeconomic-data">Socioeconomic Data</h1>
 <h2 id="households">Households</h2>
 <p>Housing data was collected by the Chittenden County Regional Planning
@@ -690,13 +833,48 @@ development and growth trends. <span class="mark"></span></p>
 classified by household size and auto ownership. The household size and
 auto ownership distribution assumptions come from the 2010 Census, at
 the Census Tract level.</p>
-<p><strong>Table 4: Regional Distribution of Households by Size and Autos</strong>
-| Household Size | 0 Vehicles | 1 Vehicle | 2 Vehicles | 3+ Vehicles |
-|----------------|------------|-----------|------------|-------------|
-| <strong>1</strong>          | 5%         |    19%    |     3%     |      0%     |
-| <strong>2</strong>          | 2%         |     8%    |    23%     |      5%     |
-| <strong>3</strong>          | 0%         |     3%    |     6%     |      5%     |
-| <strong>4+</strong>         | 0%         |     2%    |    10%     |      7%     |</p>
+<p><strong>Table 4: Regional Distribution of Households by Size and Autos</strong></p>
+<table>
+<thead>
+<tr>
+<th>Household Size</th>
+<th>0 Vehicles</th>
+<th>1 Vehicle</th>
+<th>2 Vehicles</th>
+<th>3+ Vehicles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>5%</td>
+<td>19%</td>
+<td>3%</td>
+<td>0%</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>2%</td>
+<td>8%</td>
+<td>23%</td>
+<td>5%</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>0%</td>
+<td>3%</td>
+<td>6%</td>
+<td>5%</td>
+</tr>
+<tr>
+<td><strong>4+</strong></td>
+<td>0%</td>
+<td>2%</td>
+<td>10%</td>
+<td>7%</td>
+</tr>
+</tbody>
+</table>
 <p>There are 68,272 households within the model region and 7,749 group quarters. Group quarters are treated as 75% one person-zero vehicle and 25% two person-one vehicle households. Group quarters are not multi-family or apartment buildings. These are most typically student housing, with one address but multiple residents.</p>
 <h2 id="employment">Employment</h2>
 <p>The CCRPC collected employment land use data from two distinct sources:
@@ -734,18 +912,63 @@ traffic. External trips, which have at least one trip end located at an
 external station, are added as fixed inputs. Table 5 presents the 6
 internal trip types as well as the 3 commercial vehicle trip types and 3
 external trip types.</p>
-<p><strong>Table 5: Trip Purpose Definitions</strong>
-| Trip Type            | Abbreviation | Description                                                                                               |
-|----------------------|--------------|-----------------------------------------------------------------------------------------------------------|
-| Home Based Work      | HBW          | A trip where one end is home and the other end is work                                                    |
-| Home Based Other     | HBO          | A trip where one end is home and the other end is NOT work                                                |
-| Non-Home-Based       | NHB          | A trip where neither end is home                                                                          |
-| Light Commercial     | L_Comm       | A trip made by a commercial vehicle with 4 tires                                                          |
-| Medium Commercial    | M_Comm       | A trip made by a commercial vehicle with 6 tires                                                          |
-| Heavy Commercial     | H_Comm       | A trip made by a commercial vehicle with &gt;6 tires                                                        |
-| Internal-to-External | IX           | A trip originating inside of the model and terminating outside of the model zone geography                |
-| External-to-Internal | XI           | A trip originating outside of the model zone geography and terminating inside of the model                |
-| External-to-External | XX           | A trip originating and terminating outside of the model geography, but passing through the model en route |</p>
+<p><strong>Table 5: Trip Purpose Definitions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Trip Type</th>
+<th>Abbreviation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Home Based Work</td>
+<td>HBW</td>
+<td>A trip where one end is home and the other end is work</td>
+</tr>
+<tr>
+<td>Home Based Other</td>
+<td>HBO</td>
+<td>A trip where one end is home and the other end is NOT work</td>
+</tr>
+<tr>
+<td>Non-Home-Based</td>
+<td>NHB</td>
+<td>A trip where neither end is home</td>
+</tr>
+<tr>
+<td>Light Commercial</td>
+<td>L_Comm</td>
+<td>A trip made by a commercial vehicle with 4 tires</td>
+</tr>
+<tr>
+<td>Medium Commercial</td>
+<td>M_Comm</td>
+<td>A trip made by a commercial vehicle with 6 tires</td>
+</tr>
+<tr>
+<td>Heavy Commercial</td>
+<td>H_Comm</td>
+<td>A trip made by a commercial vehicle with &gt;6 tires</td>
+</tr>
+<tr>
+<td>Internal-to-External</td>
+<td>IX</td>
+<td>A trip originating inside of the model and terminating outside of the model zone geography</td>
+</tr>
+<tr>
+<td>External-to-Internal</td>
+<td>XI</td>
+<td>A trip originating outside of the model zone geography and terminating inside of the model</td>
+</tr>
+<tr>
+<td>External-to-External</td>
+<td>XX</td>
+<td>A trip originating and terminating outside of the model geography, but passing through the model en route</td>
+</tr>
+</tbody>
+</table>
 <p>At this stage trip ends are categorized as “productions” and
 “attractions.” Production ends occur at the trip maker’s residence. Trip
 productions are based on the number and type of housing units within a
@@ -777,80 +1000,405 @@ auto, 1 auto, 2 autos, or 3+ autos). The cross-classification approach
 required that separate trip production estimates be developed for each
 of the resulting 16 household types (4 x 4).</p>
 <p>Table 6 shows the trip production rates for internal HBW, HBO and NHB trip productions. The production rates were estimated using the 1998 Chittenden County household survey and the 2001 NHTS survey. CCRPC purchased the Add-On data for the 2009 NHTS which was also used to check and update the trip production rates, and were further informed by an rMove™ convenience survey conducted by RSG for the CCRPC in the fall of Each number entered into the production tables is in units of person trips per household per day. The trip generation rates were adjusted by comparing them to rates from newer surveys for similar geographical regions.</p>
-<p><strong>Table 6: HBW, HBO, and NHB Person Trip Production Rates</strong>
-| Trip Type          | HH Size | 0 Vehicles | 1 Vehicle | 2 Vehicles |  3+ Vehicles |
-|--------------------|---------|------------|-----------|------------|--------------|
-|                    |         | 0          | 1         | 2          | 3+           |
-| <strong>HBW Trip Rates</strong> | <strong>1</strong>   | 0.3848     | 0.6864    | 0.7072     | 1.2064       |
-|                    | <strong>2</strong>   | 0.3952     | 1.092     | 1.4872     | 1.8408       |
-|                    | <strong>3</strong>   | 0.416      | 1.04      | 2.028      | 2.6936       |
-|                    | <strong>4+</strong>  | 0.8944     | 1.6848    | 2.0488     | 2.7144       |
-| <strong>HBO Trip Rates</strong> | <strong>1</strong>   | 1.5912     | 2.0384    | 2.3192     | 1.872        |
-|                    | <strong>2</strong>   | 2.444      | 4.3368    | 3.9        | 3.4944       |
-|                    | <strong>3</strong>   | 2.4648     | 4.7944    | 4.9608     | 4.316        |
-|                    | <strong>4+</strong>  | 5.8032     | 5.2728    | 8.0496     | 6.6872       |
-| <strong>NHB Trip Rates</strong> | <strong>1</strong>   | 0.78       | 1.4872    | 1.508      | 1.6536       |
-|                    | <strong>2</strong>   | 1.1752     | 1.872     | 2.288      | 2.2984       |
-|                    | <strong>3</strong>   | 0.8008     | 3.5048    | 2.7768     | 2.6728       |
-|                    | <strong>4+</strong>  | 4.0248     | 3.0472    | 4.1704     | 4.5656       |</p>
+<p><strong>Table 6: HBW, HBO, and NHB Person Trip Production Rates</strong></p>
+<table>
+<thead>
+<tr>
+<th>Trip Type</th>
+<th>HH Size</th>
+<th>0 Vehicles</th>
+<th>1 Vehicle</th>
+<th>2 Vehicles</th>
+<th>3+ Vehicles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3+</td>
+</tr>
+<tr>
+<td><strong>HBW Trip Rates</strong></td>
+<td><strong>1</strong></td>
+<td>0.3848</td>
+<td>0.6864</td>
+<td>0.7072</td>
+<td>1.2064</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>2</strong></td>
+<td>0.3952</td>
+<td>1.092</td>
+<td>1.4872</td>
+<td>1.8408</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>3</strong></td>
+<td>0.416</td>
+<td>1.04</td>
+<td>2.028</td>
+<td>2.6936</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>4+</strong></td>
+<td>0.8944</td>
+<td>1.6848</td>
+<td>2.0488</td>
+<td>2.7144</td>
+</tr>
+<tr>
+<td><strong>HBO Trip Rates</strong></td>
+<td><strong>1</strong></td>
+<td>1.5912</td>
+<td>2.0384</td>
+<td>2.3192</td>
+<td>1.872</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>2</strong></td>
+<td>2.444</td>
+<td>4.3368</td>
+<td>3.9</td>
+<td>3.4944</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>3</strong></td>
+<td>2.4648</td>
+<td>4.7944</td>
+<td>4.9608</td>
+<td>4.316</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>4+</strong></td>
+<td>5.8032</td>
+<td>5.2728</td>
+<td>8.0496</td>
+<td>6.6872</td>
+</tr>
+<tr>
+<td><strong>NHB Trip Rates</strong></td>
+<td><strong>1</strong></td>
+<td>0.78</td>
+<td>1.4872</td>
+<td>1.508</td>
+<td>1.6536</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>2</strong></td>
+<td>1.1752</td>
+<td>1.872</td>
+<td>2.288</td>
+<td>2.2984</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>3</strong></td>
+<td>0.8008</td>
+<td>3.5048</td>
+<td>2.7768</td>
+<td>2.6728</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>4+</strong></td>
+<td>4.0248</td>
+<td>3.0472</td>
+<td>4.1704</td>
+<td>4.5656</td>
+</tr>
+</tbody>
+</table>
 <p>There are estimated to be an average of 773,567 daily person trips (Table 7) in the Chittenden County model region for the 2015 base year.</p>
-<p><strong>Table 7: Total Trips by Trip Purpose</strong>
-| Trip Type            | # of Trips | % of Total |
-|----------------------|-------------|------------|
-| Home Based Work      | 94,758      | 12.2%      |
-| Home Based Other     | 274,757     | 35.5%      |
-| Non-Home Based       | 173,485     | 22.4%      |
-| Light Commercial     | 111,635     | 14.4%      |
-| Medium Commercial    | 13,378      | 1.7%       |
-| Heavy Commercial     | 2,879       | 0.4%       |
-| Internal-to-External | 35,870      | 4.6%       |
-| External-to-Internal | 63,578      | 8.2%       |
-| External-to-External | 3,227       | 0.4%       |
-| Total Person Trips   | 773,567     | 100.0%     |</p>
+<p><strong>Table 7: Total Trips by Trip Purpose</strong></p>
+<table>
+<thead>
+<tr>
+<th>Trip Type</th>
+<th># of Trips</th>
+<th>% of Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Home Based Work</td>
+<td>94,758</td>
+<td>12.2%</td>
+</tr>
+<tr>
+<td>Home Based Other</td>
+<td>274,757</td>
+<td>35.5%</td>
+</tr>
+<tr>
+<td>Non-Home Based</td>
+<td>173,485</td>
+<td>22.4%</td>
+</tr>
+<tr>
+<td>Light Commercial</td>
+<td>111,635</td>
+<td>14.4%</td>
+</tr>
+<tr>
+<td>Medium Commercial</td>
+<td>13,378</td>
+<td>1.7%</td>
+</tr>
+<tr>
+<td>Heavy Commercial</td>
+<td>2,879</td>
+<td>0.4%</td>
+</tr>
+<tr>
+<td>Internal-to-External</td>
+<td>35,870</td>
+<td>4.6%</td>
+</tr>
+<tr>
+<td>External-to-Internal</td>
+<td>63,578</td>
+<td>8.2%</td>
+</tr>
+<tr>
+<td>External-to-External</td>
+<td>3,227</td>
+<td>0.4%</td>
+</tr>
+<tr>
+<td>Total Person Trips</td>
+<td>773,567</td>
+<td>100.0%</td>
+</tr>
+</tbody>
+</table>
 <p>The total regional trip productions by purpose were compared to the trip rates extracted from the 2009 NHTS Add-On survey data that was purchased by CCRPC. The figure below compares the NHTS rates (trips per household) to the total regional trips estimated by the Version 4 travel model. While the overall Version 4 travel model trips per household are lower than the NHTS survey, they are in line with observed trips per household from the 2016 rMove™ survey, which noted approximately 85% of all respondents completed 8 trips per day or fewer.</p>
-<p><strong>Table 8: Total Trips per Household by Purpose (NHTS versus Model)</strong>
-| Purpose   | NHTS     | Model    |
-|-----------|----------|----------|
-| HBW       | 1.2      | 1.39     |
-| HBO       | 4.7      | 4.02     |
-| NHB       | 4.4      | 2.54     |
-| <strong>Total</strong> | <strong>10.2</strong> | <strong>7.95</strong> |</p>
-<p><strong>Figure 9: Complete Person-Days By Number of Trips Per Day (rMove™ 2016)</strong>
-<img src="assets/media/figure9.png"
+<p><strong>Table 8: Total Trips per Household by Purpose (NHTS versus Model)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th>NHTS</th>
+<th>Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HBW</td>
+<td>1.2</td>
+<td>1.39</td>
+</tr>
+<tr>
+<td>HBO</td>
+<td>4.7</td>
+<td>4.02</td>
+</tr>
+<tr>
+<td>NHB</td>
+<td>4.4</td>
+<td>2.54</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>10.2</strong></td>
+<td><strong>7.95</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Figure 9: Complete Person-Days By Number of Trips Per Day (rMove™ 2016)</strong></p>
+<p><img src="assets/media/figure9.png"
 style="width:5.32in;height:2.48in" /></p>
 <h2 id="internal-trip-attractions">Internal Trip Attractions</h2>
 <p>Trip attraction models for HBW, HBO and NHB trip purposes were developed originally from the CCRPC diary survey and the light, medium and heavy commercial trip rates came from FHWA’s Quick Response Freight Manual (DTFH61-93-C-00075 &amp; DTFH61-93-C-00216, Sept-1996, <u>http://tmip.fhwa.dot.gov/resources/clearinghouse/docs/quick/quick.pdf</u>). The estimated model coefficients were then calibrated so that trip attractions by purpose would be consistent with trip productions and proportionate to historic ITE trip generation rates by land-use type. Each number entered into the attraction table (Table 10) is in units of person trips per employee or housing unit per day.</p>
-<p><strong>Table 9: Daily Internal Person Trip Attraction Rates</strong>
-| Land Use Class     | Number of Employees | Percent of Total Employees | Average ITE Rate |
-|--------------------|---------------------|----------------------------|------------------|
-| Accommodations     | 1,911               | 1.6%                       | 5.72             |
-| College            | 8,534               | 7.2%                       | 6.39             |
-| Commercial         | 35,396              | 29.7%                      | 4.60             |
-| Industrial         | 22,171              | 18.6%                      | 3.83             |
-| Institutional      | 18,437              | 15.5%                      | 7.86             |
-| K12                | 4,786               | 4.0%                       | 12.41            |
-| Retail             | 19,986              | 16.8%                      | 12.41            |
-| Special Commercial | 2,547               | 2.1%                       | 15.98            |
-| Special Retail     | 5,525               | 4.6%                       | 29.33            |</p>
-<p><strong>Table 10: Daily Internal Person Trip Attraction Rates by Trip Purpose Per Employee</strong>
-| Land-Use Class     | HBW   | HBO    | NHB   | L_COMM | M_COMM | H_COMM |
-|--------------------|-------|--------|-------|--------|--------|--------|
-| Accommodations     | 0.717 | 2.54   | 1.437 | 0.874  | 0.136  | 0.018  |
-| College            | 0.717 | 2.97   | 1.68  | 0.874  | 0.136  | 0.018  |
-| Commercial         | 0.717 | 1.821  | 1.03  | 0.874  | 0.136  | 0.018  |
-| Industrial         | 0.717 | 0.348  | 0.197 | 1.876  | 0.484  | 0.208  |
-| Institutional      | 0.717 | 3.907  | 2.21  | 0.874  | 0.136  | 0.018  |
-| K12                | 0.717 | 6.814  | 3.854 | 0.874  | 0.136  | 0.018  |
-| Retail             | 0.717 | 5.926  | 3.352 | 1.776  | 0.506  | 0.13   |
-| Special Commercial | 0.717 | 8.209  | 4.643 | 1.776  | 0.506  | 0.13   |
-| Special Retail     | 0.717 | 16.736 | 9.465 | 1.776  | 0.506  | 0.13   |
-| Households         | 0     | 0.24   | 0.12  | 0.502  | 0.198  | 0      |</p>
+<p><strong>Table 9: Daily Internal Person Trip Attraction Rates</strong></p>
+<table>
+<thead>
+<tr>
+<th>Land Use Class</th>
+<th>Number of Employees</th>
+<th>Percent of Total Employees</th>
+<th>Average ITE Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accommodations</td>
+<td>1,911</td>
+<td>1.6%</td>
+<td>5.72</td>
+</tr>
+<tr>
+<td>College</td>
+<td>8,534</td>
+<td>7.2%</td>
+<td>6.39</td>
+</tr>
+<tr>
+<td>Commercial</td>
+<td>35,396</td>
+<td>29.7%</td>
+<td>4.60</td>
+</tr>
+<tr>
+<td>Industrial</td>
+<td>22,171</td>
+<td>18.6%</td>
+<td>3.83</td>
+</tr>
+<tr>
+<td>Institutional</td>
+<td>18,437</td>
+<td>15.5%</td>
+<td>7.86</td>
+</tr>
+<tr>
+<td>K12</td>
+<td>4,786</td>
+<td>4.0%</td>
+<td>12.41</td>
+</tr>
+<tr>
+<td>Retail</td>
+<td>19,986</td>
+<td>16.8%</td>
+<td>12.41</td>
+</tr>
+<tr>
+<td>Special Commercial</td>
+<td>2,547</td>
+<td>2.1%</td>
+<td>15.98</td>
+</tr>
+<tr>
+<td>Special Retail</td>
+<td>5,525</td>
+<td>4.6%</td>
+<td>29.33</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 10: Daily Internal Person Trip Attraction Rates by Trip Purpose Per Employee</strong></p>
+<table>
+<thead>
+<tr>
+<th>Land-Use Class</th>
+<th>HBW</th>
+<th>HBO</th>
+<th>NHB</th>
+<th>L_COMM</th>
+<th>M_COMM</th>
+<th>H_COMM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accommodations</td>
+<td>0.717</td>
+<td>2.54</td>
+<td>1.437</td>
+<td>0.874</td>
+<td>0.136</td>
+<td>0.018</td>
+</tr>
+<tr>
+<td>College</td>
+<td>0.717</td>
+<td>2.97</td>
+<td>1.68</td>
+<td>0.874</td>
+<td>0.136</td>
+<td>0.018</td>
+</tr>
+<tr>
+<td>Commercial</td>
+<td>0.717</td>
+<td>1.821</td>
+<td>1.03</td>
+<td>0.874</td>
+<td>0.136</td>
+<td>0.018</td>
+</tr>
+<tr>
+<td>Industrial</td>
+<td>0.717</td>
+<td>0.348</td>
+<td>0.197</td>
+<td>1.876</td>
+<td>0.484</td>
+<td>0.208</td>
+</tr>
+<tr>
+<td>Institutional</td>
+<td>0.717</td>
+<td>3.907</td>
+<td>2.21</td>
+<td>0.874</td>
+<td>0.136</td>
+<td>0.018</td>
+</tr>
+<tr>
+<td>K12</td>
+<td>0.717</td>
+<td>6.814</td>
+<td>3.854</td>
+<td>0.874</td>
+<td>0.136</td>
+<td>0.018</td>
+</tr>
+<tr>
+<td>Retail</td>
+<td>0.717</td>
+<td>5.926</td>
+<td>3.352</td>
+<td>1.776</td>
+<td>0.506</td>
+<td>0.13</td>
+</tr>
+<tr>
+<td>Special Commercial</td>
+<td>0.717</td>
+<td>8.209</td>
+<td>4.643</td>
+<td>1.776</td>
+<td>0.506</td>
+<td>0.13</td>
+</tr>
+<tr>
+<td>Special Retail</td>
+<td>0.717</td>
+<td>16.736</td>
+<td>9.465</td>
+<td>1.776</td>
+<td>0.506</td>
+<td>0.13</td>
+</tr>
+<tr>
+<td>Households</td>
+<td>0</td>
+<td>0.24</td>
+<td>0.12</td>
+<td>0.502</td>
+<td>0.198</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
 <h2 id="external-trips">External Trips</h2>
 <p>Trips are further categorized based on whether both the origin and destination are internal to Chittenden County, or whether the trip has
 an external trip end. External trips can be classified as internal-to-external (IX), external-to-internal (XI), or external-to-external (XX). </p>
 <p>Simple trip generation and distribution models cannot estimate these types of trips since land use data would need to be estimated for all areas outside the model region. Instead, to assist in estimating these types of trips, counts are taken at selected roads at the boundary of the model. These roads are termed external load links. Trips from outside the network are loaded into the network through these links.</p>
-<p><strong>Figure 10: Location of External TAZs</strong>
-<img src="assets/media/image13.png"
+<p><strong>Figure 10: Location of External TAZs</strong></p>
+<p><img src="assets/media/image13.png"
 style="width:5.28148in;height:7.17672in" /></p>
 <p>In the base year, the total IX, XI and XX trips are set to match base
 year traffic count data at the external stations. The percent of XX
@@ -888,74 +1436,661 @@ related traffic assumptions.</p>
 <p>Base year external-external trips are added directly into the vehicle
 trip table. The external-external trips used in the 2015 model reflect
 daily traffic.</p>
-<p><strong>Table 11: External-to-External Trips (Passengers &amp; Trucks)</strong>
-| <strong>External TAZ</strong> | <strong>10001</strong> | <strong>10002</strong> | <strong>10003</strong> | <strong>10004</strong> | <strong>10005</strong> | <strong>10006</strong> | <strong>10007</strong> | <strong>10008</strong> | <strong>10009</strong> | <strong>10010</strong> | <strong>10011</strong> | <strong>10012</strong> | <strong>10013</strong> | <strong>10014</strong> | <strong>10015</strong> | <strong>10016</strong> | <strong>10017</strong> | <strong>Total</strong> |      |
-|------------------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|------|
-| <strong>10001</strong>        | 0         | 1         | 3         | 66        | 0         | 4         | 0         | 2         | 0         | 1         | 79        | 0         | 0         | 14        | 1         | 0         | 12        | 183       |      |
-| <strong>10002</strong>        | 1         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 1         | 0         | 0         | 0         | 0         | 0         | 0         | 2         |      |
-| <strong>10003</strong>        | 3         | 0         | 5         | 0         | 3         | 0         | 0         | 0         | 0         | 0         | 62        | 0         | 0         | 0         | 0         | 0         | 8         | 81        |      |
-| <strong>10004</strong>        | 66        | 0         | 0         | 5         | 17        | 2         | 1         | 1         | 0         | 4         | 1083      | 0         | 0         | 10        | 5         | 0         | 66        | 1260      |      |
-| <strong>10005</strong>        | 0         | 0         | 3         | 17        | 0         | 0         | 0         | 0         | 0         | 0         | 16        | 0         | 0         | 0         | 0         | 0         | 6         | 42        |      |
-| <strong>10006</strong>        | 4         | 0         | 0         | 2         | 0         | 0         | 0         | 0         | 0         | 0         | 22        | 0         | 0         | 1         | 0         | 0         | 7         | 36        |      |
-| <strong>10007</strong>        | 0         | 0         | 0         | 1         | 0         | 0         | 0         | 0         | 0         | 0         | 15        | 0         | 0         | 0         | 0         | 0         | 7         | 23        |      |
-| <strong>10008</strong>        | 2         | 0         | 0         | 1         | 0         | 0         | 0         | 0         | 0         | 1         | 20        | 0         | 0         | 2         | 1         | 0         | 4         | 31        |      |
-| <strong>10009</strong>        | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 1         | 0         | 1         | 0         | 0         | 0         | 1         | 3         |      |
-| <strong>10010</strong>        | 1         | 0         | 0         | 4         | 0         | 0         | 0         | 1         | 0         | 0         | 0         | 0         | 1         | 1         | 0         | 1         | 1         | 10        |      |
-| <strong>10011</strong>        | 79        | 1         | 62        | 1083      | 16        | 22        | 15        | 20        | 1         | 0         | 0         | 0         | 0         | 15        | 5         | 0         | 29        | 1348      |      |
-| <strong>10012</strong>        | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 1         | 1         |      |
-| <strong>10013</strong>        | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 1         | 1         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 2         |      |
-| <strong>10014</strong>        | 14        | 0         | 0         | 10        | 0         | 1         | 0         | 2         | 0         | 1         | 15        | 0         | 0         | 0         | 0         | 0         | 3         | 46        |      |
-| <strong>10015</strong>        | 1         | 0         | 0         | 5         | 0         | 0         | 0         | 1         | 0         | 0         | 5         | 0         | 0         | 0         | 0         | 0         | 0         | 12        |      |
-| <strong>10016</strong>        | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 1         | 0         | 0         | 0         | 0         | 0         | 0         | 0         | 1         |      |
-| <strong>10017</strong>        | 12        | 0         | 8         | 66        | 6         | 7         | 7         | 4         | 1         | 1         | 29        | 1         | 0         | 3         | 0         | 0         | 0         | 145       |      |
-| <strong>Total</strong>        | 183       | 2         | 81        | 1260      | 42        | 36        | 23        | 31        | 3         | 10        | 1348      | 1         | 2         | 46        | 12        | 1         | 145       |           | 3226 |
-|                  |           |           |           |           |           |           |           |           |           |           |           |           |           |           |           |           |           | 3226      |      |</p>
+<p><strong>Table 11: External-to-External Trips (Passengers &amp; Trucks)</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>External TAZ</strong></th>
+<th><strong>10001</strong></th>
+<th><strong>10002</strong></th>
+<th><strong>10003</strong></th>
+<th><strong>10004</strong></th>
+<th><strong>10005</strong></th>
+<th><strong>10006</strong></th>
+<th><strong>10007</strong></th>
+<th><strong>10008</strong></th>
+<th><strong>10009</strong></th>
+<th><strong>10010</strong></th>
+<th><strong>10011</strong></th>
+<th><strong>10012</strong></th>
+<th><strong>10013</strong></th>
+<th><strong>10014</strong></th>
+<th><strong>10015</strong></th>
+<th><strong>10016</strong></th>
+<th><strong>10017</strong></th>
+<th><strong>Total</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>10001</strong></td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>66</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+<td>79</td>
+<td>0</td>
+<td>0</td>
+<td>14</td>
+<td>1</td>
+<td>0</td>
+<td>12</td>
+<td>183</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>10002</strong></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>10003</strong></td>
+<td>3</td>
+<td>0</td>
+<td>5</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>62</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>8</td>
+<td>81</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>10004</strong></td>
+<td>66</td>
+<td>0</td>
+<td>0</td>
+<td>5</td>
+<td>17</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>4</td>
+<td>1083</td>
+<td>0</td>
+<td>0</td>
+<td>10</td>
+<td>5</td>
+<td>0</td>
+<td>66</td>
+<td>1260</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>10005</strong></td>
+<td>0</td>
+<td>0</td>
+<td>3</td>
+<td>17</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>16</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>6</td>
+<td>42</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>10006</strong></td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>22</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>7</td>
+<td>36</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>10007</strong></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>15</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>7</td>
+<td>23</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>10008</strong></td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>20</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>4</td>
+<td>31</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>10009</strong></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>10010</strong></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>10011</strong></td>
+<td>79</td>
+<td>1</td>
+<td>62</td>
+<td>1083</td>
+<td>16</td>
+<td>22</td>
+<td>15</td>
+<td>20</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>15</td>
+<td>5</td>
+<td>0</td>
+<td>29</td>
+<td>1348</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>10012</strong></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>10013</strong></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>10014</strong></td>
+<td>14</td>
+<td>0</td>
+<td>0</td>
+<td>10</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+<td>15</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>3</td>
+<td>46</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>10015</strong></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>12</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>10016</strong></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>10017</strong></td>
+<td>12</td>
+<td>0</td>
+<td>8</td>
+<td>66</td>
+<td>6</td>
+<td>7</td>
+<td>7</td>
+<td>4</td>
+<td>1</td>
+<td>1</td>
+<td>29</td>
+<td>1</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>145</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td>183</td>
+<td>2</td>
+<td>81</td>
+<td>1260</td>
+<td>42</td>
+<td>36</td>
+<td>23</td>
+<td>31</td>
+<td>3</td>
+<td>10</td>
+<td>1348</td>
+<td>1</td>
+<td>2</td>
+<td>46</td>
+<td>12</td>
+<td>1</td>
+<td>145</td>
+<td></td>
+<td>3226</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>3226</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h3 id="ixxi-trip-base-year-assumptions">IXXI Trip Base-Year Assumptions</h3>
 <p>Base year IX and XI trips are set to match 2015 base year traffic count data at the external stations. The internal trip ends are estimated
 differently for IX trips (produced inside the region) and XI trips (produced outside the region).</p>
-<p><strong>Table 12: 2015 IX and XI Daily Vehicle Trips, by External TAZ</strong>
-| External TAZ | External-to-Internal Trips | Internal-to-External Trips |
-|--------------|----------------------------|----------------------------|
-| <strong>10001</strong>    | 6,276                      | 3,133                      |
-| <strong>10002</strong>    | 574                        | 290                        |
-| <strong>10003</strong>    | 2,423                      | 1,225                      |
-| <strong>10004</strong>    | 11,047                     | 5,073                      |
-| <strong>10005</strong>    | 2,897                      | 1,455                      |
-| <strong>10006</strong>    | 3,068                      | 1,580                      |
-| <strong>10007</strong>    | 90                         | 35                         |
-| <strong>10008</strong>    | 4,151                      | 2,138                      |
-| <strong>10009</strong>    | 922                        | 418                        |
-| <strong>10010</strong>    | 1,895                      | 936                        |
-| <strong>10011</strong>    | 14,224                     | 11,099                     |
-| <strong>10012</strong>    | 185                        | 96                         |
-| <strong>10013</strong>    | 338                        | 170                        |
-| <strong>10014</strong>    | 2,310                      | 1,128                      |
-| <strong>10015</strong>    | 4,185                      | 2,113                      |
-| <strong>10016</strong>    | 1,052                      | 705                        |
-| <strong>10017</strong>    | 7,944                      | 4,277                      |
-| <strong>ALL</strong>      | 63,579                     | 35,870                     |</p>
+<p><strong>Table 12: 2015 IX and XI Daily Vehicle Trips, by External TAZ</strong></p>
+<table>
+<thead>
+<tr>
+<th>External TAZ</th>
+<th>External-to-Internal Trips</th>
+<th>Internal-to-External Trips</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>10001</strong></td>
+<td>6,276</td>
+<td>3,133</td>
+</tr>
+<tr>
+<td><strong>10002</strong></td>
+<td>574</td>
+<td>290</td>
+</tr>
+<tr>
+<td><strong>10003</strong></td>
+<td>2,423</td>
+<td>1,225</td>
+</tr>
+<tr>
+<td><strong>10004</strong></td>
+<td>11,047</td>
+<td>5,073</td>
+</tr>
+<tr>
+<td><strong>10005</strong></td>
+<td>2,897</td>
+<td>1,455</td>
+</tr>
+<tr>
+<td><strong>10006</strong></td>
+<td>3,068</td>
+<td>1,580</td>
+</tr>
+<tr>
+<td><strong>10007</strong></td>
+<td>90</td>
+<td>35</td>
+</tr>
+<tr>
+<td><strong>10008</strong></td>
+<td>4,151</td>
+<td>2,138</td>
+</tr>
+<tr>
+<td><strong>10009</strong></td>
+<td>922</td>
+<td>418</td>
+</tr>
+<tr>
+<td><strong>10010</strong></td>
+<td>1,895</td>
+<td>936</td>
+</tr>
+<tr>
+<td><strong>10011</strong></td>
+<td>14,224</td>
+<td>11,099</td>
+</tr>
+<tr>
+<td><strong>10012</strong></td>
+<td>185</td>
+<td>96</td>
+</tr>
+<tr>
+<td><strong>10013</strong></td>
+<td>338</td>
+<td>170</td>
+</tr>
+<tr>
+<td><strong>10014</strong></td>
+<td>2,310</td>
+<td>1,128</td>
+</tr>
+<tr>
+<td><strong>10015</strong></td>
+<td>4,185</td>
+<td>2,113</td>
+</tr>
+<tr>
+<td><strong>10016</strong></td>
+<td>1,052</td>
+<td>705</td>
+</tr>
+<tr>
+<td><strong>10017</strong></td>
+<td>7,944</td>
+<td>4,277</td>
+</tr>
+<tr>
+<td><strong>ALL</strong></td>
+<td>63,579</td>
+<td>35,870</td>
+</tr>
+</tbody>
+</table>
 <p>The IX internal trip generation rates vary by town and were estimated using the 2000 Census data. Residents of towns that are closer to the model boundary generate more IX trips as a percent of the residents’ trip-making.</p>
-<p><strong>Table 13: Percent IX and XI by District (NHTS versus Model)</strong>
-| Town             | Model%_IX | Census % IX |
-|------------------|------------|-------------|
-| Bolton           | 16.8%      | 16.8%       |
-| Buel’s Gore      | 12.9%      | 50.0%       |
-| Burlington       | 5.9%       | 5.9%        |
-| Charlotte        | 14.3%      | 14.3%       |
-| Colchester       | 3.4%       | 3.4%        |
-| Essex Junction   | 6.9%       | -          |
-| Essex            | 6.9%       | 6.9%        |
-| Hinesburg        | 11.1%      | 11.1%       |
-| Huntington       | 11.0%      | 11.0%       |
-| Jericho          | 7.7%       | 7.7%        |
-| Milton           | 6.1%       | 6.1%        |
-| Richmond         | 9.0%       | 9.0%        |
-| Shelburne        | 5.5%       | 5.5%        |
-| South Burlington | 8.2%       | 8.2%        |
-| St George        | 8.0%       | 8.0%        |
-| Underhill        | 12.7%      | 12.7%       |
-| Westford         | 11.4%      | 11.4%       |
-| Williston        | 7.3%       | 7.3%        |</p>
+<p><strong>Table 13: Percent IX and XI by District (NHTS versus Model)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Town</th>
+<th>Model%_IX</th>
+<th>Census % IX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bolton</td>
+<td>16.8%</td>
+<td>16.8%</td>
+</tr>
+<tr>
+<td>Buel’s Gore</td>
+<td>12.9%</td>
+<td>50.0%</td>
+</tr>
+<tr>
+<td>Burlington</td>
+<td>5.9%</td>
+<td>5.9%</td>
+</tr>
+<tr>
+<td>Charlotte</td>
+<td>14.3%</td>
+<td>14.3%</td>
+</tr>
+<tr>
+<td>Colchester</td>
+<td>3.4%</td>
+<td>3.4%</td>
+</tr>
+<tr>
+<td>Essex Junction</td>
+<td>6.9%</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Essex</td>
+<td>6.9%</td>
+<td>6.9%</td>
+</tr>
+<tr>
+<td>Hinesburg</td>
+<td>11.1%</td>
+<td>11.1%</td>
+</tr>
+<tr>
+<td>Huntington</td>
+<td>11.0%</td>
+<td>11.0%</td>
+</tr>
+<tr>
+<td>Jericho</td>
+<td>7.7%</td>
+<td>7.7%</td>
+</tr>
+<tr>
+<td>Milton</td>
+<td>6.1%</td>
+<td>6.1%</td>
+</tr>
+<tr>
+<td>Richmond</td>
+<td>9.0%</td>
+<td>9.0%</td>
+</tr>
+<tr>
+<td>Shelburne</td>
+<td>5.5%</td>
+<td>5.5%</td>
+</tr>
+<tr>
+<td>South Burlington</td>
+<td>8.2%</td>
+<td>8.2%</td>
+</tr>
+<tr>
+<td>St George</td>
+<td>8.0%</td>
+<td>8.0%</td>
+</tr>
+<tr>
+<td>Underhill</td>
+<td>12.7%</td>
+<td>12.7%</td>
+</tr>
+<tr>
+<td>Westford</td>
+<td>11.4%</td>
+<td>11.4%</td>
+</tr>
+<tr>
+<td>Williston</td>
+<td>7.3%</td>
+<td>7.3%</td>
+</tr>
+</tbody>
+</table>
 <p>The internal ends of the XI trips are estimated based on the total
 attractions in each TAZ, and the distance from the external station. The
 notion is that XI trips are produced externally to the model, and tend
@@ -977,13 +2112,53 @@ Winooski. The ‘Inner’ district is comprised of Colchester, Essex,
 Williston, Jericho, Richmond, St. George, and Shelburne. The ‘Outer’
 district is comprised of Milton, Westford, Underhill, Bolton,
 Huntington, Buel’s Gore, Hinesburg and Charlotte.</p>
-<p><strong>Table 14: Internal-to-External Trip Assumptions (% of internal productions)</strong>
-| Percent IX by District |       |       | Percent XI by District |       |       |
-|------------------------|-------|-------|------------------------|-------|-------|
-| District               | NHTS  | Model | District               | NHTS  | Model |
-| Core                   | 5.0%  | 5.4%  | Core                   | 56.1% | 54.7% |
-| Inner                  | 5.9%  | 4.8%  | Inner                  | 38.7% | 36.6% |
-| Outer                  | 10.2% | 9.8%  | Outer                  | 5.2%  | 8.7%  |</p>
+<p><strong>Table 14: Internal-to-External Trip Assumptions (% of internal productions)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Percent IX by District</th>
+<th></th>
+<th></th>
+<th>Percent XI by District</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>District</td>
+<td>NHTS</td>
+<td>Model</td>
+<td>District</td>
+<td>NHTS</td>
+<td>Model</td>
+</tr>
+<tr>
+<td>Core</td>
+<td>5.0%</td>
+<td>5.4%</td>
+<td>Core</td>
+<td>56.1%</td>
+<td>54.7%</td>
+</tr>
+<tr>
+<td>Inner</td>
+<td>5.9%</td>
+<td>4.8%</td>
+<td>Inner</td>
+<td>38.7%</td>
+<td>36.6%</td>
+</tr>
+<tr>
+<td>Outer</td>
+<td>10.2%</td>
+<td>9.8%</td>
+<td>Outer</td>
+<td>5.2%</td>
+<td>8.7%</td>
+</tr>
+</tbody>
+</table>
 <h3 id="external-trip-growth-rates">External Trip Growth Rates</h3>
 <p>Future year external trips are assumed to grow annually at a user-specified rate, which can vary by external TAZ. In the model, the
 external trips are initially assumed to have a growth rate of 0.5% per year but this rate is adjustable.</p>
@@ -1091,34 +2266,455 @@ trips) to the attraction TAZ.</p>
 <img alt="diurnal_distribution" src="assets/media/diurnal_distribution.png" /></p>
 <p><strong>Figure 13: Diurnal Distribution for Truck and External Trips</strong>
 <img alt="diurnal_distribution_trucks_external" src="assets/media/diurnal_distribution_trucks_external.png" /></p>
-<p><strong>Table 15: Diurnal Distribution %s</strong>
-| Hour    | DEP HBW | RET HBW | DEP HBO | RET HBO | DEP NHB | RET NHB | DEP Light COMM | RET Light COMM | DEP MEd Comm | RET Med Comm | DEP Heavy COMM | RET Heavy Comm | DEP EXT | RET EXT |
-|---------|---------|---------|---------|---------|---------|---------|----------------|----------------|--------------|--------------|----------------|----------------|---------|---------|
-| <strong>0</strong>   | 0.0%    | 0.3%    | 0.1%    | 0.4%    | 0.0%    | 0.0%    | 0.5%           | 0.5%           | 0.4%         | 0.4%         | 1.1%           | 1.1%           | 0.1%    | 0.3%    |
-| <strong>1</strong>   | 0.0%    | 0.1%    | 0.1%    | 0.2%    | 0.1%    | 0.1%    | 0.2%           | 0.2%           | 0.3%         | 0.3%         | 0.8%           | 0.8%           | 0.0%    | 0.1%    |
-| <strong>2</strong>   | 0.0%    | 0.2%    | 0.1%    | 0.1%    | 0.1%    | 0.1%    | 0.2%           | 0.2%           | 0.3%         | 0.3%         | 0.7%           | 0.7%           | 0.0%    | 0.1%    |
-| <strong>3</strong>   | 0.1%    | 0.0%    | 0.5%    | 0.1%    | 0.0%    | 0.0%    | 0.2%           | 0.2%           | 0.2%         | 0.2%         | 0.8%           | 0.8%           | 0.2%    | 0.0%    |
-| <strong>4</strong>   | 1.1%    | 0.0%    | 0.3%    | 0.1%    | 0.0%    | 0.0%    | 0.4%           | 0.4%           | 0.6%         | 0.6%         | 1.1%           | 1.1%           | 0.6%    | 0.0%    |
-| <strong>5</strong>   | 3.1%    | 0.2%    | 0.5%    | 0.1%    | 0.0%    | 0.0%    | 1.2%           | 1.2%           | 1.5%         | 1.6%         | 1.8%           | 1.8%           | 1.7%    | 0.1%    |
-| <strong>6</strong>   | 9.0%    | 0.3%    | 1.3%    | 0.1%    | 0.3%    | 0.3%    | 2.8%           | 2.8%           | 2.5%         | 2.5%         | 2.1%           | 2.1%           | 4.8%    | 0.2%    |
-| <strong>7</strong>   | 12.4%   | 0.2%    | 3.9%    | 0.8%    | 1.9%    | 1.9%    | 2.9%           | 2.9%           | 3.4%         | 3.4%         | 2.8%           | 2.8%           | 7.7%    | 0.3%    |
-| <strong>8</strong>   | 9.8%    | 0.2%    | 5.0%    | 1.3%    | 2.6%    | 2.6%    | 2.9%           | 2.9%           | 3.6%         | 3.6%         | 2.5%           | 2.5%           | 6.8%    | 0.6%    |
-| <strong>9</strong>   | 3.4%    | 0.2%    | 5.0%    | 1.5%    | 2.8%    | 2.8%    | 3.1%           | 3.1%           | 4.0%         | 4.0%         | 3.5%           | 3.5%           | 3.5%    | 0.9%    |
-| <strong>10</strong>  | 1.6%    | 0.8%    | 4.2%    | 2.0%    | 3.4%    | 3.4%    | 3.3%           | 3.3%           | 3.6%         | 3.6%         | 3.1%           | 3.1%           | 2.5%    | 1.5%    |
-| <strong>11</strong>  | 1.1%    | 1.5%    | 3.0%    | 2.6%    | 4.8%    | 4.8%    | 3.0%           | 3.0%           | 3.8%         | 3.8%         | 3.4%           | 3.4%           | 2.3%    | 2.4%    |
-| <strong>12</strong>  | 1.4%    | 2.2%    | 2.7%    | 2.7%    | 5.9%    | 5.9%    | 2.9%           | 2.9%           | 3.4%         | 3.4%         | 3.4%           | 3.4%           | 2.5%    | 2.9%    |
-| <strong>13</strong>  | 2.5%    | 1.1%    | 3.5%    | 2.9%    | 4.3%    | 4.3%    | 3.3%           | 3.3%           | 3.6%         | 3.6%         | 3.1%           | 3.1%           | 3.1%    | 2.2%    |
-| <strong>14</strong>  | 1.1%    | 2.9%    | 2.3%    | 4.5%    | 4.5%    | 4.5%    | 3.2%           | 3.2%           | 3.8%         | 3.8%         | 3.0%           | 3.0%           | 2.2%    | 4.1%    |
-| <strong>15</strong>  | 1.1%    | 5.6%    | 2.4%    | 4.3%    | 4.9%    | 4.9%    | 3.6%           | 3.6%           | 3.8%         | 3.8%         | 2.6%           | 2.6%           | 2.2%    | 5.4%    |
-| <strong>16</strong>  | 0.4%    | 9.4%    | 3.3%    | 4.8%    | 4.2%    | 4.2%    | 4.2%           | 4.2%           | 3.3%         | 3.3%         | 2.5%           | 2.5%           | 2.1%    | 7.1%    |
-| <strong>17</strong>  | 0.6%    | 11.8%   | 2.6%    | 6.0%    | 3.5%    | 3.5%    | 3.3%           | 3.3%           | 2.5%         | 2.5%         | 3.5%           | 3.5%           | 2.3%    | 8.4%    |
-| <strong>18</strong>  | 0.8%    | 4.5%    | 4.0%    | 4.0%    | 2.2%    | 2.2%    | 2.7%           | 2.7%           | 1.7%         | 1.7%         | 1.9%           | 1.9%           | 2.2%    | 3.7%    |
-| <strong>19</strong>  | 0.2%    | 2.4%    | 3.0%    | 3.4%    | 1.9%    | 1.9%    | 1.6%           | 1.6%           | 1.2%         | 1.2%         | 1.4%           | 1.4%           | 1.4%    | 2.8%    |
-| <strong>20</strong>  | 0.2%    | 1.6%    | 1.3%    | 3.7%    | 1.1%    | 1.1%    | 1.6%           | 1.6%           | 0.8%         | 0.8%         | 1.4%           | 1.4%           | 0.8%    | 2.4%    |
-| <strong>21</strong>  | 0.1%    | 1.9%    | 0.5%    | 2.4%    | 0.9%    | 0.9%    | 1.3%           | 1.3%           | 0.7%         | 0.7%         | 1.2%           | 1.2%           | 0.5%    | 2.1%    |
-| <strong>22</strong>  | 0.0%    | 1.5%    | 0.4%    | 1.4%    | 0.4%    | 0.4%    | 1.0%           | 1.0%           | 0.5%         | 0.5%         | 1.2%           | 1.2%           | 0.3%    | 1.4%    |
-| <strong>23</strong>  | 0.0%    | 1.1%    | 0.2%    | 0.5%    | 0.3%    | 0.3%    | 0.7%           | 0.7%           | 0.5%         | 0.5%         | 1.1%           | 1.1%           | 0.1%    | 1.0%    |
-| <strong>Sum</strong> | 50.0%   | 50.0%   | 50.0%   | 50.0%   | 50.0%   | 50.0%   | 50.0%          | 50.0%          | 50.0%        | 50.0%        | 50.0%          | 50.0%          | 50.0%   | 50.0%   |</p>
+<p><strong>Table 15: Diurnal Distribution %s</strong></p>
+<table>
+<thead>
+<tr>
+<th>Hour</th>
+<th>DEP HBW</th>
+<th>RET HBW</th>
+<th>DEP HBO</th>
+<th>RET HBO</th>
+<th>DEP NHB</th>
+<th>RET NHB</th>
+<th>DEP Light COMM</th>
+<th>RET Light COMM</th>
+<th>DEP MEd Comm</th>
+<th>RET Med Comm</th>
+<th>DEP Heavy COMM</th>
+<th>RET Heavy Comm</th>
+<th>DEP EXT</th>
+<th>RET EXT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong></td>
+<td>0.0%</td>
+<td>0.3%</td>
+<td>0.1%</td>
+<td>0.4%</td>
+<td>0.0%</td>
+<td>0.0%</td>
+<td>0.5%</td>
+<td>0.5%</td>
+<td>0.4%</td>
+<td>0.4%</td>
+<td>1.1%</td>
+<td>1.1%</td>
+<td>0.1%</td>
+<td>0.3%</td>
+</tr>
+<tr>
+<td><strong>1</strong></td>
+<td>0.0%</td>
+<td>0.1%</td>
+<td>0.1%</td>
+<td>0.2%</td>
+<td>0.1%</td>
+<td>0.1%</td>
+<td>0.2%</td>
+<td>0.2%</td>
+<td>0.3%</td>
+<td>0.3%</td>
+<td>0.8%</td>
+<td>0.8%</td>
+<td>0.0%</td>
+<td>0.1%</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>0.0%</td>
+<td>0.2%</td>
+<td>0.1%</td>
+<td>0.1%</td>
+<td>0.1%</td>
+<td>0.1%</td>
+<td>0.2%</td>
+<td>0.2%</td>
+<td>0.3%</td>
+<td>0.3%</td>
+<td>0.7%</td>
+<td>0.7%</td>
+<td>0.0%</td>
+<td>0.1%</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>0.1%</td>
+<td>0.0%</td>
+<td>0.5%</td>
+<td>0.1%</td>
+<td>0.0%</td>
+<td>0.0%</td>
+<td>0.2%</td>
+<td>0.2%</td>
+<td>0.2%</td>
+<td>0.2%</td>
+<td>0.8%</td>
+<td>0.8%</td>
+<td>0.2%</td>
+<td>0.0%</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>1.1%</td>
+<td>0.0%</td>
+<td>0.3%</td>
+<td>0.1%</td>
+<td>0.0%</td>
+<td>0.0%</td>
+<td>0.4%</td>
+<td>0.4%</td>
+<td>0.6%</td>
+<td>0.6%</td>
+<td>1.1%</td>
+<td>1.1%</td>
+<td>0.6%</td>
+<td>0.0%</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>3.1%</td>
+<td>0.2%</td>
+<td>0.5%</td>
+<td>0.1%</td>
+<td>0.0%</td>
+<td>0.0%</td>
+<td>1.2%</td>
+<td>1.2%</td>
+<td>1.5%</td>
+<td>1.6%</td>
+<td>1.8%</td>
+<td>1.8%</td>
+<td>1.7%</td>
+<td>0.1%</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td>9.0%</td>
+<td>0.3%</td>
+<td>1.3%</td>
+<td>0.1%</td>
+<td>0.3%</td>
+<td>0.3%</td>
+<td>2.8%</td>
+<td>2.8%</td>
+<td>2.5%</td>
+<td>2.5%</td>
+<td>2.1%</td>
+<td>2.1%</td>
+<td>4.8%</td>
+<td>0.2%</td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td>12.4%</td>
+<td>0.2%</td>
+<td>3.9%</td>
+<td>0.8%</td>
+<td>1.9%</td>
+<td>1.9%</td>
+<td>2.9%</td>
+<td>2.9%</td>
+<td>3.4%</td>
+<td>3.4%</td>
+<td>2.8%</td>
+<td>2.8%</td>
+<td>7.7%</td>
+<td>0.3%</td>
+</tr>
+<tr>
+<td><strong>8</strong></td>
+<td>9.8%</td>
+<td>0.2%</td>
+<td>5.0%</td>
+<td>1.3%</td>
+<td>2.6%</td>
+<td>2.6%</td>
+<td>2.9%</td>
+<td>2.9%</td>
+<td>3.6%</td>
+<td>3.6%</td>
+<td>2.5%</td>
+<td>2.5%</td>
+<td>6.8%</td>
+<td>0.6%</td>
+</tr>
+<tr>
+<td><strong>9</strong></td>
+<td>3.4%</td>
+<td>0.2%</td>
+<td>5.0%</td>
+<td>1.5%</td>
+<td>2.8%</td>
+<td>2.8%</td>
+<td>3.1%</td>
+<td>3.1%</td>
+<td>4.0%</td>
+<td>4.0%</td>
+<td>3.5%</td>
+<td>3.5%</td>
+<td>3.5%</td>
+<td>0.9%</td>
+</tr>
+<tr>
+<td><strong>10</strong></td>
+<td>1.6%</td>
+<td>0.8%</td>
+<td>4.2%</td>
+<td>2.0%</td>
+<td>3.4%</td>
+<td>3.4%</td>
+<td>3.3%</td>
+<td>3.3%</td>
+<td>3.6%</td>
+<td>3.6%</td>
+<td>3.1%</td>
+<td>3.1%</td>
+<td>2.5%</td>
+<td>1.5%</td>
+</tr>
+<tr>
+<td><strong>11</strong></td>
+<td>1.1%</td>
+<td>1.5%</td>
+<td>3.0%</td>
+<td>2.6%</td>
+<td>4.8%</td>
+<td>4.8%</td>
+<td>3.0%</td>
+<td>3.0%</td>
+<td>3.8%</td>
+<td>3.8%</td>
+<td>3.4%</td>
+<td>3.4%</td>
+<td>2.3%</td>
+<td>2.4%</td>
+</tr>
+<tr>
+<td><strong>12</strong></td>
+<td>1.4%</td>
+<td>2.2%</td>
+<td>2.7%</td>
+<td>2.7%</td>
+<td>5.9%</td>
+<td>5.9%</td>
+<td>2.9%</td>
+<td>2.9%</td>
+<td>3.4%</td>
+<td>3.4%</td>
+<td>3.4%</td>
+<td>3.4%</td>
+<td>2.5%</td>
+<td>2.9%</td>
+</tr>
+<tr>
+<td><strong>13</strong></td>
+<td>2.5%</td>
+<td>1.1%</td>
+<td>3.5%</td>
+<td>2.9%</td>
+<td>4.3%</td>
+<td>4.3%</td>
+<td>3.3%</td>
+<td>3.3%</td>
+<td>3.6%</td>
+<td>3.6%</td>
+<td>3.1%</td>
+<td>3.1%</td>
+<td>3.1%</td>
+<td>2.2%</td>
+</tr>
+<tr>
+<td><strong>14</strong></td>
+<td>1.1%</td>
+<td>2.9%</td>
+<td>2.3%</td>
+<td>4.5%</td>
+<td>4.5%</td>
+<td>4.5%</td>
+<td>3.2%</td>
+<td>3.2%</td>
+<td>3.8%</td>
+<td>3.8%</td>
+<td>3.0%</td>
+<td>3.0%</td>
+<td>2.2%</td>
+<td>4.1%</td>
+</tr>
+<tr>
+<td><strong>15</strong></td>
+<td>1.1%</td>
+<td>5.6%</td>
+<td>2.4%</td>
+<td>4.3%</td>
+<td>4.9%</td>
+<td>4.9%</td>
+<td>3.6%</td>
+<td>3.6%</td>
+<td>3.8%</td>
+<td>3.8%</td>
+<td>2.6%</td>
+<td>2.6%</td>
+<td>2.2%</td>
+<td>5.4%</td>
+</tr>
+<tr>
+<td><strong>16</strong></td>
+<td>0.4%</td>
+<td>9.4%</td>
+<td>3.3%</td>
+<td>4.8%</td>
+<td>4.2%</td>
+<td>4.2%</td>
+<td>4.2%</td>
+<td>4.2%</td>
+<td>3.3%</td>
+<td>3.3%</td>
+<td>2.5%</td>
+<td>2.5%</td>
+<td>2.1%</td>
+<td>7.1%</td>
+</tr>
+<tr>
+<td><strong>17</strong></td>
+<td>0.6%</td>
+<td>11.8%</td>
+<td>2.6%</td>
+<td>6.0%</td>
+<td>3.5%</td>
+<td>3.5%</td>
+<td>3.3%</td>
+<td>3.3%</td>
+<td>2.5%</td>
+<td>2.5%</td>
+<td>3.5%</td>
+<td>3.5%</td>
+<td>2.3%</td>
+<td>8.4%</td>
+</tr>
+<tr>
+<td><strong>18</strong></td>
+<td>0.8%</td>
+<td>4.5%</td>
+<td>4.0%</td>
+<td>4.0%</td>
+<td>2.2%</td>
+<td>2.2%</td>
+<td>2.7%</td>
+<td>2.7%</td>
+<td>1.7%</td>
+<td>1.7%</td>
+<td>1.9%</td>
+<td>1.9%</td>
+<td>2.2%</td>
+<td>3.7%</td>
+</tr>
+<tr>
+<td><strong>19</strong></td>
+<td>0.2%</td>
+<td>2.4%</td>
+<td>3.0%</td>
+<td>3.4%</td>
+<td>1.9%</td>
+<td>1.9%</td>
+<td>1.6%</td>
+<td>1.6%</td>
+<td>1.2%</td>
+<td>1.2%</td>
+<td>1.4%</td>
+<td>1.4%</td>
+<td>1.4%</td>
+<td>2.8%</td>
+</tr>
+<tr>
+<td><strong>20</strong></td>
+<td>0.2%</td>
+<td>1.6%</td>
+<td>1.3%</td>
+<td>3.7%</td>
+<td>1.1%</td>
+<td>1.1%</td>
+<td>1.6%</td>
+<td>1.6%</td>
+<td>0.8%</td>
+<td>0.8%</td>
+<td>1.4%</td>
+<td>1.4%</td>
+<td>0.8%</td>
+<td>2.4%</td>
+</tr>
+<tr>
+<td><strong>21</strong></td>
+<td>0.1%</td>
+<td>1.9%</td>
+<td>0.5%</td>
+<td>2.4%</td>
+<td>0.9%</td>
+<td>0.9%</td>
+<td>1.3%</td>
+<td>1.3%</td>
+<td>0.7%</td>
+<td>0.7%</td>
+<td>1.2%</td>
+<td>1.2%</td>
+<td>0.5%</td>
+<td>2.1%</td>
+</tr>
+<tr>
+<td><strong>22</strong></td>
+<td>0.0%</td>
+<td>1.5%</td>
+<td>0.4%</td>
+<td>1.4%</td>
+<td>0.4%</td>
+<td>0.4%</td>
+<td>1.0%</td>
+<td>1.0%</td>
+<td>0.5%</td>
+<td>0.5%</td>
+<td>1.2%</td>
+<td>1.2%</td>
+<td>0.3%</td>
+<td>1.4%</td>
+</tr>
+<tr>
+<td><strong>23</strong></td>
+<td>0.0%</td>
+<td>1.1%</td>
+<td>0.2%</td>
+<td>0.5%</td>
+<td>0.3%</td>
+<td>0.3%</td>
+<td>0.7%</td>
+<td>0.7%</td>
+<td>0.5%</td>
+<td>0.5%</td>
+<td>1.1%</td>
+<td>1.1%</td>
+<td>0.1%</td>
+<td>1.0%</td>
+</tr>
+<tr>
+<td><strong>Sum</strong></td>
+<td>50.0%</td>
+<td>50.0%</td>
+<td>50.0%</td>
+<td>50.0%</td>
+<td>50.0%</td>
+<td>50.0%</td>
+<td>50.0%</td>
+<td>50.0%</td>
+<td>50.0%</td>
+<td>50.0%</td>
+<td>50.0%</td>
+<td>50.0%</td>
+<td>50.0%</td>
+<td>50.0%</td>
+</tr>
+</tbody>
+</table>
 <h1 id="vehicle-assignment">Vehicle Assignment</h1>
 <h2 id="model-structure_3">Model Structure</h2>
 <p>The purpose of the assignment model is to locate a specific route along
@@ -1452,20 +3048,55 @@ approach lanes and 2 turning bays for the east-west travel will
 accommodate more vehicles than an approach with just a single lane and
 no turning bays. The node capacity assumptions for intersections are
 presented in Figure 15. Node class definitions are presented in Table 1.</p>
-<p><strong>Figure 15: Node Capacity Assumptions for Intersections[^2]</strong>
-<img alt="node_capacity_allocation_signalized" src="assets/media/node_capacity.png" /></p>
-<p><strong>Table 17: Node Class Definitions</strong>
-| Node Class | Class Type         |
-|------------|--------------------|
-| 1          | Signalized         |
-| 2          | 1,2,3-Way Stop     |
-| 3          | On Ramp Yield      |
-| 4          | Yield              |
-| 5          | No Control         |
-| 6          | Toll Booth         |
-| 7          | All-Way Stop       |
-| 8          | Internal Load Node |
-| 9          | External Load Node |</p>
+<p><strong>Figure 15: Node Capacity Assumptions for Intersections[^2]</strong></p>
+<p><img alt="node_capacity_allocation_signalized" src="assets/media/node_capacity.png" /></p>
+<p><strong>Table 17: Node Class Definitions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Node Class</th>
+<th>Class Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Signalized</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1,2,3-Way Stop</td>
+</tr>
+<tr>
+<td>3</td>
+<td>On Ramp Yield</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Yield</td>
+</tr>
+<tr>
+<td>5</td>
+<td>No Control</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Toll Booth</td>
+</tr>
+<tr>
+<td>7</td>
+<td>All-Way Stop</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Internal Load Node</td>
+</tr>
+<tr>
+<td>9</td>
+<td>External Load Node</td>
+</tr>
+</tbody>
+</table>
 <p>The user defined total intersection capacity must be allocated to each
 approach link in order to apply the logit based volume delay function
 described in the previous section. This allocation is performed in one
@@ -1504,24 +3135,77 @@ style="width:5.5625in;height:3.67361in" /></p>
 <p>The average number of occupants in each vehicle was estimated using NHTS
 and CCRPC survey data. These values are used when converting from person
 trips to vehicle trips.</p>
-<p><strong>Table 18: Auto Occupancy Factors</strong>
-| Trip Type     | Average Auto Occupancy |
-|---------------|------------------------|
-| HBW           | 1.15                   |
-| HBO           | 1.70                   |
-| NHB           | 1.55                   |
-| L_Comm        | 1.00                   |
-| M_Comm        | 1.00                   |
-| H_Comm        | 1.00                   |
-| IX_MedTruck   | 1.00                   |
-| XI_MedTruck   | 1.00                   |
-| IX_HeavyTruck | 1.00                   |
-| XI_HeavyTruck | 1.00                   |
-| IX_Passenger  | 1.00                   |
-| XI_Passenger  | 1.00                   |
-| XX_Passenger  | 1.00                   |
-| XX_MedTruck   | 1.00                   |
-| XX_HeavyTruck | 1.00                   |</p>
+<p><strong>Table 18: Auto Occupancy Factors</strong></p>
+<table>
+<thead>
+<tr>
+<th>Trip Type</th>
+<th>Average Auto Occupancy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HBW</td>
+<td>1.15</td>
+</tr>
+<tr>
+<td>HBO</td>
+<td>1.70</td>
+</tr>
+<tr>
+<td>NHB</td>
+<td>1.55</td>
+</tr>
+<tr>
+<td>L_Comm</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>M_Comm</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>H_Comm</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>IX_MedTruck</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>XI_MedTruck</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>IX_HeavyTruck</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>XI_HeavyTruck</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>IX_Passenger</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>XI_Passenger</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>XX_Passenger</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>XX_MedTruck</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>XX_HeavyTruck</td>
+<td>1.00</td>
+</tr>
+</tbody>
+</table>
 <h1 id="mode-choice">Mode Choice</h1>
 <h2 id="model-structure_4">Model Structure</h2>
 <p>In a conventional urban transportation modeling system, the mode choice
@@ -1534,8 +3218,8 @@ A logit model is shown in Equation 4. The share of trips using each mode
 in the mode choice model is a function of the relative attractiveness of
 each mode. The attractiveness of each mode is a function of the
 characteristics of the mode and the preferences of different travelers.</p>
-<p><strong>Equation 4: Example of Logit Model</strong>
-<img src="assets/media/example_logit_model.png"
+<p><strong>Equation 4: Example of Logit Model</strong></p>
+<p><img src="assets/media/example_logit_model.png"
 style="width:3.88194in;height:1.65278in" /></p>
 <p>The “utility functions” (Vs) in this equation can contain mode-specific
 travel time, cost and access variables as well as traveler-specific
@@ -1612,8 +3296,8 @@ shown in Figure 19. The TAZ based intersection density values were also
 re-examined for the base year and the square root of the TAZ
 intersection density (intersection nodes per square mile) was capped at
 20, or 400 intersections per square mile.</p>
-<p><strong>Figure 19: Walkable Zones</strong>
-<img src="assets/media/image24.jpeg"
+<p><strong>Figure 19: Walkable Zones</strong></p>
+<p><img src="assets/media/image24.jpeg"
 style="width:6.22917in;height:6.15625in"
 alt="C:\Users\ben\AppData\Local\Microsoft\Windows\INetCache\Content.Word\Walkable ZOnes.jpg" /></p>
 <h3 id="drive-vs-carpool">“Drive” vs. “Carpool”</h3>
@@ -1661,42 +3345,153 @@ data.</p>
 <h2 id="parameters">Parameters</h2>
 <p>The mode choice model parameters are shown in Equation 5 and Equation 6 below.</p>
 <p><strong>Equation 5: Pre-Distribution Mode Choice Model Utility Equations</strong>
-<img src="assets/media/pre_distribution_mode_choice_utility.png"
-style="width:6.0in;height:3.5in" /></p>
-<p><strong>Equation 5: Post-Distribution Mode Choice Model Utility Equations</strong>
-<img src="assets/media/post_distribution_mode_choice_utility.png"
-style="width:6.0in;height:3.5in" /></p>
+<img alt="pre_distribution_mode_choice_utility" src="assets/media/pre_distribution_mode_choice_utility.png" /></p>
+<p><strong>Equation 6: Post-Distribution Mode Choice Model Utility Equations</strong>
+<img alt="post_distribution_mode_choice_utility" src="assets/media/post_distribution_mode_choice_parameters.png" /></p>
 <p>The parameters used in transit assignment are specified within the
 transit network file, and are reported in Table 19.</p>
-<p><strong>Table 19: Transit Pathfinding Parameters</strong>
-| Parameter                   | Value          | Units     |
-|-----------------------------|----------------|-----------|
-| Max Trip Cost               | 999            | Minutes   |
-| Max Xfers                   | 60             | Minutes   |
-| Value of Time               | 0.12           | \$/Minute |
-| Max # of Walk Access Paths |                |           |
-| Flat Fare                   | 1              | \$        |
-| Xfer Cost                   | 0              | \$        |
-| Weighting Factors           |                |           |
-| Fare                        | 1              |           |
-| Link Time                   | 1              |           |
-| Xfer Penalty Time           | 1              |           |
-| Init Wait Time              | 2              |           |
-| Xfer Wait Time              | 2              |           |
-| Dwell Time                  | 0              |           |
-| Walk Time                   | 3              |           |
-| Headway                     | Route Specific | Minutes   |
-| Xfer Penalty Time           | 3              | Minutes   |
-| Max Init Wait Time          | 60             | Minutes   |
-| Max Xfer Wait Time          | 60             | Minutes   |
-| Min Init Wait Time          | 2              | Minutes   |
-| Min Xfer Wait Time          | 2              | Minutes   |
-| Dwelling Time               | 0              | Minutes   |
-| Layover                     | 5              | Minutes   |
-| Max Access Walk Time        | 20             | Minutes   |
-| Max Egress Walk Time        | 20             | Minutes   |
-| Max Xfer Walk Time          | 20             | Minutes   |
-| Max Total Time              | 240            | Minutes   |</p>
+<p><strong>Table 19: Transit Pathfinding Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Max Trip Cost</td>
+<td>999</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td>Max Xfers</td>
+<td>60</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td>Value of Time</td>
+<td>0.12</td>
+<td>\$/Minute</td>
+</tr>
+<tr>
+<td>Max # of Walk Access Paths</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Flat Fare</td>
+<td>1</td>
+<td>\$</td>
+</tr>
+<tr>
+<td>Xfer Cost</td>
+<td>0</td>
+<td>\$</td>
+</tr>
+<tr>
+<td>Weighting Factors</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Fare</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>Link Time</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>Xfer Penalty Time</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>Init Wait Time</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>Xfer Wait Time</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>Dwell Time</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>Walk Time</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>Headway</td>
+<td>Route Specific</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td>Xfer Penalty Time</td>
+<td>3</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td>Max Init Wait Time</td>
+<td>60</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td>Max Xfer Wait Time</td>
+<td>60</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td>Min Init Wait Time</td>
+<td>2</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td>Min Xfer Wait Time</td>
+<td>2</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td>Dwelling Time</td>
+<td>0</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td>Layover</td>
+<td>5</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td>Max Access Walk Time</td>
+<td>20</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td>Max Egress Walk Time</td>
+<td>20</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td>Max Xfer Walk Time</td>
+<td>20</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td>Max Total Time</td>
+<td>240</td>
+<td>Minutes</td>
+</tr>
+</tbody>
+</table>
 <h1 id="travel-model-validation">Travel Model Validation</h1>
 <p>Calibration and validation is performed for each step in the model: land
 use, trip generation, trip distribution, mode split, and assignment. The
@@ -1718,8 +3513,7 @@ correlation, and an r value of -1 would indicate a perfect inverse
 correlation. The value of r can be estimated using the following
 formula.</p>
 <p><strong>Equation 7: Coefficient of Correlation</strong>
-<img src="assets/media/coefficient_correlation.png"
-style="width:2.75694in;height:0.67361in" /></p>
+<img alt="coefficient_correlation" src="assets/media/coefficient_correlation.png" /></p>
 <p>FHWA recommends a minimum r value of 0.88.</p>
 <p>The CCRPC Version 4 daily model has a correlation coefficient of
 <strong>0.922.</strong></p>
@@ -1732,12 +3526,11 @@ is always higher than the actual average network error because of the
 weighting scheme. This is discussed in the following section on absolute
 error. RMSE is calculated as:</p>
 <p><strong>Equation 8: Root Mean Squared Error</strong>
-<img src="assets/media/rootmean_square_error.png"
-style="width:1.75694in;height:0.84028in" /></p>
-<p>where:
-x = Ground count
-y = Calibration volume
-n = Number of observations</p>
+<img alt="rootmean_square_error" src="assets/media/rootmean_square_error.png" /></p>
+<p>where:</p>
+<p>x = Ground count</p>
+<p>y = Calibration volume</p>
+<p>n = Number of observations</p>
 <p>The RMSE should generally be less than 40%.</p>
 <p>The CCRPC Version 4 daily model has an RMSE of <strong>31%.</strong></p>
 <p>The CCRPC Version 4 AM model has an RMSE of <strong>34%.</strong></p>
@@ -1747,8 +3540,7 @@ n = Number of observations</p>
 error. It reflects the average link error in the network and is
 reflected in the following formula:</p>
 <p><strong>Equation 9: Absolute Error</strong>
-<img src="assets/media/absolute_error.png"
-style="width:2.46528in;height:0.51389in" /></p>
+<img alt="absolute_error" src="assets/media/absolute_error.png" /></p>
 <p>The CCRPC Version 4 daily model has an absolute error of <strong>23%.</strong></p>
 <p>The CCRPC Version 4 AM model has an absolute error of <strong>26%.</strong></p>
 <p>The CCRPC Version 4 PM model has an absolute error of <strong>26%</strong>.</p>
@@ -1756,8 +3548,7 @@ style="width:2.46528in;height:0.51389in" /></p>
 <p>The sum of differences is the average error of the network. It is
 similar to FHWA’s “percent error region-wide standard”.</p>
 <p><strong>Equation 10: Sum of Differences</strong>
-<img src="assets/media/sum_differences.png"
-style="width:2.46528in;height:0.51389in" /></p>
+<img alt="sum_differences" src="assets/media/sum_differences.png" /></p>
 <p>The CCRPC Version 4 region-wide percent sum of differences for the daily
 model is <strong>-1.61%.</strong></p>
 <p>The CCRPC Version 4 region-wide percent sum of differences for the AM
@@ -1768,37 +3559,148 @@ model is <strong>-0.80%</strong>.</p>
 <p>A comparison between the FHWA guidelines and the calibrated daily model
 is shown in Table 20. All measures of performance exceed guidelines
 published by the FHWA.</p>
-<p><strong>Table 20: FHWA Assignment Calibration Guidelines</strong>
-| Measures of Performance                    | FHWA Guideline | Daily Model | AM Peak Model | PM Peak Model |
-|--------------------------------------------|----------------|-------------|---------------|---------------|
-| Correlation Coefficient                | 0.880          | 0.922       | 0.917         | 0.904         |
-| Percent Error Region-Wide              | + / - 5%      | -1.61%      | 0.55%         | -0.80%        |
-| Sum of Differences by Functional Class |                |             |               |               |
-| Freeways                               | + / - 7%      | -0.01%      | 3.63%         | -0.15%        |
-| Principal Arterials                    | + / - 10%     | 6.21%       | 6.37%         | 7.70%         |
-| Minor Arterials                        | + / - 15%     | -3.91%      | -0.65%        | -2.74%        |
-| Collectors                             | + / - 25%     | -4.17%      | 3.85%         | -0.38%        |</p>
-<p><strong>Table 21: Comparison of Daily Vehicle Miles of Travel (HPMS versus Model)</strong>
-| (Upper Bound) Link Volume | MDOT Error |
-|---------------------------|------------|
-| 0                         | 200%       |
-| 1,000                     | 100%       |
-| 2,500                     | 50%        |
-| 5,000                     | 25%        |
-| 10,000                    | 20%        |
-| 25,000                    | 15%        |
-| 50,000                    | 10%        |</p>
+<p><strong>Table 20: FHWA Assignment Calibration Guidelines</strong></p>
+<table>
+<thead>
+<tr>
+<th>Measures of Performance</th>
+<th>FHWA Guideline</th>
+<th>Daily Model</th>
+<th>AM Peak Model</th>
+<th>PM Peak Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Correlation Coefficient</td>
+<td>0.880</td>
+<td>0.922</td>
+<td>0.917</td>
+<td>0.904</td>
+</tr>
+<tr>
+<td>Percent Error Region-Wide</td>
+<td>+ / - 5%</td>
+<td>-1.61%</td>
+<td>0.55%</td>
+<td>-0.80%</td>
+</tr>
+<tr>
+<td>Sum of Differences by Functional Class</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Freeways</td>
+<td>+ / - 7%</td>
+<td>-0.01%</td>
+<td>3.63%</td>
+<td>-0.15%</td>
+</tr>
+<tr>
+<td>Principal Arterials</td>
+<td>+ / - 10%</td>
+<td>6.21%</td>
+<td>6.37%</td>
+<td>7.70%</td>
+</tr>
+<tr>
+<td>Minor Arterials</td>
+<td>+ / - 15%</td>
+<td>-3.91%</td>
+<td>-0.65%</td>
+<td>-2.74%</td>
+</tr>
+<tr>
+<td>Collectors</td>
+<td>+ / - 25%</td>
+<td>-4.17%</td>
+<td>3.85%</td>
+<td>-0.38%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 21: Comparison of Daily Vehicle Miles of Travel (HPMS versus Model)</strong></p>
+<table>
+<thead>
+<tr>
+<th>(Upper Bound) Link Volume</th>
+<th>MDOT Error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>200%</td>
+</tr>
+<tr>
+<td>1,000</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>2,500</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>5,000</td>
+<td>25%</td>
+</tr>
+<tr>
+<td>10,000</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>25,000</td>
+<td>15%</td>
+</tr>
+<tr>
+<td>50,000</td>
+<td>10%</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Figure 20: Comparison of Individual Link Level Error using MDOT Criteria (Daily comparison)</strong>
 <img alt="" src="assets/media/percent_error_links.png" /></p>
 <h3 id="comparison-to-hpms-daily-vmt">Comparison to HPMS Daily VMT</h3>
-<p><strong>Table 22: Comparison of Daily Vehicle Miles of Travel (HPMS versus Model)</strong>
-| Facility Type   | Avg. Daily VMT (2015 HPMS) | Model VMT     |
-|-----------------|----------------------------|---------------|
-| <strong>Interstates</strong> | 1,444,852                  | 1,444,914     |
-| <strong>Arterials</strong>   | 1,651,658                  | 2,033,475     |
-| <strong>Collector</strong>   | 681,096                    | 570,105       |
-| <strong>Local</strong>       | 823,507                    | 113,144*     |
-| <strong>Total</strong>       | <strong>4,601,112</strong>              | <strong>4,230,791</strong> |</p>
+<p><strong>Table 22: Comparison of Daily Vehicle Miles of Travel (HPMS versus Model)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Facility Type</th>
+<th>Avg. Daily VMT (2015 HPMS)</th>
+<th>Model VMT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Interstates</strong></td>
+<td>1,444,852</td>
+<td>1,444,914</td>
+</tr>
+<tr>
+<td><strong>Arterials</strong></td>
+<td>1,651,658</td>
+<td>2,033,475</td>
+</tr>
+<tr>
+<td><strong>Collector</strong></td>
+<td>681,096</td>
+<td>570,105</td>
+</tr>
+<tr>
+<td><strong>Local</strong></td>
+<td>823,507</td>
+<td>113,144*</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>4,601,112</strong></td>
+<td><strong>4,230,791</strong></td>
+</tr>
+</tbody>
+</table>
 <p>* Model does not include many local roads.</p>
 <h2 id="transit-assignment">Transit Assignment</h2>
 <p>The CCRPC Version 4 travel model also includes a transit assignment procedure which loads the hourly transit trip matrices onto the transit route system. The bus assignment provides a link-by-link assignment of transit flows allowing the analyst to query total transit flow on a link or for any individual route. The transit assignment also saves the walk access/egress paths which allows the analyst to examine the patterns of pedestrian travel needed to access the bus network.</p>
@@ -1834,12 +3736,33 @@ the NHTS survey and the CCRPC Version 4 travel model. The average trip
 distances for HBW, HBO, and NHB trips are very comparable between the
 survey and the model. Note, the comparisons presented below are for
 internal trips (internal-to-internal) only.</p>
-<p><strong>Table 23: Average Trip Distance by Purpose (NHTS versus Model)</strong>
-| Purpose | NHTS (miles) | Model (miles) |
-|---------|--------------|---------------|
-| <strong>HBW</strong> | 8.1          | 7.5           |
-| <strong>HBO</strong> | 5.2          | 5.5           |
-| <strong>NHB</strong> | 4.3          | 4.8           |</p>
+<p><strong>Table 23: Average Trip Distance by Purpose (NHTS versus Model)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th>NHTS (miles)</th>
+<th>Model (miles)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HBW</strong></td>
+<td>8.1</td>
+<td>7.5</td>
+</tr>
+<tr>
+<td><strong>HBO</strong></td>
+<td>5.2</td>
+<td>5.5</td>
+</tr>
+<tr>
+<td><strong>NHB</strong></td>
+<td>4.3</td>
+<td>4.8</td>
+</tr>
+</tbody>
+</table>
 <p>The trip length frequency distributions were also extracted from the survey and the model to determine if the model was replicating the
 overall shape of the observed frequency distribution. Figure 22, Figure 23, and Figure 24 compare the NHTS and model trip length frequency distributions for HBW, HBO and NHB trips respectively. The model and the survey frequency distributions are examined at 2-mile distance bins (0-2 miles, 2-4 miles, etc).</p>
 <p><strong>Figure 22: HBW Trip Length Frequency Distribution (NHTS versus Model)</strong>
@@ -1865,14 +3788,73 @@ survey data. The observable reduction in auto trips and increase in
 walk/bike trips in the new version of the model is a result of
 discussions with the CCRPC and an analysis of rMove<sup>TM</sup> data
 collected as part of this project.</p>
-<p><strong>Table 24: Comparison of Mode Shares (2009 NHTS versus Model)</strong>
-| 2009 NHTS Mode Shares |       |         |           | Version 4 Model |       |         |           |
-|-----------------------|-------|---------|-----------|-----------------|-------|---------|-----------|
-| Trip Purpose          | Auto  | Transit | Walk/Bike | Trip Purpose    | Auto  | Transit | Walk/Bike |
-| HBW                   | 94.5% | 2.2%    | 3.3%      | HBW             | 86.1% | 3.1%    | 10.8%     |
-| HBO                   | 87.8% | 1.4%    | 10.8%     | HBO             | 82.2% | 2.4%    | 15.4%     |
-| NHB                   | 91.4% | 0.4%    | 8.2%      | NHB             | 79.7% | 2.2%    | 18.1%     |
-| All                   | 89.8% | 1.2%    | 9.0%      | All             | 82.1% | 2.5%    | 15.5%     |</p>
+<p><strong>Table 24: Comparison of Mode Shares (2009 NHTS versus Model)</strong></p>
+<table>
+<thead>
+<tr>
+<th>2009 NHTS Mode Shares</th>
+<th></th>
+<th></th>
+<th></th>
+<th>Version 4 Model</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trip Purpose</td>
+<td>Auto</td>
+<td>Transit</td>
+<td>Walk/Bike</td>
+<td>Trip Purpose</td>
+<td>Auto</td>
+<td>Transit</td>
+<td>Walk/Bike</td>
+</tr>
+<tr>
+<td>HBW</td>
+<td>94.5%</td>
+<td>2.2%</td>
+<td>3.3%</td>
+<td>HBW</td>
+<td>86.1%</td>
+<td>3.1%</td>
+<td>10.8%</td>
+</tr>
+<tr>
+<td>HBO</td>
+<td>87.8%</td>
+<td>1.4%</td>
+<td>10.8%</td>
+<td>HBO</td>
+<td>82.2%</td>
+<td>2.4%</td>
+<td>15.4%</td>
+</tr>
+<tr>
+<td>NHB</td>
+<td>91.4%</td>
+<td>0.4%</td>
+<td>8.2%</td>
+<td>NHB</td>
+<td>79.7%</td>
+<td>2.2%</td>
+<td>18.1%</td>
+</tr>
+<tr>
+<td>All</td>
+<td>89.8%</td>
+<td>1.2%</td>
+<td>9.0%</td>
+<td>All</td>
+<td>82.1%</td>
+<td>2.5%</td>
+<td>15.5%</td>
+</tr>
+</tbody>
+</table>
 <h1 id="land-use-input-files">Land Use Input Files</h1>
 <h2 id="model-structure_5">Model Structure</h2>
 <p>Version 4 of the model removed the previous integration of a land use
@@ -1906,8 +3888,8 @@ completed using a generalized attractiveness using the equations below.
 The net growth is a function of the build out potential, the existing
 amount of land use, and a modifier which adjusts the desirability of a
 TAZ based on who portion of its space is current build out.</p>
-<p><strong>Equation 11: Generalized Attractiveness</strong>
-<img alt="" src="assets/media/LUAM_generalized_attractiveness.png" /></p>
+<p><strong>Equation 11: Generalized Attractiveness</strong></p>
+<p><img alt="" src="assets/media/LUAM_generalized_attractiveness.png" /></p>
 <p>The actual available percentage is simply 1-existing/available. This percentage is modified to create a curve that decreases the impact of TAZs with very large available land percentages. The equation for modified percentage of available land is:</p>
 <p><strong>Equation 12: Modified Percentage</strong>
 <img alt="" src="assets/media/modified_percentage_LUAM.png" /></p>
@@ -1916,8 +3898,8 @@ The MP calculation results in the curve shown below:</p>
 <p><strong>Figure 25: Modified % Available Developable Land</strong>
 <img alt="modified_avail_land" src="assets/media/modified_avail_land.png" /></p>
 <p>The generalized attractiveness (GATTn) is essentially a weighted attractiveness of each TAZ for households and employment. The final step is simply to allocate the control totals proportional to the generalized accessibility.</p>
-<p><strong>Equation 13: Land Use Allocation</strong>
-<img alt="" src="assets/media/LUAM.png" /></p>
+<p><strong>Equation 13: Land Use Allocation</strong></p>
+<p><img alt="" src="assets/media/LUAM.png" /></p>
 <p>This creates a proportional allocation of the control total (CT) across land use “n” for each TAZ.</p>
 <h1 id="guidelines-for-working-with-complex-models">Guidelines for Working with Complex Models</h1>
 <p>Four guidelines for working with complex system models are offered here. The most important guideline for effective model use is to maintain a “high thought-to-simulation ratio.” It is recommended that considerable time be spent thinking through a simulation before starting the computer. It is essential that the simulation be formulated correctly. Understanding results of a simulation may also require a considerable investment of time.</p>
@@ -2602,5 +4584,5 @@ ways</p>
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2026-05-20 19:06:06.822408+00:00
+Build Date UTC : 2026-05-21 01:08:30.643087+00:00
 -->
