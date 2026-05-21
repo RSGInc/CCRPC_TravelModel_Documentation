@@ -307,36 +307,36 @@ include:</p>
 </ul>
 <h2 id="installing-the-model_1">Installing the Model</h2>
 <p>Copy the model scripts and configure the interface control files:</p>
-<ol>
+<ul>
 <li>
 <p>Paste the GISDK macros folder (“<strong>Resource Files</strong>”) and built-in <strong>scenarios</strong> folders (“2015_Base”,…,), along with the <strong>CCRPC_mod.bin</strong> and .DCB files to the root directory location chosen by the user.</p>
 </li>
 <li>
 <p>Edit the MacrosLIST_CCRPC.lst file (located in the ResourceFiles folder) using a text editor. Update all file paths to indicate the Model root directory as chosen by the user.</p>
 </li>
-</ol>
+</ul>
 <h2 id="installing-the-transcad-add-in">Installing the TransCAD Add-In</h2>
 <p>Install the GISDK program:</p>
-<ol>
+<ul>
 <li>In the main TransCAD menu, select Tools and make sure the “GIS Developer’s Kit” is enabled.</li>
-</ol>
+</ul>
 <p><strong>Figure 1: GIS Developer’s Kit</strong></p>
 <p><img src="../assets/media/gisdk.png"
 style="width:1.36441in;height:0.29163in" alt="GISDK_Tools.bmp" /></p>
-<ol>
+<ul>
 <li>
 <p>Click the “Compile to UI” button (icon with an arrow pointing to text, see Figure 1) and navigate to the GISDK list file located: Drive:\CCRPC\ResourceFiles\MacrosLIST_CCRPC.lst</p>
 </li>
 <li>
 <p>This will open a “Save As” dialog box. Navigate to the CompiledUI folder (Drive:\CCRPC\ResourceFiles\CompiledUI) and save over the ccrpc_ui.dbd file in this location. (Figure 2).</p>
 </li>
-</ol>
+</ul>
 <p><strong>Figure 2: Compiling to UI</strong></p>
 <p><img src="../assets/media/compiling_to_ui.png"
 style="width:6.5in;height:3.53681in" /></p>
-<ol>
+<ul>
 <li>Return to the TransCAD menu and Select: Tools &gt; Setup Add-Ins and fill in the fields as shown in Figure 3. To set the “UI Database” field, the user should browse to the UI Database (“ccrpc_ui.dbd”) that was created in the previous step.</li>
-</ol>
+</ul>
 <p><strong>Figure 3: Setup Add-ins</strong></p>
 <p><img src="../assets/media/setup_add_ins.png"
 style="width:4.5in;height:5.60417in" /></p>
@@ -344,19 +344,19 @@ style="width:4.5in;height:5.60417in" /></p>
 <p>CCRPC model users may need to install more than one version of the model. A straightforward approach is to copy the entire root directory folder and save with a modified version name. The user can then again follow the steps outlined above only this time setting a new and distinct “Description” when setting up the add-in, and selecting the new and distinct file path for the second installations UI Database.</p>
 <h2 id="launching-the-model">Launching The Model</h2>
 <p>This section describes the general steps and procedures involved in loading and configuring CCRPC inputs using the model interface. Section 3.0 provides detailed instructions for creating a new scenario.</p>
-<ol>
+<ul>
 <li>Open the TransCAD interface by selecting Tools &gt; Add-Ins &gt;CCRPC (Figure 4).</li>
-</ol>
+</ul>
 <p><strong>Figure 4: Model Interface</strong></p>
 <p><img src="../assets/media/model_interface.png"
 style="width:4.76845in;height:7.44512in" /></p>
-<ol>
+<ul>
 <li>Select setup – this opens a new dialog box</li>
-</ol>
+</ul>
 <p><strong>Figure 5: Project Scenarios Menu</strong></p>
 <p><img src="../assets/media/project_scenarios.png"
 style="width:6.28125in;height:4in" /></p>
-<ol>
+<ul>
 <li>
 <p>To add a new scenario, select “Copy”, which will create a new project scenario line. Enter a name for the scenario in the “Name” field and set the “Dir” (directory) button to the main directory of the scenario.</p>
 </li>
@@ -366,20 +366,20 @@ style="width:6.28125in;height:4in" /></p>
 <li>
 <p>Click “Ok” to exit the “Project Scenarios” menu.</p>
 </li>
-</ol>
+</ul>
 <p><strong>Figure 6: Defining Inputs</strong></p>
 <p><img src="../assets/media/defining_inputs.png"
 style="width:6.34375in;height:6.27083in" /></p>
 <h2 id="running-the-ccrpc-model">Running the CCRPC Model</h2>
 <p>The CCRPC model can execute a single step or run all steps with an indefinite number of iterations until the model has converged, an equilibrium where the input assumptions are consistent with output results. Typically, users should run the model to convergence. Developers and advanced users may occasionally want to execute a single step or loop. This section describes the normal operation of the CCRPC model – running to convergence.</p>
-<ol>
+<ul>
 <li>
 <p>Return to the CCRPC Model interface (see Figure 4).</p>
 </li>
 <li>
 <p>Click the “RUN ALL” button.</p>
 </li>
-</ol>
+</ul>
 <h1 id="creating-a-new-scenario">Creating A New Scenario</h1>
 <p>This section describes the procedures involved in creating new scenarios for the CCRPC Regional Travel Model. New scenarios might feature edits to the highway network, transit system, or land use data. The "Network Manager" section steps through the process of using the Network Manager to update the master network and export a new scenario network and the "Create a New Scenario" section outlines instructions for creating a new scenario.</p>
 <p>Table 1 presents an outline of the type of edits that might need to be made in creating a new scenario. The likelihood of the user needing to make an edit is indicated, with “high” meaning that a new scenario would likely need changes to this input, “medium” meaning that a new scenario would occasionally involve changes to this input, “low” meaning that a new scenario rarely would involve changes to this input, and “very low” meaning that new scenario would almost never involve changes to this input.</p>
