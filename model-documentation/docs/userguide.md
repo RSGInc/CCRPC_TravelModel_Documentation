@@ -122,6 +122,7 @@ Install the GISDK program:
 1.  In the main TransCAD menu, select Tools and make sure the “GIS Developer’s Kit” is enabled.
 
 **Figure 1: GIS Developer’s Kit**
+
 <img src="../assets/media/gisdk.png"
 style="width:1.36441in;height:0.29163in" alt="GISDK_Tools.bmp" />
 
@@ -130,12 +131,14 @@ style="width:1.36441in;height:0.29163in" alt="GISDK_Tools.bmp" />
 3.  This will open a “Save As” dialog box. Navigate to the CompiledUI folder (Drive:\CCRPC\ResourceFiles\CompiledUI) and save over the ccrpc_ui.dbd file in this location. (Figure 2).
 
 **Figure 2: Compiling to UI**
+
 <img src="../assets/media/compiling_to_ui.png"
 style="width:6.5in;height:3.53681in" />
 
 4.  Return to the TransCAD menu and Select: Tools > Setup Add-Ins and fill in the fields as shown in Figure 3. To set the “UI Database” field, the user should browse to the UI Database (“ccrpc_ui.dbd”) that was created in the previous step.
 
 **Figure 3: Setup Add-ins**
+
 <img src="../assets/media/setup_add_ins.png"
 style="width:4.5in;height:5.60417in" />
 
@@ -150,12 +153,14 @@ This section describes the general steps and procedures involved in loading and 
 1.  Open the TransCAD interface by selecting Tools > Add-Ins >CCRPC (Figure 4).
 
 **Figure 4: Model Interface**
+
 <img src="../assets/media/model_interface.png"
 style="width:4.76845in;height:7.44512in" />
 
 2.  Select setup – this opens a new dialog box
 
 **Figure 5: Project Scenarios Menu**
+
 <img src="../assets/media/project_scenarios.png"
 style="width:6.28125in;height:4in" />
 
@@ -166,6 +171,7 @@ style="width:6.28125in;height:4in" />
 5.  Click “Ok” to exit the “Project Scenarios” menu.
 
 **Figure 6: Defining Inputs**
+
 <img src="../assets/media/defining_inputs.png"
 style="width:6.34375in;height:6.27083in" />
 
@@ -249,6 +255,7 @@ Roadway projects that may add or remove links and modify link and node attribute
 | Node       | Alters the indicated node field  |
 
 **Figure 7: Example Project .BIN File**
+
 <img src="../assets/media/example_project_bin_file.png"
 style="width:6.5in;height:3.04097in" />
 
@@ -257,40 +264,42 @@ Scenarios are created using text files that list out which projects (various \[p
 The \[scenario\].txt file must have a name that is 11 characters long or shorter. Using longer filenames for the scenario files will cause the model to crash.
 
 **Figure 8: Scenario Example**
+
 <img src="../assets/media/scenario_example.png"
 style="width:6.5in;height:1.48194in" />
 
 To run the Network Manager, follow the steps outlined below:
 
-1.  Open the CCRPC model interface (Figure 4) and launch the Network Manager; this will open the Network Manager dialog box.
+- Open the CCRPC model interface (Figure 4) and launch the Network Manager; this will open the Network Manager dialog box.
 
-2.  In the Network Manager window (Figure 9), enter a name for the network scenario.
+- In the Network Manager window (Figure 9), enter a name for the network scenario.
 
 **Figure 9: Network Manager**
+
 <img src="../assets/media/network_manager.png"
 style="width:2.33431in;height:3.14107in" />
 
-3.  Browse to the master network folder.
+- Browse to the master network folder.
 
 <img src="../assets/media/master_network_folder.png"
 style="width:2.88403in;height:0.98819in" />
 
-4.  Browse to the MasterNetwork_Streets.dbd and click Open.
+- Browse to the MasterNetwork_Streets.dbd and click Open.
 
 <img src="../assets/media/master_network_streets.png"
 style="width:4.70973in;height:0.69234in" />
 
-5.  Browse to the Highway Network \[Scenario\].txt file and click Open
+- Browse to the Highway Network \[Scenario\].txt file and click Open
 
 <img src="../assets/media/highway_network_scenario.png"
 style="width:4.51887in;height:0.86663in" />
 
-6.  Browse to the Transit Route System .rts file and click Open
+- Browse to the Transit Route System .rts file and click Open
 
 <img src="../assets/media/transit_route_system.png"
 style="width:4.60137in;height:0.70236in" />
 
-7.  Navigate to the output folder, choose a name for the output network
+- Navigate to the output folder, choose a name for the output network
     scenario, then click Create Network.
 
 ## Create A New Scenario
