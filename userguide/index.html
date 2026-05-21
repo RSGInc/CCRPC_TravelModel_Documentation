@@ -575,108 +575,598 @@ style="width:4.60137in;height:0.70236in" /></p>
 </li>
 </ul>
 <p>The relationships between these files are stored in what TransCAD calls the Network file (.net). This file refers to the Highway/Streets file, the Link-Type Lookup, and the Turn Penalty Table which together describe the network, as well as details such as which attribute in the Highway/Streets layer represents Road Class or Capacity. The tables below, list the attributes of these key input files along with a description and indication if the field is manually coded by the user (User) or if it is automatically calculated by TransCAD during a model run (TransCAD).</p>
-<p><strong>Figure 10: Link Type Lookup Table</strong>
-| <strong>Field_Name</strong> | <strong>Comment</strong>                                        | <strong>Populated By</strong> | <strong>Units</strong>         |
-|----------------|----------------------------------------------------|------------------|-------------------|
-| LinkClass      | Numberic code for link class                       | User             |                   |
-| Class Type     | Description of link type                           | User             |                   |
-| Speed          | Speed Limit for link class                         | User             | MPH               |
-| CapPerLane     | Number of vehicles per lane for level of service F | User             | Vehicles per Lane |
-| c1             | link delay paramter c1                             | User             |                   |
-| c2             | link delay paramter c2                             | User             |                   |
-| c3             | link delay paramter c3                             | User             |                   |
-| c4             | link delay paramter c4                             | User             |                   |
-| p1             | node delay parameter p1                            | User             |                   |
-| p2             | node delay parameter p2                            | User             |                   |
-| p3             | node delay parameter p3                            | User             |                   |
-| p4             | node delay parameter p4                            | User             |                   |</p>
-<p><strong>Figure 11: Node Type Lookup Table</strong>
-| <strong>Field_Name</strong> | <strong>Comment</strong>                 | <strong>Populated By</strong> | <strong>Units</strong> |
-|----------------|-----------------------------|------------------|-----------|
-| NodeClass      | Numeric code for node class | User             |           |
-| Class Type     | Description of node type    | User             |           |</p>
-<p><strong>Figure 12: Highway/street Line Layer Attributes</strong>
-| <strong>Field_Name</strong>           | <strong>Comment</strong>                                                                                                         | <strong>Populated By</strong> | <strong>Units</strong>     |
-|--------------------------|---------------------------------------------------------------------------------------------------------------------|------------------|---------------|
-| ID                       | Link index number created by TransCAD                                                                               | TransCAD         |               |
-| Dir                      | Direction of flow with respect to link coding: two-way (0) or one-way with (1) or against (-1) the link's topology. | User             |               |
-| Length                   | Length of link                                                                                                      | TransCAD         | Miles         |
-| TWN_NM                   | Abreviated town name                                                                                                | User             |               |
-| Class                    | Numerical code for link class                                                                                       | User             |               |
-| Class_Type               | Description of link class                                                                                           | User             |               |
-| Mode                     | Mode of transportation: 1 (Bus), 2 (Rail), or 3 (Auto)                                                              | User             |               |
-| Walk Link                | Indication of pedestrian use: allowed (1) or prohibited (0)                                                         | User             |               |
-| Drive Link               | Indication of vehicle use: allowed (1) or prohibited (0)                                                            | User             |               |
-| EnhancedTransit          | Presense (1) or lack (0) of transit signal priority or BRT.                                                         | User             |               |
-| Area                     | Not used                                                                                                            | User             |               |
-| Speed                    | Travel speed from link type lookup table                                                                            | TransCAD         | MPH           |
-| Speed_UI                 | User specified speed (overrides lookup value)                                                                       | User             | MPH           |
-| Lanes                    | Travel lanes per direction (if 4 lane x-section, '2')                                                               | User             | Lanes         |
-| CapPerLane               | Link capacity per lane fom link type lookup table                                                                   | TransCAD         | Vehicles/Lane |
-| CapPerLane_UI            | User specified capacity per lane (overrides lookup value)                                                           | User             | Vehicles/Lane |
-| Capacity                 | Total link capacity in vehicles                                                                                     | TransCAD         | Vehicles      |
-| WalkTime                 | Walk time at 3 mph                                                                                                  | TransCAD         | Minutes       |
-| FreeFlowTT               | Free-flow travel time                                                                                               | TransCAD         | Minutes       |
-| Base                     | Master netwowrk indicatio if included (1) or excluded (0) from the base scenario network                            | User             |               |
-| Toll                     | Toll value                                                                                                          | User             |  Cents        |
-| Ramp                     | Indication if link is a highway ramp (1)                                                                            | User             |               |
-| TAZ_Connector            | Indication if link is a TAZ connector (1)                                                                           | User             |               |
-| External                 | Indication if link is an external connector (1)                                                                     | User             |               |
-| Name                     | Street name                                                                                                         |                  |               |
-| SelectedAreaLink         | Indication if link is part of selected area analysis (1)                                                            | User             |               |
-| TruckExclusion           | Indication if link allows or prohibits trucks (Not Used)                                                            | User             |               |
-| AB_AM_Count              | Calibration count in AB direction for AM peak hour                                                                  | User             | All Vehicles  |
-| BA_AM_Count              | Calibration count in BA direction for AM peak hour                                                                  | User             | All Vehicles  |
-| AB_AM_AutoCount          | Calibration count in AB direction for AM peak hour                                                                  | User             | Autos         |
-| BA_AM_AutoCount          | Calibration count in BA direction for AM peak hour                                                                  | User             | Autos         |
-| AB_AM_MedTruckCount      | Calibration count in AB direction for AM peak hour                                                                  | User             | Med Trucks    |
-| BA_AM_MedTruckCount      | Calibration count in BA direction for AM peak hour                                                                  | User             | Med Trucks    |
-| AB_AM_HeavyTruckCount    | Calibration count in AB direction for AM peak hour                                                                  | User             | Heavy Trucks  |
-| BA_AM_HeavyTruckCount    | Calibration count in BA direction for AM peak hour                                                                  | User             | Heavy Trucks  |
-| AB_PM_Count              | Calibration count in AB direction for PM peak hour                                                                  | User             | All Vehicles  |
-| BA_PM_Count              | Calibration count in BA direction for PM peak hour                                                                  | User             | All Vehicles  |
-| AB_PM_AutoCount          | Calibration count in AB direction for PM peak hour                                                                  | User             | Autos         |
-| BA_PM_AutoCount          | Calibration count in BA direction for PM peak hour                                                                  | User             | Autos         |
-| AB_PM_MedTruckCount      | Calibration count in AB direction for PM peak hour                                                                  | User             | Med Trucks    |
-| BA_PM_MedTruckCount      | Calibration count in BA direction for PM peak hour                                                                  | User             | Med Trucks    |
-| AB_PM_HeavyTruckCount    | Calibration count in AB direction for PM peak hour                                                                  | User             | Heavy Trucks  |
-| BA_PM_HeavyTruckCount    | Calibration count in BA direction for PM peak hour                                                                  | User             | Heavy Trucks  |
-| AB_DLY_Count             | Calibration count in AB direction for entire day                                                                    | User             | All Vehicles  |
-| BA_DLY_Count             | Calibration count in BA direction for entire day                                                                    | User             | All Vehicles  |
-| AB_DLY_AutoCount         | Calibration count in AB direction for entire day                                                                    | User             | Autos         |
-| BA_DLY_AutoCount         | Calibration count in BA direction for entire day                                                                    | User             | Autos         |
-| AB_DLY_MedTruckCount     | Calibration count in AB direction for entire day                                                                    | User             | Med Trucks    |
-| BA_DLY_MedTruckCount     | Calibration count in BA direction for entire day                                                                    | User             | Med Trucks    |
-| AB_DLY_HeavyTruckCount   | Calibration count in AB direction for entire day                                                                    | User             | Heavy Trucks  |
-| BA_DLY_HeavyTruckCount   | Calibration count in BA direction for entire day                                                                    | User             | Heavy Trucks  |
-| ABBA_DLY_Count           | Calibration count in both directions for entire day                                                                 | User             | All Vehicles  |
-| ABBA_DLY_AutoCount       | Calibration count in both directions for entire day                                                                 | User             | Autos         |
-| ABBA_DLY_MedTruckCount   | Calibration count in both directions for entire day                                                                 | User             | Med Trucks    |
-| ABBA_DLY_HeavyTruckCount | Calibration count in both directions for entire day                                                                 | User             | Heavy Trucks  |
-| Centroid Connector       | Indication if link is a centroid connector (1) or not (0)                                                           | User             |               |
-| AB_Dir                   | Direction of flow for AB topology                                                                                   | User             |               |
-| BA_Dir                   | Direction of flow for BA tobology                                                                                   | User             |               |
-| Urban                    | Indication if link is in (1) or outside (0) an "urban" area                                                         | User             |               |</p>
-<p><strong>Figure 13: Node Layer Attributes</strong>
-| <strong>Field_Name</strong>      | <strong>Comment</strong>                                                      | <strong>Populated By</strong> | <strong>Units</strong>      |
-|---------------------|------------------------------------------------------------------|------------------|----------------|
-| ID                  | Node index number created by TransCAD                            | TransCAD         |                |
-| Longitude           | Longitude of node                                                | TransCAD         | Degrees x 10^6 |
-| Latitude            | Latitude of node                                                 | TransCAD         | Degrees x 10^6 |
-| Elevation           | Elevation of node (not used)                                     | TransCAD         |                |
-| TAZ                 | Inidcation if node is a TAZ (1)                                  | User             |                |
-| TAZ_Name            | TAZ identification number (1-960 internal, 10001-10017 external) | User             |                |
-| External            | Indication if node is an external (1)                            | User             |                |
-| Label               | Either null, "Centroid", or "External"                           | User             |                |
-| Exit                | Indication of node is a highway exit (1)                         | User             |                |
-| Exit_Number         | Highway Exit number                                              | User             |                |
-| Class               | Node class                                                       | User             |                |
-| ParkandRide         | Indication if node is a park and ride location - (not used)      | User             |                |
-| Capacity            | Vehicle capacity of node                                         | User             | Vehicles/hour  |
-| Town                | Abreviation of town name                                         | User             |                |
-| Special Delay Link1 | Upstream node id for first stop-controlled approach              | User             |                |
-| Special Delay Link2 | Upstream node id for second stop-controlled approach             | User             |                |
-| Special Delay Link3 | Upstream node id for third stop-controlled approach              | User             |                |</p>
+<p><strong>Figure 10: Link Type Lookup Table</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Field_Name</strong></th>
+<th><strong>Comment</strong></th>
+<th><strong>Populated By</strong></th>
+<th><strong>Units</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LinkClass</td>
+<td>Numberic code for link class</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Class Type</td>
+<td>Description of link type</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>Speed Limit for link class</td>
+<td>User</td>
+<td>MPH</td>
+</tr>
+<tr>
+<td>CapPerLane</td>
+<td>Number of vehicles per lane for level of service F</td>
+<td>User</td>
+<td>Vehicles per Lane</td>
+</tr>
+<tr>
+<td>c1</td>
+<td>link delay paramter c1</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>c2</td>
+<td>link delay paramter c2</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>c3</td>
+<td>link delay paramter c3</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>c4</td>
+<td>link delay paramter c4</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>p1</td>
+<td>node delay parameter p1</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>p2</td>
+<td>node delay parameter p2</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>p3</td>
+<td>node delay parameter p3</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>p4</td>
+<td>node delay parameter p4</td>
+<td>User</td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p><strong>Figure 11: Node Type Lookup Table</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Field_Name</strong></th>
+<th><strong>Comment</strong></th>
+<th><strong>Populated By</strong></th>
+<th><strong>Units</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NodeClass</td>
+<td>Numeric code for node class</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Class Type</td>
+<td>Description of node type</td>
+<td>User</td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p><strong>Figure 12: Highway/street Line Layer Attributes</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Field_Name</strong></th>
+<th><strong>Comment</strong></th>
+<th><strong>Populated By</strong></th>
+<th><strong>Units</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>Link index number created by TransCAD</td>
+<td>TransCAD</td>
+<td> </td>
+</tr>
+<tr>
+<td>Dir</td>
+<td>Direction of flow with respect to link coding: two-way (0) or one-way with (1) or against (-1) the link's topology.</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Length</td>
+<td>Length of link</td>
+<td>TransCAD</td>
+<td>Miles</td>
+</tr>
+<tr>
+<td>TWN_NM</td>
+<td>Abreviated town name</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Class</td>
+<td>Numerical code for link class</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Class_Type</td>
+<td>Description of link class</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Mode</td>
+<td>Mode of transportation: 1 (Bus), 2 (Rail), or 3 (Auto)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Walk Link</td>
+<td>Indication of pedestrian use: allowed (1) or prohibited (0)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Drive Link</td>
+<td>Indication of vehicle use: allowed (1) or prohibited (0)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>EnhancedTransit</td>
+<td>Presense (1) or lack (0) of transit signal priority or BRT.</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Area</td>
+<td>Not used</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>Travel speed from link type lookup table</td>
+<td>TransCAD</td>
+<td>MPH</td>
+</tr>
+<tr>
+<td>Speed_UI</td>
+<td>User specified speed (overrides lookup value)</td>
+<td>User</td>
+<td>MPH</td>
+</tr>
+<tr>
+<td>Lanes</td>
+<td>Travel lanes per direction (if 4 lane x-section, '2')</td>
+<td>User</td>
+<td>Lanes</td>
+</tr>
+<tr>
+<td>CapPerLane</td>
+<td>Link capacity per lane fom link type lookup table</td>
+<td>TransCAD</td>
+<td>Vehicles/Lane</td>
+</tr>
+<tr>
+<td>CapPerLane_UI</td>
+<td>User specified capacity per lane (overrides lookup value)</td>
+<td>User</td>
+<td>Vehicles/Lane</td>
+</tr>
+<tr>
+<td>Capacity</td>
+<td>Total link capacity in vehicles</td>
+<td>TransCAD</td>
+<td>Vehicles</td>
+</tr>
+<tr>
+<td>WalkTime</td>
+<td>Walk time at 3 mph</td>
+<td>TransCAD</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td>FreeFlowTT</td>
+<td>Free-flow travel time</td>
+<td>TransCAD</td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>Master netwowrk indicatio if included (1) or excluded (0) from the base scenario network</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Toll</td>
+<td>Toll value</td>
+<td>User</td>
+<td> Cents</td>
+</tr>
+<tr>
+<td>Ramp</td>
+<td>Indication if link is a highway ramp (1)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>TAZ_Connector</td>
+<td>Indication if link is a TAZ connector (1)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>External</td>
+<td>Indication if link is an external connector (1)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Street name</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>SelectedAreaLink</td>
+<td>Indication if link is part of selected area analysis (1)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>TruckExclusion</td>
+<td>Indication if link allows or prohibits trucks (Not Used)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>AB_AM_Count</td>
+<td>Calibration count in AB direction for AM peak hour</td>
+<td>User</td>
+<td>All Vehicles</td>
+</tr>
+<tr>
+<td>BA_AM_Count</td>
+<td>Calibration count in BA direction for AM peak hour</td>
+<td>User</td>
+<td>All Vehicles</td>
+</tr>
+<tr>
+<td>AB_AM_AutoCount</td>
+<td>Calibration count in AB direction for AM peak hour</td>
+<td>User</td>
+<td>Autos</td>
+</tr>
+<tr>
+<td>BA_AM_AutoCount</td>
+<td>Calibration count in BA direction for AM peak hour</td>
+<td>User</td>
+<td>Autos</td>
+</tr>
+<tr>
+<td>AB_AM_MedTruckCount</td>
+<td>Calibration count in AB direction for AM peak hour</td>
+<td>User</td>
+<td>Med Trucks</td>
+</tr>
+<tr>
+<td>BA_AM_MedTruckCount</td>
+<td>Calibration count in BA direction for AM peak hour</td>
+<td>User</td>
+<td>Med Trucks</td>
+</tr>
+<tr>
+<td>AB_AM_HeavyTruckCount</td>
+<td>Calibration count in AB direction for AM peak hour</td>
+<td>User</td>
+<td>Heavy Trucks</td>
+</tr>
+<tr>
+<td>BA_AM_HeavyTruckCount</td>
+<td>Calibration count in BA direction for AM peak hour</td>
+<td>User</td>
+<td>Heavy Trucks</td>
+</tr>
+<tr>
+<td>AB_PM_Count</td>
+<td>Calibration count in AB direction for PM peak hour</td>
+<td>User</td>
+<td>All Vehicles</td>
+</tr>
+<tr>
+<td>BA_PM_Count</td>
+<td>Calibration count in BA direction for PM peak hour</td>
+<td>User</td>
+<td>All Vehicles</td>
+</tr>
+<tr>
+<td>AB_PM_AutoCount</td>
+<td>Calibration count in AB direction for PM peak hour</td>
+<td>User</td>
+<td>Autos</td>
+</tr>
+<tr>
+<td>BA_PM_AutoCount</td>
+<td>Calibration count in BA direction for PM peak hour</td>
+<td>User</td>
+<td>Autos</td>
+</tr>
+<tr>
+<td>AB_PM_MedTruckCount</td>
+<td>Calibration count in AB direction for PM peak hour</td>
+<td>User</td>
+<td>Med Trucks</td>
+</tr>
+<tr>
+<td>BA_PM_MedTruckCount</td>
+<td>Calibration count in BA direction for PM peak hour</td>
+<td>User</td>
+<td>Med Trucks</td>
+</tr>
+<tr>
+<td>AB_PM_HeavyTruckCount</td>
+<td>Calibration count in AB direction for PM peak hour</td>
+<td>User</td>
+<td>Heavy Trucks</td>
+</tr>
+<tr>
+<td>BA_PM_HeavyTruckCount</td>
+<td>Calibration count in BA direction for PM peak hour</td>
+<td>User</td>
+<td>Heavy Trucks</td>
+</tr>
+<tr>
+<td>AB_DLY_Count</td>
+<td>Calibration count in AB direction for entire day</td>
+<td>User</td>
+<td>All Vehicles</td>
+</tr>
+<tr>
+<td>BA_DLY_Count</td>
+<td>Calibration count in BA direction for entire day</td>
+<td>User</td>
+<td>All Vehicles</td>
+</tr>
+<tr>
+<td>AB_DLY_AutoCount</td>
+<td>Calibration count in AB direction for entire day</td>
+<td>User</td>
+<td>Autos</td>
+</tr>
+<tr>
+<td>BA_DLY_AutoCount</td>
+<td>Calibration count in BA direction for entire day</td>
+<td>User</td>
+<td>Autos</td>
+</tr>
+<tr>
+<td>AB_DLY_MedTruckCount</td>
+<td>Calibration count in AB direction for entire day</td>
+<td>User</td>
+<td>Med Trucks</td>
+</tr>
+<tr>
+<td>BA_DLY_MedTruckCount</td>
+<td>Calibration count in BA direction for entire day</td>
+<td>User</td>
+<td>Med Trucks</td>
+</tr>
+<tr>
+<td>AB_DLY_HeavyTruckCount</td>
+<td>Calibration count in AB direction for entire day</td>
+<td>User</td>
+<td>Heavy Trucks</td>
+</tr>
+<tr>
+<td>BA_DLY_HeavyTruckCount</td>
+<td>Calibration count in BA direction for entire day</td>
+<td>User</td>
+<td>Heavy Trucks</td>
+</tr>
+<tr>
+<td>ABBA_DLY_Count</td>
+<td>Calibration count in both directions for entire day</td>
+<td>User</td>
+<td>All Vehicles</td>
+</tr>
+<tr>
+<td>ABBA_DLY_AutoCount</td>
+<td>Calibration count in both directions for entire day</td>
+<td>User</td>
+<td>Autos</td>
+</tr>
+<tr>
+<td>ABBA_DLY_MedTruckCount</td>
+<td>Calibration count in both directions for entire day</td>
+<td>User</td>
+<td>Med Trucks</td>
+</tr>
+<tr>
+<td>ABBA_DLY_HeavyTruckCount</td>
+<td>Calibration count in both directions for entire day</td>
+<td>User</td>
+<td>Heavy Trucks</td>
+</tr>
+<tr>
+<td>Centroid Connector</td>
+<td>Indication if link is a centroid connector (1) or not (0)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>AB_Dir</td>
+<td>Direction of flow for AB topology</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>BA_Dir</td>
+<td>Direction of flow for BA tobology</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Urban</td>
+<td>Indication if link is in (1) or outside (0) an "urban" area</td>
+<td>User</td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p><strong>Figure 13: Node Layer Attributes</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Field_Name</strong></th>
+<th><strong>Comment</strong></th>
+<th><strong>Populated By</strong></th>
+<th><strong>Units</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>Node index number created by TransCAD</td>
+<td>TransCAD</td>
+<td> </td>
+</tr>
+<tr>
+<td>Longitude</td>
+<td>Longitude of node</td>
+<td>TransCAD</td>
+<td>Degrees x 10^6</td>
+</tr>
+<tr>
+<td>Latitude</td>
+<td>Latitude of node</td>
+<td>TransCAD</td>
+<td>Degrees x 10^6</td>
+</tr>
+<tr>
+<td>Elevation</td>
+<td>Elevation of node (not used)</td>
+<td>TransCAD</td>
+<td> </td>
+</tr>
+<tr>
+<td>TAZ</td>
+<td>Inidcation if node is a TAZ (1)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>TAZ_Name</td>
+<td>TAZ identification number (1-960 internal, 10001-10017 external)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>External</td>
+<td>Indication if node is an external (1)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Label</td>
+<td>Either null, "Centroid", or "External"</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Exit</td>
+<td>Indication of node is a highway exit (1)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Exit_Number</td>
+<td>Highway Exit number</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Class</td>
+<td>Node class</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>ParkandRide</td>
+<td>Indication if node is a park and ride location - (not used)</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Capacity</td>
+<td>Vehicle capacity of node</td>
+<td>User</td>
+<td>Vehicles/hour</td>
+</tr>
+<tr>
+<td>Town</td>
+<td>Abreviation of town name</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Special Delay Link1</td>
+<td>Upstream node id for first stop-controlled approach</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Special Delay Link2</td>
+<td>Upstream node id for second stop-controlled approach</td>
+<td>User</td>
+<td> </td>
+</tr>
+<tr>
+<td>Special Delay Link3</td>
+<td>Upstream node id for third stop-controlled approach</td>
+<td>User</td>
+<td> </td>
+</tr>
+</tbody>
+</table>
 <h2 id="trip-generation">Trip Generation</h2>
 <p>The following land-use files inform the model trip generation.</p>
 <ul>
