@@ -434,13 +434,33 @@ underlying code and adjustments to the shape of all matrix inputs</td>
 <p>The Network Manager tool, accessed through the model GUI, allows the user to create alternative roadway networks. User-defined projects (specified in various [projects].bin files) control the adding, removing, and/or modifying of roadway links and nodes, while scenarios (specified in various [scenario].txt files) contain a list of projects. This section details the associated files and step-by-step instructions for using the network manager.</p>
 <p>The network manager uses three primary files: master network (.dbd), project (.bin), and scenario files (.txt).</p>
 <p>Roadway projects that may add or remove links and modify link and node attributes are stored in .bin files. The user can create future roadway projects by using the projects template, which is the Project_Template.bin file. The project files contain five fields: Project_ID, Action, ID, Field_Name, Field_Value, and Notes. The four options for the Action field are listed below in Table 2, with an example of a project file in Figure 7.</p>
-<p><strong>Table 2: Project Action Commands</strong>
-| <strong>Action</strong> | <strong>Description</strong>                  |
-|------------|----------------------------------|
-| Add        | Adds a link to the scenario      |
-| Remove     | Removes a link from the scenario |
-| Modify     | Alters the indicated link field  |
-| Node       | Alters the indicated node field  |</p>
+<p><strong>Table 2: Project Action Commands</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Action</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add</td>
+<td>Adds a link to the scenario</td>
+</tr>
+<tr>
+<td>Remove</td>
+<td>Removes a link from the scenario</td>
+</tr>
+<tr>
+<td>Modify</td>
+<td>Alters the indicated link field</td>
+</tr>
+<tr>
+<td>Node</td>
+<td>Alters the indicated node field</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Figure 7: Example Project .BIN File</strong>
 <img src="../assets/media/example_project_bin_file.png"
 style="width:6.5in;height:3.04097in" /></p>
