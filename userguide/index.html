@@ -320,8 +320,8 @@ include:</p>
 <ol>
 <li>In the main TransCAD menu, select Tools and make sure the “GIS Developer’s Kit” is enabled.</li>
 </ol>
-<p><strong>Figure 1: GIS Developer’s Kit</strong>
-<img src="../assets/media/gisdk.png"
+<p><strong>Figure 1: GIS Developer’s Kit</strong></p>
+<p><img src="../assets/media/gisdk.png"
 style="width:1.36441in;height:0.29163in" alt="GISDK_Tools.bmp" /></p>
 <ol>
 <li>
@@ -331,14 +331,14 @@ style="width:1.36441in;height:0.29163in" alt="GISDK_Tools.bmp" /></p>
 <p>This will open a “Save As” dialog box. Navigate to the CompiledUI folder (Drive:\CCRPC\ResourceFiles\CompiledUI) and save over the ccrpc_ui.dbd file in this location. (Figure 2).</p>
 </li>
 </ol>
-<p><strong>Figure 2: Compiling to UI</strong>
-<img src="../assets/media/compiling_to_ui.png"
+<p><strong>Figure 2: Compiling to UI</strong></p>
+<p><img src="../assets/media/compiling_to_ui.png"
 style="width:6.5in;height:3.53681in" /></p>
 <ol>
 <li>Return to the TransCAD menu and Select: Tools &gt; Setup Add-Ins and fill in the fields as shown in Figure 3. To set the “UI Database” field, the user should browse to the UI Database (“ccrpc_ui.dbd”) that was created in the previous step.</li>
 </ol>
-<p><strong>Figure 3: Setup Add-ins</strong>
-<img src="../assets/media/setup_add_ins.png"
+<p><strong>Figure 3: Setup Add-ins</strong></p>
+<p><img src="../assets/media/setup_add_ins.png"
 style="width:4.5in;height:5.60417in" /></p>
 <h2 id="reinstalling-other-versions-of-the-model">(Re)Installing other Versions of the Model</h2>
 <p>CCRPC model users may need to install more than one version of the model. A straightforward approach is to copy the entire root directory folder and save with a modified version name. The user can then again follow the steps outlined above only this time setting a new and distinct “Description” when setting up the add-in, and selecting the new and distinct file path for the second installations UI Database.</p>
@@ -347,14 +347,14 @@ style="width:4.5in;height:5.60417in" /></p>
 <ol>
 <li>Open the TransCAD interface by selecting Tools &gt; Add-Ins &gt;CCRPC (Figure 4).</li>
 </ol>
-<p><strong>Figure 4: Model Interface</strong>
-<img src="../assets/media/model_interface.png"
+<p><strong>Figure 4: Model Interface</strong></p>
+<p><img src="../assets/media/model_interface.png"
 style="width:4.76845in;height:7.44512in" /></p>
 <ol>
 <li>Select setup – this opens a new dialog box</li>
 </ol>
-<p><strong>Figure 5: Project Scenarios Menu</strong>
-<img src="../assets/media/project_scenarios.png"
+<p><strong>Figure 5: Project Scenarios Menu</strong></p>
+<p><img src="../assets/media/project_scenarios.png"
 style="width:6.28125in;height:4in" /></p>
 <ol>
 <li>
@@ -367,8 +367,8 @@ style="width:6.28125in;height:4in" /></p>
 <p>Click “Ok” to exit the “Project Scenarios” menu.</p>
 </li>
 </ol>
-<p><strong>Figure 6: Defining Inputs</strong>
-<img src="../assets/media/defining_inputs.png"
+<p><strong>Figure 6: Defining Inputs</strong></p>
+<p><img src="../assets/media/defining_inputs.png"
 style="width:6.34375in;height:6.27083in" /></p>
 <h2 id="running-the-ccrpc-model">Running the CCRPC Model</h2>
 <p>The CCRPC model can execute a single step or run all steps with an indefinite number of iterations until the model has converged, an equilibrium where the input assumptions are consistent with output results. Typically, users should run the model to convergence. Developers and advanced users may occasionally want to execute a single step or loop. This section describes the normal operation of the CCRPC model – running to convergence.</p>
@@ -461,50 +461,50 @@ underlying code and adjustments to the shape of all matrix inputs</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Figure 7: Example Project .BIN File</strong>
-<img src="../assets/media/example_project_bin_file.png"
+<p><strong>Figure 7: Example Project .BIN File</strong></p>
+<p><img src="../assets/media/example_project_bin_file.png"
 style="width:6.5in;height:3.04097in" /></p>
 <p>Scenarios are created using text files that list out which projects (various [project].bin files) to be included in the scenario. Figure 8 shows an example scenario file. The names of the project files are divided by line breaks; these names must match the name of the project .bin files exactly. An optional project description can be added to the project filename if separated by a semicolon (e.g. 2025wTIP; Includes all FY 2018-2021 Front of Book TIP projects). The user can create any desirable scenario by adding or removing projects that correspond to project files. It is important to note that the Base project represents the base year network and does not correspond to a specific project file.</p>
 <p>The [scenario].txt file must have a name that is 11 characters long or shorter. Using longer filenames for the scenario files will cause the model to crash.</p>
-<p><strong>Figure 8: Scenario Example</strong>
-<img src="../assets/media/scenario_example.png"
+<p><strong>Figure 8: Scenario Example</strong></p>
+<p><img src="../assets/media/scenario_example.png"
 style="width:6.5in;height:1.48194in" /></p>
 <p>To run the Network Manager, follow the steps outlined below:</p>
-<ol>
+<ul>
 <li>
 <p>Open the CCRPC model interface (Figure 4) and launch the Network Manager; this will open the Network Manager dialog box.</p>
 </li>
 <li>
 <p>In the Network Manager window (Figure 9), enter a name for the network scenario.</p>
 </li>
-</ol>
-<p><strong>Figure 9: Network Manager</strong>
-<img src="../assets/media/network_manager.png"
+</ul>
+<p><strong>Figure 9: Network Manager</strong></p>
+<p><img src="../assets/media/network_manager.png"
 style="width:2.33431in;height:3.14107in" /></p>
-<ol>
+<ul>
 <li>Browse to the master network folder.</li>
-</ol>
+</ul>
 <p><img src="../assets/media/master_network_folder.png"
 style="width:2.88403in;height:0.98819in" /></p>
-<ol>
+<ul>
 <li>Browse to the MasterNetwork_Streets.dbd and click Open.</li>
-</ol>
+</ul>
 <p><img src="../assets/media/master_network_streets.png"
 style="width:4.70973in;height:0.69234in" /></p>
-<ol>
+<ul>
 <li>Browse to the Highway Network [Scenario].txt file and click Open</li>
-</ol>
+</ul>
 <p><img src="../assets/media/highway_network_scenario.png"
 style="width:4.51887in;height:0.86663in" /></p>
-<ol>
+<ul>
 <li>Browse to the Transit Route System .rts file and click Open</li>
-</ol>
+</ul>
 <p><img src="../assets/media/transit_route_system.png"
 style="width:4.60137in;height:0.70236in" /></p>
-<ol>
+<ul>
 <li>Navigate to the output folder, choose a name for the output network
     scenario, then click Create Network.</li>
-</ol>
+</ul>
 <h2 id="create-a-new-scenario">Create A New Scenario</h2>
 <p>This section outlines a step-by-step set of instructions for creating a new scenario and starting a full scenario run.</p>
 <ol>
